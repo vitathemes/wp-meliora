@@ -1,0 +1,24 @@
+.site.is-content-sidebar {
+	.site-main__container {
+		display: flex;
+	}
+
+	.site-main__content {
+		flex-grow: 1;
+		width: 62%;
+		order: 1;
+	}
+
+	.sidebar {
+		width: $size__site-sidebar;
+		order: 2;
+	}
+}
+
+.site-header {
+	width: 100%;
+}
+
+.site-footer {
+	width: 100%;
+}

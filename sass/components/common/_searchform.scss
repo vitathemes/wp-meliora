@@ -1,0 +1,39 @@
+.c-search-form {
+  display: flex;
+  position: relative;
+}
+
+.c-search-form__label {
+  width: 100%;
+}
+
+.c-search-form__label__text {
+  position: absolute;
+  left: -10000px;
+}
+
+.c-search-form__input {
+  flex-grow: 1;
+  height: 40px;
+  border-radius: 3px !important;
+  padding-right: 40px !important;
+  width: 100%;
+  min-width: 180px;
+  font-size: 12px;
+}
+
+.c-search-form__submit {
+  width: 40px;
+  height: 40px;
+  background-color: #FFBA9D;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 3px !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}

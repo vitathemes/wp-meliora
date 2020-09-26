@@ -1,0 +1,23 @@
+a {
+	color: $digital-interface__secondary-color;
+	transition: $global-transition;
+
+	&:visited {
+		color: $digital-interface__secondary-color;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $digital-interface__primary-color;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

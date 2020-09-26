@@ -1,0 +1,24 @@
+.c-widget {
+	margin-bottom: 40px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.c-widget__title {
+	display: flex;
+	align-items: center;
+	margin: 0 0 24px 0;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		width: auto;
+		flex-grow: 1;
+		height: 1px;
+		margin-left: 40px;
+		background-color: $digital-interface__neutral-gray-color;
+		max-width: 104px;
+	}
+}

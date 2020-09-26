@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-family: $digital-interface__secondary-font;
+	font-weight: var(--heading-typography-variant);
+	margin: 0 0 1.25em;
+}
+
+h1, .h1, h1 * {
+	font-family: var(--heading-typography-font-family);
+	font-size: clamp(1em, var(--heading-typography-font-size) , 10em);
+	color: var(--tertiary-color);
+	line-height: 1.175;
+	font-weight: var(--heading-typography-variant) !important;
+}
+
+h2, .h2, h2 * {
+	font-family: var(--heading-typography-font-family);
+	font-size: clamp(0.85em, calc(var(--heading-typography-font-size) - 0.3em) , 8em);
+	color: var(--tertiary-color);
+	line-height: 1.167;
+	font-weight: var(--heading-typography-variant) !important;
+}
+
+h3, .h3, h3 *{
+	font-family: var(--heading-typography-font-family);
+	font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.45em) , 7em);
+	color: var(--tertiary-color);
+	line-height: 1.154;
+	font-weight: var(--heading-typography-variant);
+}
+
+h4, .h4, h4 * {
+	font-family: var(--heading-typography-font-family);
+	font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.6em) , 6em);
+	color: var(--tertiary-color);
+	line-height: 1.15;
+	font-weight: var(--heading-typography-variant) !important;
+}
+
+h5, .h5, h5 * {
+	font-family: var(--heading-typography-font-family);
+	font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.75em) , 5em);
+	color: var(--tertiary-color);
+	line-height: 1.205;
+	font-weight: var(--heading-typography-variant) !important;
+}
+
+h6, .h6, h6 * {
+	font-family: var(--heading-typography-font-family);
+	font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 1em) , 4em);
+	color: var(--tertiary-color);
+	line-height: 1.194;
+	font-weight: var(--heading-typography-variant) !important;
+}

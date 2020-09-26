@@ -1,0 +1,41 @@
+.pagination {
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+
+    .page-numbers {
+      color: $digital-interface__tertiary-color;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 0 5px;
+      margin: 0 10px 0 0;
+      text-decoration: none;
+
+      &:hover {
+        color: $digital-interface__primary-color;
+      }
+
+      &.current {
+        color: $digital-interface__primary-color;
+      }
+
+      &.next , &.prev {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $digital-interface__tertiary-color;
+        color: $digital-interface__tertiary-color;
+        border-radius: $global-radius;
+
+        &:hover {
+          color: $digital-interface__neutral-white;
+          background-color: $digital-interface__tertiary-color;
+        }
+      }
+    }
+  }
+}
