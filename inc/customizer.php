@@ -422,7 +422,7 @@ add_action( 'init', function () {
 		'label'     => esc_html__( 'Texts', 'wp-manifest' ),
 		'section'   => 'typography',
 		'default'   => [
-			'font-family'    => 'Lato',
+			'font-family'    => 'Roboto Mono',
 			'variant'        => '300',
 			'font-size'      => '16px',
 			'line-height'    => '1.6',
