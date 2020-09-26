@@ -20,6 +20,7 @@
     margin-right: 24px;
     display: inline-block;
     width: auto;
+    margin-bottom: 0;
 
     @include media(laptop) {
       margin-right: 48px;
