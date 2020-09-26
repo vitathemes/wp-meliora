@@ -6,6 +6,7 @@
 			value="<?php echo get_search_query() ?>" name="s"
 			title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 	</label>
-	<input type="submit" class="c-search-form__submit search-submit"
-		value="<?php echo esc_attr_x( '🔍', 'submit button' ) ?>" />
+    <button type="submit" class="c-search-form__submit search-submit">
+        <span class="dashicons dashicons-search"></span>
+    </button>
 </form>

@@ -6,55 +6,50 @@
  *
  * @package wp_meliora
  */
-
-get_header();
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<main id="primary" class="site-main">
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<main id="primary" class="site-main">
+    <div class="site-main__container default-max-width">
+        <div class="c-header--404">
+            <div class="c-header__branding">
+				<?php
+				wp_meliora_branding();
+				?>
+            </div><!-- .site-branding -->
+        </div>
+        <section class="error-404 not-found">
+            <div>
+                <span class="not-found__error">404</span>
+            </div>
+            <header class="page-header">
+                <h1 class="page-title"><?php esc_html_e( 'Page not found - 404', 'wp_meliora' ); ?></h1>
+            </header><!-- .page-header -->
+            <div class="page-content">
+                <p><?php esc_html_e( 'This page not found (deleted or never exists). try a phrase in search box or back to home and start again.', 'wp_meliora' ); ?></p>
+                <div class="not-found__actions">
+                    <a class="not-found__actions__link">Take me home
+                        <span class="dashicons dashicons-arrow-right-alt2"></span></a>
+                </div>
+				<?php
+				get_search_form();
+				?>
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp_meliora' ); ?></h1>
-			</header><!-- .page-header -->
+            </div><!-- .page-content -->
+        </section><!-- .error-404 -->
+    </div>
+</main><!-- #main -->
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp_meliora' ); ?></p>
+<?php wp_footer(); ?>
 
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wp_meliora' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$wp_meliora_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp_meliora' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_meliora_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+</body>
+</html>

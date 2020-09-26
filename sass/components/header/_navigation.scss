@@ -101,6 +101,7 @@
   }
 
   a {
+    font-weight: var(--heading-typography-variant);
     transition: $global-transition;
     display: block;
     text-decoration: none;

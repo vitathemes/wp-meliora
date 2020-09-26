@@ -33,6 +33,7 @@
 .c-post__tags {
   display: flex;
   flex-wrap: wrap;
+  clear: both;
 }
 
 .c-post:not(.c-post--archive) .c-post__tags {
@@ -57,7 +58,7 @@
   }
 }
 
-.blog .c-post, .archive .c-post {
+.blog .c-post, .archive .c-post, .search .c-post {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -103,13 +104,22 @@
 }
 
 .c-post__meta--date-author {
-  margin: 40px 0 48px;
+  margin: 30px 0 24px;
   font-size: 0.75em;
   color: $wp-meliora__neutral-dark-gray-color;
+
+
+  @include media(laptop) {
+    margin: 40px 0 48px;
+  }
 }
 
 .c-post__thumbnail {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+
+  @include media(laptop) {
+    margin-bottom: 48px;
+  }
 }
 
 .c-post.c-post--single {

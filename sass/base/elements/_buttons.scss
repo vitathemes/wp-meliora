@@ -2,19 +2,16 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+	border: none;
+	font-weight: var(--heading-typography-variant);
+	padding: 16px 24px;
+	background-color: $wp-meliora__main-primary-light-color;
+	color: $wp-meliora__neutral-white;
 	border-radius: $global-radius;
-	border: 0;
-	background: $wp-meliora__primary-color;
-	color: #fff;
-	line-height: 1;
-	padding: 0;
+	cursor: pointer;
+	transition: $global-transition;
 
 	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
+		background-color: $wp-meliora__main-primary-dark-color;
 	}
 }

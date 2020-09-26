@@ -9,10 +9,22 @@
   .form-submit {
     margin: 0;
   }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+
+  .comment-list {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .comments-title {
-  margin: 0 0 8px;
+  margin: 0 0 48px;
+  line-height: 1.75;
 }
 
 .comments-header {
@@ -37,10 +49,24 @@
   display: block;
 }
 
+.c-comments .comment-list > li, .c-comments .comment-list > .comment {
+  padding: 24px 0;
+  margin: 0;
+  border-bottom: 1px solid #d4d4d4;
+}
+
 .comment {
   list-style: none;
   padding: 0;
   margin: 24px 0;
+
+  .comment-respond {
+    margin-top: 40px;
+
+    .comment-form {
+      margin-bottom: 24px;
+    }
+  }
 
   & > li > ol.children {
     border-bottom: 0;
@@ -85,8 +111,8 @@
   }
 
   .comment {
-    padding: 20px 10px;
-    margin: 5px 0;
+    padding: 20px 10px 10px;
+    margin: 20px 0 0;
   }
 
   .comment-meta {
@@ -136,18 +162,11 @@ ol.children {
 }
 
 ol.children:last-child {
-  border-bottom: 1px solid #d4d4d4;
+
 }
 
 .comment-navigation {
   margin-bottom: 40px;
-}
-
-
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row nowrap;
 }
 
 .comments > .comment:first-child {
@@ -281,7 +300,7 @@ ol.children:last-child {
 
   input {
     margin-top: 0.4em;
-	  margin-right: 0.5em;
+    margin-right: 0.5em;
   }
 
   label {
@@ -297,7 +316,7 @@ ol.children:last-child {
 }
 
 #cancel-comment-reply-link {
-  font-size: 0.5em;
+  font-size: 0.75rem;
   margin-left: 2em;
 }
 
@@ -316,13 +335,25 @@ ol.children:last-child {
 }
 
 .form-submit {
-	width: 100%;
+  width: 100%;
 
-	input, [type="submit"] {
-		font-weight: var(--heading-typography-variant);
-		padding: 16px 24px;
-		background-color: $wp-meliora__main-primary-light-color;
-		color: $wp-meliora__neutral-white;
-		border-radius: $global-radius;
-	}
+  input, [type="submit"] {
+    font-weight: var(--heading-typography-variant);
+    padding: 16px 24px;
+    background-color: $wp-meliora__main-primary-light-color;
+    color: $wp-meliora__neutral-white;
+    border-radius: $global-radius;
+    cursor: pointer;
+    transition: $global-transition;
+
+    &:hover {
+      background-color: $wp-meliora__main-primary-dark-color;
+    }
+  }
+}
+
+.no-comments {
+  margin-top: 24px;
+  font-weight: var(--heading-typography-variant);
+  text-align: center;
 }

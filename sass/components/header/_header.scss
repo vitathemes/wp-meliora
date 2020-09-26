@@ -65,9 +65,12 @@
   color: $wp-meliora__secondary-color;
   text-decoration: none;
 
-
   &:visited {
     color: $wp-meliora__secondary-color;
+
+    &:hover {
+      color: $wp-meliora__primary-color;
+    }
   }
 }
 
@@ -76,5 +79,15 @@
 @include media(laptop) {
   .c-header__navigation {
     order: 1;
+  }
+}
+
+
+// 404 Header
+.c-header--404 {
+  margin: 48px 0 0;
+
+  @include media(laptop) {
+    margin: 64px 0 0;
   }
 }

@@ -137,7 +137,6 @@ function wp_meliora_post_tags_archive() {
 	$tags = get_the_tags();
 	if ( $tags ) {
 		echo '<div class="c-post__tags">';
-		//["term_id"]=> int(6) ["name"]=> string(3) "HCI" ["slug"]=> string(3) "hci" ["term_group"]=> int(0) ["term_taxonomy_id"]=> int(6) ["taxonomy"]=> string(8) "post_tag" ["description"]=> string(0) "" ["parent"]=> int(0) ["count"]=> int(2) ["filter"]=> string(3) "raw" } };
 		$i = 0;
 		foreach ( $tags as $tag ) {
 			$i ++;
@@ -153,12 +152,24 @@ function wp_meliora_post_tags_archive() {
 	}
 }
 
+function wp_meliora_post_tags_single() {
+	$tags = get_the_tags();
+	if ( $tags ) {
+		echo '<div class="c-post__tags">';
+		foreach ( $tags as $tag ) { ?>
+            <a aria-label="<?php echo $tag->name; ?>" class="c-post__tags__tag" href="<?php echo get_tag_link( $tag->term_id ); ?>">#<?php echo $tag->name; ?></a>
+			<?php
+		}
+		echo '</div>';
+	}
+}
+
 function wp_meliora_categories_list() { ?>
     <li class="<?php if ( is_home() ) {
 		echo "current-cat";
 	} ?>"><a href="<?php echo wp_meliora_get_blog_posts_page_url(); ?>">All</a></li>
 	<?php
-	wp_list_categories( array( 'title_li' => '' ) );
+	wp_list_categories( array( 'title_li' => '', 'depth' => 1 ) );
 }
 
 function wp_meliora_get_blog_posts_page_url() {

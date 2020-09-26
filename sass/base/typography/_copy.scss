@@ -1,8 +1,9 @@
 * {
 	word-wrap: break-word;
+  white-space: normal;
 }
 
-*:not(h1, h2, h3, h4, h5, h6) {
+*:not(h1, h2, h3, h4, h5, h6, b, strong) {
 	font-weight: var(--text-typography-variant);
 }
 
@@ -88,6 +89,6 @@ big {
 	mark,
 	ins
 	{
-		color: $wp-meliora__main-primary-dark-color;
+		color: $wp-meliora__tertiary-color;
 	}
 }

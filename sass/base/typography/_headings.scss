@@ -28,7 +28,7 @@ h2, .h2, h2 * {
 
 h3, .h3, h3 *{
 	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.45em) , 7em);
+	font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.4em) , 7em);
 	color: var(--tertiary-color);
 	line-height: 1.154;
 	font-weight: var(--heading-typography-variant);
@@ -36,7 +36,7 @@ h3, .h3, h3 *{
 
 h4, .h4, h4 * {
 	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.6em) , 6em);
+	font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.5em) , 6em);
 	color: var(--tertiary-color);
 	line-height: 1.15;
 	font-weight: var(--heading-typography-variant) !important;
@@ -44,7 +44,7 @@ h4, .h4, h4 * {
 
 h5, .h5, h5 * {
 	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.75em) , 5em);
+	font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.6em) , 5em);
 	color: var(--tertiary-color);
 	line-height: 1.205;
 	font-weight: var(--heading-typography-variant) !important;
@@ -52,7 +52,7 @@ h5, .h5, h5 * {
 
 h6, .h6, h6 * {
 	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 1em) , 4em);
+	font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 0.7em) , 4em);
 	color: var(--tertiary-color);
 	line-height: 1.194;
 	font-weight: var(--heading-typography-variant) !important;
