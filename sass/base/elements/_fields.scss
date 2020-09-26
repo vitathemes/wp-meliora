@@ -14,15 +14,19 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $digital-interface__main-primary-light-color;
+	color: $wp-meliora__main-primary-light-color;
 	border: none;
 	border-radius: $global-radius;
-	background-color: $digital-interface__neutral-gray-light-color;
+	background-color: $wp-meliora__neutral-gray-light-color;
 	padding-right: 8px;
 	padding-left: 14px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	font-size: 0.75rem;
+	line-height: 1.5em;
 
 	&::placeholder {
-		color: $digital-interface__main-primary-light-color;
+		color: $wp-meliora__main-primary-light-color;
 		opacity: 1;
 	}
 
@@ -32,10 +36,10 @@ textarea {
 }
 
 select {
-	color: $digital-interface__main-primary-light-color;
+	color: $wp-meliora__main-primary-light-color;
 	border: none;
 	border-radius: $global-radius;
-	background-color: $digital-interface__neutral-gray-light-color;
+	background-color: $wp-meliora__neutral-gray-light-color;
 	padding: 10px 14px;
 }
 

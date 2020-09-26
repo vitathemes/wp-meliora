@@ -54,7 +54,7 @@
 
 .c-header__navigation__toggle {
   background-color: transparent;
-  color: $digital-interface__secondary-color;
+  color: $wp-meliora__secondary-color;
 }
 
 .c-header__branding__title {
@@ -62,12 +62,12 @@
 }
 
 .c-header__branding__title__link {
-  color: $digital-interface__secondary-color;
+  color: $wp-meliora__secondary-color;
   text-decoration: none;
 
 
   &:visited {
-    color: $digital-interface__secondary-color;
+    color: $wp-meliora__secondary-color;
   }
 }
 

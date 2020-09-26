@@ -1,15 +1,15 @@
 a {
-	color: $digital-interface__secondary-color;
+	color: $wp-meliora__secondary-color;
 	transition: $global-transition;
 
 	&:visited {
-		color: $digital-interface__secondary-color;
+		color: $wp-meliora__secondary-color;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $digital-interface__primary-color;
+		color: $wp-meliora__primary-color;
 	}
 
 	&:focus {

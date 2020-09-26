@@ -4,20 +4,20 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('c-post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('c-post c-post--archive'); ?>>
 	<header class="c-post__header entry-header">
 		<?php
 		if ( 'post' === get_post_type() ) :
 			?>
             <div class="c-post__meta entry-meta">
 				<?php
-				digital_interface_posted_on();
-				//digital_interface_posted_by();
+				wp_meliora_posted_on();
+				//wp_meliora_posted_by();
 				?>
             </div><!-- .entry-meta -->
 		<?php endif;
@@ -29,17 +29,15 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php digital_interface_post_thumbnail(); ?>
-
     <?php if (is_singular()): ?>
 	<div class="c-post__content entry-content">
-		<?php digital_interface_post_content(); ?>
+		<?php wp_meliora_post_content(); ?>
 		<?php
 
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'digital_interface' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp_meliora' ),
 				'after'  => '</div>',
 			)
 		);
@@ -48,11 +46,11 @@
 
 
 	<footer class="c-post__footer entry-footer">
-		<?php digital_interface_entry_footer(); ?>
+		<?php wp_meliora_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
     <?php else: ?>
 
-        <?php digital_interface_post_tags_archive(); ?>
+        <?php wp_meliora_post_tags_archive(); ?>
 
     <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

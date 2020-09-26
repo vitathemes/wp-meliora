@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses digital_interface_header_style()
+ * @uses wp_meliora_header_style()
  */
-function digital_interface_custom_header_setup() {
+function wp_meliora_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'digital_interface_custom_header_args',
+			'wp_meliora_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'digital_interface_header_style',
+				'wp-head-callback'   => 'wp_meliora_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'digital_interface_custom_header_setup' );
+add_action( 'after_setup_theme', 'wp_meliora_custom_header_setup' );
 
-if ( ! function_exists( 'digital_interface_header_style' ) ) :
+if ( ! function_exists( 'wp_meliora_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see digital_interface_custom_header_setup().
+	 * @see wp_meliora_custom_header_setup().
 	 */
-	function digital_interface_header_style() {
+	function wp_meliora_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 get_header();

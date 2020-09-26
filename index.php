@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 get_header();
@@ -20,7 +20,7 @@ get_header();
             <div class="site-main__content">
                 <div class="c-categories-list">
                     <ul class="c-categories-list__list js-categories-list s-categories-list" data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "variableWidth": true}'>
-	                    <?php digital_interface_categories_list(); ?>
+	                    <?php wp_meliora_categories_list(); ?>
                     </ul>
                 </div>
 				<?php

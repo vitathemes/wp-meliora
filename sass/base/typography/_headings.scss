@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: $digital-interface__secondary-font;
+	font-family: $wp-meliora__secondary-font;
 	font-weight: var(--heading-typography-variant);
 	margin: 0 0 1.25em;
 }
@@ -14,7 +14,7 @@ h1, .h1, h1 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(1em, var(--heading-typography-font-size) , 10em);
 	color: var(--tertiary-color);
-	line-height: 1.175;
+	line-height: 1.5;
 	font-weight: var(--heading-typography-variant) !important;
 }
 

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function digital_interface_jetpack_setup() {
+function wp_meliora_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'digital_interface_infinite_scroll_render',
+			'render'    => 'wp_meliora_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function digital_interface_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'digital_interface-style',
+				'stylesheet' => 'wp_meliora-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function digital_interface_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'digital_interface_jetpack_setup' );
+add_action( 'after_setup_theme', 'wp_meliora_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function digital_interface_infinite_scroll_render() {
+function wp_meliora_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

@@ -1,5 +1,5 @@
 .c-categories-list {
-  border-bottom: 1px solid $digital-interface__neutral-gray-color;
+  border-bottom: 1px solid $wp-meliora__neutral-gray-color;
   margin: 0 12px;
 
   @include media(laptop) {
@@ -30,8 +30,8 @@
   li.current-cat {
 
     a {
-      color: $digital-interface__secondary-color;
-      border-bottom: 2px solid $digital-interface__neutral-dark-gray-color;
+      color: $wp-meliora__secondary-color;
+      border-bottom: 2px solid $wp-meliora__neutral-dark-gray-color;
     }
   }
 
@@ -39,13 +39,13 @@
     font-weight: var(--heading-typography-variant);
     text-decoration: none;
     padding: 0 0 8px;
-    color: $digital-interface__neutral-dark-gray-color;
+    color: $wp-meliora__neutral-dark-gray-color;
     word-wrap: normal;
     white-space: nowrap;
     display: block;
 
     &:hover {
-      color: $digital-interface__secondary-color;
+      color: $wp-meliora__secondary-color;
     }
   }
 }

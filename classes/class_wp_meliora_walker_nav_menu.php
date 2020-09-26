@@ -1,7 +1,7 @@
 <?php
 
 
-class Di_walker_nav_menu extends Walker_Nav_Menu {
+class Wp_meliora_walker_nav_menu extends Walker_Nav_Menu {
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$object      = $item->object;
 		$type        = $item->type;

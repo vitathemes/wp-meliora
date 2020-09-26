@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 /*
@@ -20,44 +20,50 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="c-comments comments-area">
 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
+		comment_form( array( 'label_submit'  => 'Post',
+		                     'title_reply'   => 'Add a comment',
+		                     'comment_field' => '<p class="comment-form-comment"><label for="comment">Comment*</label> <textarea id="comment" name="comment" cols="45" rows="3" maxlength="20000" required="required" spellcheck="false"></textarea></p>'
+		) );
 		?>
-		<h2 class="comments-title">
+        <h2 class="comments-title">
 			<?php
-			$digital_interface_comment_count = get_comments_number();
-			if ( '1' === $digital_interface_comment_count ) {
+			$wp_meliora_comment_count = get_comments_number();
+			if ( '1' === $wp_meliora_comment_count ) {
 				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'digital_interface' ),
+				/* translators: 1: title. */
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wp_meliora' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $digital_interface_comment_count, 'comments title', 'digital_interface' ) ),
-					number_format_i18n( $digital_interface_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf(
+				/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $wp_meliora_comment_count, 'comments title', 'wp_meliora' ) ),
+					number_format_i18n( $wp_meliora_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}
 			?>
-		</h2><!-- .comments-title -->
+        </h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
+        <ol class="comment-list">
 			<?php
 			wp_list_comments(
 				array(
+					'walker'     => new Wp_meliora_walker_comment(),
 					'style'      => 'ol',
 					'short_ping' => true,
+					'avatar_size' => 70,
 				)
 			);
 			?>
-		</ol><!-- .comment-list -->
+        </ol><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();
@@ -65,13 +71,11 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'digital_interface' ); ?></p>
-			<?php
+            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp_meliora' ); ?></p>
+		<?php
 		endif;
 
 	endif; // Check for have_comments().
-
-	comment_form();
 	?>
 
 </div><!-- #comments -->

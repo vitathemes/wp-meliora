@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Digital_Interface
+ * @package wp_meliora
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

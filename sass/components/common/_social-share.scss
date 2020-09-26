@@ -1,0 +1,28 @@
+.c-social-share {
+  display: flex;
+  flex-direction: row;
+  min-height: 20px;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+    margin-right: 24px;
+  }
+}
+
+.c-social-share__link {
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  margin-right: 24px;
+
+  &:hover {
+    .c-social-share__link__icon {
+      color: $wp-meliora__primary-color;
+    }
+  }
+}
+
+.c-social-share__link__icon {
+  color: $wp-meliora__secondary-color;
+}

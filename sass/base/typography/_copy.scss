@@ -20,16 +20,16 @@ i {
 
 blockquote {
 	margin: 0;
-	border-left: 2px solid $digital-interface__neutral-dark-gray-color;
+	border-left: 2px solid $wp-meliora__neutral-dark-gray-color;
 	padding-left: 64px;
-	color: $digital-interface__secondary-color;
+	color: $wp-meliora__secondary-color;
 	font-weight: bold;
 	font-size: 19px;
 	line-height: 32px;
 	letter-spacing: 0.1em;
 
 	cite {
-		color: $digital-interface__tertiary-color;
+		color: $wp-meliora__tertiary-color;
 		font-weight: 400;
 		font-size: 19px;
 		line-height: 32px;
@@ -43,20 +43,20 @@ address {
 
 pre {
 	background: $color__background-pre;
-	font-family: $digital-interface__secondary-font;
+	font-family: $wp-meliora__secondary-font;
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
-	color: $digital-interface__secondary-color;
+	color: $wp-meliora__secondary-color;
 }
 
 code,
 kbd,
 tt,
 var {
-	font-family: $digital-interface__secondary-font;
+	font-family: $wp-meliora__secondary-font;
 }
 
 abbr,
@@ -88,6 +88,6 @@ big {
 	mark,
 	ins
 	{
-		color: $digital-interface__main-primary-dark-color;
+		color: $wp-meliora__main-primary-dark-color;
 	}
 }
