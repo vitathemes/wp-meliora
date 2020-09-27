@@ -85,6 +85,7 @@ https://flickity.metafizzy.co
     border-radius: 50%;
     /* vertically center */
     transform: translateY(-50%);
+    padding: 16px 5px;
 
     @include media(laptop) {
         width: 30px;
@@ -95,13 +96,13 @@ https://flickity.metafizzy.co
 .flickity-prev-next-button.previous {
     left: -22px;
     @include media(laptop) {
-        left: -30px;
+        left: -35px;
     }
 }
 .flickity-prev-next-button.next {
     right: -22px;
     @include media(laptop) {
-        right: -30px;
+        right: -35px;
     }
 }
 /* right to left */

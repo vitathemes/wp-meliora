@@ -1,11 +1,11 @@
 /*!
-Theme Name: Digital Interface
-Theme URI: http://underscores.me/
+Theme Name: WP-Meliora
+Theme URI: https://vitathemes.com/theme/wp-meliora/
 Author: VitaThemes
 Author URI: https://vitathemes.com
-Description: Just another minimal WordPress theme
+Description: A minimal & mobile-first blog theme. The best choice for people who want to start blogging as soon as possible.
 Version: 1.0.0
-Tested up to: 5.4
+Tested up to: 5.5.1
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -2155,7 +2155,7 @@ ol.children {
 .s-categories-list a {
 	font-weight: var(--heading-typography-variant);
 	text-decoration: none;
-	padding: 0 0 8px;
+	padding: 0 4px 8px;
 	color: #ABABAB;
 	word-wrap: normal;
 	white-space: nowrap;
@@ -2234,6 +2234,47 @@ ol.children {
 
 .c-social-share__link__icon {
 	color: var(--secondary-color);
+}
+
+/* Footer
+--------------------------------------------- */
+.c-footer {
+	background-color: #F4F4F4;
+	padding: 0;
+	font-size: 0.75rem;
+}
+
+.c-footer__top {
+	background-color: #FFFFFF;
+}
+
+.c-footer__top__back-to-top__link {
+	width: 63px;
+	height: 63px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 5px;
+	text-decoration: none;
+	border-radius: 50%;
+	transform: translateY(27px);
+}
+
+.c-footer__top__back-to-top__link .dashicons {
+	font-size: 14px;
+}
+
+.c-footer__top__back-to-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.c-footer__bottom {
+	padding: 40px 0;
 }
 
 /*--------------------------------------------------------------
@@ -2324,6 +2365,7 @@ https://flickity.metafizzy.co
 	border-radius: 50%;
 	/* vertically center */
 	transform: translateY(-50%);
+	padding: 16px 5px;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -2339,7 +2381,7 @@ https://flickity.metafizzy.co
 
 @media only screen and (min-width: 1140px) {
 	.flickity-prev-next-button.previous {
-		left: -30px;
+		left: -35px;
 	}
 }
 
@@ -2349,7 +2391,7 @@ https://flickity.metafizzy.co
 
 @media only screen and (min-width: 1140px) {
 	.flickity-prev-next-button.next {
-		right: -30px;
+		right: -35px;
 	}
 }
 
