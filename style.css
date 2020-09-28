@@ -897,21 +897,35 @@ textarea {
 
 .site.is-content-sidebar .site-main__container {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1140px) {
+	.site.is-content-sidebar .site-main__container {
+		flex-wrap: nowrap;
+	}
 }
 
 .site.is-content-sidebar .site-main__content {
 	flex-grow: 1;
-	width: 62%;
-	order: 1;
+	order: 2;
+	width: 100%;
+}
+
+@media only screen and (min-width: 1140px) {
+	.site.is-content-sidebar .site-main__content {
+		width: 62%;
+	}
 }
 
 .site.is-content-sidebar .c-sidebar {
-	width: 38%;
+	width: 100%;
 	order: 2;
 }
 
 @media only screen and (min-width: 1140px) {
 	.site.is-content-sidebar .c-sidebar {
+		width: 38%;
 		padding-left: 100px;
 	}
 }
