@@ -146,6 +146,7 @@ function wp_meliora_post_tags_archive() {
 				$tags_count = count( $tags ) - 3; ?>
                 <span class="c-post__tags__tag c-post__tags__tag--more"><?php echo "+" . $tags_count; ?></span>
 				<?php
+                break;
 			}
 		}
 		echo '</div>';
