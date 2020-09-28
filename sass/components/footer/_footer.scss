@@ -37,3 +37,59 @@
 .c-footer__bottom {
   padding: 40px 0;
 }
+
+.c-footer__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media(laptop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.c-footer__copyright {
+  padding: 0 15px;
+  margin-top: 10px;
+
+  p {
+    margin: 0;
+  }
+
+  @include media(laptop) {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+.c-footer__socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 42px;
+  padding: 0 15px;
+
+  @include media(laptop) {
+    width: auto;
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+.s-footer-socials {
+
+  a {
+    text-decoration: none;
+    color: $wp-meliora__secondary-color;
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $wp-meliora__primary-color;
+    }
+  }
+}

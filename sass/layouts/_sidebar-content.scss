@@ -1,33 +1,40 @@
 .site.is-sidebar-content {
 
-	.site-main__container {
-		display: flex;
-		flex-wrap: wrap;
+  .site-main__container {
+    display: flex;
+    flex-wrap: wrap;
 
-		@include media(laptop) {
-			flex-wrap: nowrap;
-		}
-	}
+    @include media(laptop) {
+      flex-wrap: nowrap;
+    }
+  }
 
-	.site-main__content {
-		flex-grow: 1;
-		order: 2;
-		width: 100%;
+  .c-sidebar {
+    @include media(laptop) {
+      padding-right: 100px;
+    }
+  }
 
-		@include media(laptop) {
-			width: 62%;
-		}
-	}
 
-	.sidebar {
-		width: 100%;
-		order: 2;
+  .site-main__content {
+    flex-grow: 1;
+    order: 2;
+    width: 100%;
 
-		@include media(laptop) {
-			width: $size__site-sidebar;
-			order: 1;
-		}
-	}
+    @include media(laptop) {
+      width: 62%;
+    }
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 2;
+
+    @include media(laptop) {
+      width: $size__site-sidebar;
+      order: 1;
+    }
+  }
 }
 
 .site-header {
@@ -36,7 +43,7 @@
 
 .site-main {
   width: auto;
-	flex-grow: 1;
+  flex-grow: 1;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 

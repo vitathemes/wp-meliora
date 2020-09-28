@@ -1,24 +1,28 @@
 .site.is-content-sidebar {
-	.site-main__container {
-		display: flex;
-	}
+  .site-main__container {
+    display: flex;
+  }
 
-	.site-main__content {
-		flex-grow: 1;
-		width: 62%;
-		order: 1;
-	}
+  .site-main__content {
+    flex-grow: 1;
+    width: 62%;
+    order: 1;
+  }
 
-	.sidebar {
-		width: $size__site-sidebar;
-		order: 2;
-	}
+  .c-sidebar {
+    width: $size__site-sidebar;
+    order: 2;
+
+    @include media(laptop) {
+      padding-left: 100px;
+    }
+  }
 }
 
 .site-header {
-	width: 100%;
+  width: 100%;
 }
 
 .site-footer {
-	width: 100%;
+  width: 100%;
 }

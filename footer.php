@@ -21,17 +21,14 @@
     </div>
     <div class="c-footer__bottom site-info">
         <div class="u-default-max-width">
-            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp_meliora' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wp_meliora' ), 'WordPress' );
-				?>
-            </a>
-            <span class="sep"> | </span>
-			<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'wp_meliora' ), 'WP-Meliora', '<a href="https://vitathemes.com">VitaThemes</a>' );
-			?>
+          <div class="c-footer__grid">
+              <div class="c-footer__copyright">
+                  <?php echo get_theme_mod('copyright_text', '<a href="https://wordpress.org/" class="customize-unpreviewable">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: WP-Meliora by <a href="https://vitathemes.com" class="customize-unpreviewable">VitaThemes</a>.'); ?>
+              </div>
+              <div class="c-footer__socials s-footer-socials">
+                  <?php wp_meliora_socials_links(); ?>
+              </div>
+          </div>
         </div><!-- .site-info -->
     </div>
 </footer><!-- #colophon -->

@@ -233,3 +233,32 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+if ( ! function_exists( 'wp_meliora_socials_links' ) ) :
+	/**
+	 * Display Social Networks
+	 */
+	function wp_meliora_socials_links() {
+		$wp_meliora_facebook = get_theme_mod('facebook', "");
+		$wp_meliora_twitter = get_theme_mod('twitter', "");
+		$wp_meliora_instagram = get_theme_mod('instagram', "");
+		$wp_meliora_linkedin = get_theme_mod('linkedin', "");
+
+		if ($wp_meliora_facebook) {
+		    echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url($wp_meliora_facebook));
+        }
+
+		if ($wp_meliora_twitter) {
+			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-twitter"></span></a>', esc_url($wp_meliora_twitter));
+		}
+
+		if ($wp_meliora_instagram) {
+			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-instagram"></span></a>', esc_url($wp_meliora_instagram));
+		}
+
+		if ($wp_meliora_linkedin) {
+			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-linkedin"></span></a>', esc_url($wp_meliora_linkedin));
+		}
+	}
+endif;

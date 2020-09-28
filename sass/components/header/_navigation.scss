@@ -85,7 +85,8 @@
     }
 
     li:hover > ul,
-    li.focus > ul {
+    li.focus > ul,
+    li:focus-within > ul {
       left: auto;
       display: block;
     }
@@ -167,13 +168,15 @@
 /* Small menu. */
 .main-navigation.toggled > ul {
   display: block;
-  width: 100%;
+  width: calc(100% + 30px);
+  left: -15px;
+  padding: 0 15px;
   position: absolute;
   top: 64px;
   background-color: $wp-meliora__neutral-white;
-  z-index: 9;
   padding-bottom: 10px;
   border-bottom: 1px solid $wp-meliora__neutral-gray-light-color;
+  z-index: 9;
 }
 
 @media screen and (min-width: 37.5em) {
