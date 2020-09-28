@@ -247,8 +247,8 @@ if ( ! function_exists( 'wp_meliora_socials_links' ) ) :
 		$wp_meliora_linkedin = get_theme_mod('linkedin', "");
 
 		if ($wp_meliora_facebook) {
-		    echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url($wp_meliora_facebook));
-        }
+			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url($wp_meliora_facebook));
+		}
 
 		if ($wp_meliora_twitter) {
 			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-twitter"></span></a>', esc_url($wp_meliora_twitter));
@@ -263,3 +263,26 @@ if ( ! function_exists( 'wp_meliora_socials_links' ) ) :
 		}
 	}
 endif;
+
+if ( ! function_exists( 'wp_meliora_site_layout_class' ) ) :
+	/**
+	 * Generate Site Layout Class
+	 */
+	function wp_meliora_site_layout_class() {
+		$wp_meliora_site_layout = get_theme_mod('site_layout', "left");
+
+		if ($wp_meliora_site_layout == "left") {
+			echo esc_html('is-sidebar-content');
+		}
+
+		if ($wp_meliora_site_layout == "center") {
+			echo esc_html('no-sidebar');
+		}
+
+		if ($wp_meliora_site_layout == "right") {
+			echo esc_html('is-content-sidebar');
+		}
+
+	}
+endif;
+

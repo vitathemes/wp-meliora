@@ -91,13 +91,6 @@ add_action( 'init', function () {
 		'priority' => 4,
 	) );
 
-	// Home Page
-	Kirki::add_section( 'blogpage', array(
-		'title'    => esc_html__( 'Blog Settings', 'wp_meliora' ),
-		'panel'    => '',
-		'priority' => 4,
-	) );
-
 // Typography
 	Kirki::add_section( 'typography', array(
 		'title'    => esc_html__( 'Typography', 'wp_meliora' ),
@@ -106,8 +99,8 @@ add_action( 'init', function () {
 	) );
 
 // Elements
-	Kirki::add_section( 'elements', array(
-		'title'    => esc_html__( 'Elements', 'wp_meliora' ),
+	Kirki::add_section( 'layout', array(
+		'title'    => esc_html__( 'Layout', 'wp_meliora' ),
 		'panel'    => '',
 		'priority' => 5,
 	) );
@@ -524,6 +517,25 @@ add_action( 'init', function () {
 		'label'    => __( 'Primary Color', 'wp-manifest' ),
 		'section'  => 'branding',
 		'default'  => '#FFBA9D',
+	] );
+
+// </editor-fold>
+
+	// -- Layout Fields --
+// <editor-fold desc="branding">
+
+	Kirki::add_field( 'wp-manifest', [
+		'type'     => 'radio-image',
+		'settings' => 'site_layout',
+		'label'    => __( 'Layout', 'wp-manifest' ),
+		'section'  => 'layout',
+		'default'     => 'left',
+		'priority'    => 10,
+		'choices'     => [
+			'left'   => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWElEQVR42mNgGAXDE4RCQMDAKONaBQINWqtWrWBatQDIaxg8ygYqQIAOYwC6bwHUmYNH2eBPSMhgBQXKRr0w6oVRL4x6YdQLo14Y9cKoF0a9QCO3jYLhBADvmFlNY69qsQAAAABJRU5ErkJggg==',
+			'center' => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAQMAAABknzrDAAAABlBMVEX////V1dXUdjOkAAAAPUlEQVRIx2NgGAUkAcb////Y/+d/+P8AdcQoc8vhH/X/5P+j2kG+GA3CCgrwi43aMWrHqB2jdowEO4YpAACyKSE0IzIuBgAAAABJRU5ErkJggg==',
+			'right'  => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWUlEQVR42mNgGAUjB4iGgkEIzZStAoEVTECiQWsVkLdiECkboAABOmwBF9BtUGcOImUDEiCkJCQU0ECBslEvjHph1AujXhj1wqgXRr0w6oVRLwyEF0bBUAUAz/FTNXm+R/MAAAAASUVORK5CYII=',
+		],
 	] );
 
 // </editor-fold>
