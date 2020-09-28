@@ -70,7 +70,7 @@ add_action( 'init', function () {
 
 
 // Add config
-	Kirki::add_config( 'wp_meliora', array(
+	Kirki::add_config( 'wp-meliora', array(
 		'option_type' => 'theme_mod'
 	) );
 
@@ -78,7 +78,7 @@ add_action( 'init', function () {
 // <editor-fold desc="Sections">
 // Branding
 	Kirki::add_section( 'branding', array(
-		'title'    => esc_html__( 'Branding', 'wp_meliora' ),
+		'title'    => esc_html__( 'Branding', 'wp-meliora' ),
 		'panel'    => '',
 		'priority' => 3,
 	) );
@@ -86,28 +86,28 @@ add_action( 'init', function () {
 
 // Home Page
 	Kirki::add_section( 'homepage', array(
-		'title'    => esc_html__( 'Homepage', 'wp_meliora' ),
+		'title'    => esc_html__( 'Homepage', 'wp-meliora' ),
 		'panel'    => '',
 		'priority' => 4,
 	) );
 
 // Typography
 	Kirki::add_section( 'typography', array(
-		'title'    => esc_html__( 'Typography', 'wp_meliora' ),
+		'title'    => esc_html__( 'Typography', 'wp-meliora' ),
 		'panel'    => '',
 		'priority' => 4,
 	) );
 
 // Elements
 	Kirki::add_section( 'layout', array(
-		'title'    => esc_html__( 'Layout', 'wp_meliora' ),
+		'title'    => esc_html__( 'Layout', 'wp-meliora' ),
 		'panel'    => '',
 		'priority' => 5,
 	) );
 
 	// Header
 	Kirki::add_section( 'header', array(
-		'title'    => esc_html__( 'Header', 'wp_meliora' ),
+		'title'    => esc_html__( 'Header', 'wp-meliora' ),
 		'panel'    => '',
 		'priority' => 6,
 	) );
@@ -121,13 +121,13 @@ add_action( 'init', function () {
 
 
 	Kirki::add_section( 'socials', array(
-		'title'    => esc_html__( 'Socials', 'wp_meliora' ),
+		'title'    => esc_html__( 'Socials', 'wp-meliora' ),
 		'panel'    => 'footer',
 		'priority' => 6,
 	) );
 
 	Kirki::add_section( 'copyright', array(
-		'title'    => esc_html__( 'Copyright', 'wp_meliora' ),
+		'title'    => esc_html__( 'Copyright', 'wp-meliora' ),
 		'panel'    => 'footer',
 		'priority' => 6,
 	) );
@@ -136,10 +136,10 @@ add_action( 'init', function () {
 
 
 // Header
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'toggle',
 		'settings' => 'search_icon_header',
-		'label'    => esc_html__( 'Search Icon', 'wp_meliora' ),
+		'label'    => esc_html__( 'Search Icon', 'wp-meliora' ),
 		'section'  => 'header',
 		'default'  => 1,
 		'priority' => 10,
@@ -147,10 +147,10 @@ add_action( 'init', function () {
 // Header
 	// -- Typography Fields --
 	// <editor-fold desc="Typography">
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'      => 'typography',
 		'settings'  => 'headings_typography',
-		'label'     => esc_html__( 'Headlines', 'wp_meliora' ),
+		'label'     => esc_html__( 'Headlines', 'wp-meliora' ),
 		'section'   => 'typography',
 		'default'   => [
 			'font-family'    => 'Roboto Mono',
@@ -421,18 +421,18 @@ add_action( 'init', function () {
 		),
 	] );
 
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'color',
 		'settings' => 'headings_typography_color',
-		'label'    => __( 'Headings Color', 'wp_meliora' ),
+		'label'    => __( 'Headings Color', 'wp-meliora' ),
 		'section'  => 'typography',
 		'default'  => '#000',
 	] );
 
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'      => 'typography',
 		'settings'  => 'text_typography',
-		'label'     => esc_html__( 'Texts', 'wp_meliora' ),
+		'label'     => esc_html__( 'Texts', 'wp-meliora' ),
 		'section'   => 'typography',
 		'default'   => [
 			'font-family'    => 'Roboto Mono',
@@ -451,10 +451,10 @@ add_action( 'init', function () {
 		),
 	] );
 
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'color',
 		'settings' => 'text_typography_color',
-		'label'    => __( 'Text Color', 'wp_meliora' ),
+		'label'    => __( 'Text Color', 'wp-meliora' ),
 		'section'  => 'typography',
 		'default'  => '#565656',
 	] );
@@ -463,34 +463,34 @@ add_action( 'init', function () {
 
 // Footer
 	// -- Socials --
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'link',
 		'settings' => 'facebook',
-		'label'    => esc_html__( 'Facebook', 'wp_meliora' ),
+		'label'    => esc_html__( 'Facebook', 'wp-meliora' ),
 		'section'  => 'socials',
 		'priority' => 10,
 	] );
 
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'link',
 		'settings' => 'twitter',
-		'label'    => esc_html__( 'Twitter', 'wp_meliora' ),
+		'label'    => esc_html__( 'Twitter', 'wp-meliora' ),
 		'section'  => 'socials',
 		'priority' => 10,
 	] );
 
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'link',
 		'settings' => 'instagram',
-		'label'    => esc_html__( 'Instagram', 'wp_meliora' ),
+		'label'    => esc_html__( 'Instagram', 'wp-meliora' ),
 		'section'  => 'socials',
 		'priority' => 10,
 	] );
 
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'link',
 		'settings' => 'linkedin',
-		'label'    => esc_html__( 'Linkedin', 'wp_meliora' ),
+		'label'    => esc_html__( 'Linkedin', 'wp-meliora' ),
 		'section'  => 'socials',
 		'priority' => 10,
 	] );
@@ -498,10 +498,10 @@ add_action( 'init', function () {
 	// -- Socials --
 
 	// -- Copyright --
-	Kirki::add_field( 'wp_meliora', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'editor',
 		'settings' => 'copyright_text',
-		'label'    => esc_html__( 'Copyright Text', 'wp_meliora' ),
+		'label'    => esc_html__( 'Copyright Text', 'wp-meliora' ),
 		'section'  => 'copyright',
 		'default' => '<a href="https://wordpress.org/" class="customize-unpreviewable">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: WP-Meliora by <a href="https://vitathemes.com" class="customize-unpreviewable">VitaThemes</a>.',
 		'priority' => 10,
@@ -511,10 +511,10 @@ add_action( 'init', function () {
 	// -- Branding Fields --
 // <editor-fold desc="branding">
 
-	Kirki::add_field( 'wp-manifest', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'color',
 		'settings' => 'branding_primary_color',
-		'label'    => __( 'Primary Color', 'wp-manifest' ),
+		'label'    => __( 'Primary Color', 'wp-meliora' ),
 		'section'  => 'branding',
 		'default'  => '#FFBA9D',
 	] );
@@ -524,10 +524,10 @@ add_action( 'init', function () {
 	// -- Layout Fields --
 // <editor-fold desc="branding">
 
-	Kirki::add_field( 'wp-manifest', [
+	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'radio-image',
 		'settings' => 'site_layout',
-		'label'    => __( 'Layout', 'wp-manifest' ),
+		'label'    => __( 'Layout', 'wp-meliora' ),
 		'section'  => 'layout',
 		'default'     => 'left',
 		'priority'    => 10,

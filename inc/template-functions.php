@@ -142,7 +142,7 @@ function wp_meliora_theme_settings() {
 	$wp_meliora_theme_typography   = wp_meliora_typography();
 	?>
     <style>
-        <?php echo $wp_meliora_theme_typography; ?>
+        <?php echo esc_html($wp_meliora_theme_typography); ?>
     </style>
 	<?php
 }

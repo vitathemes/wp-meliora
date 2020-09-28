@@ -21,8 +21,8 @@ get_header();
 
 //					the_post_navigation(
 //						array(
-//							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'wp_meliora' ) . '</span> <span class="nav-title">%title</span>',
-//							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'wp_meliora' ) . '</span> <span class="nav-title">%title</span>',
+//							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'wp-meliora' ) . '</span> <span class="nav-title">%title</span>',
+//							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'wp-meliora' ) . '</span> <span class="nav-title">%title</span>',
 //						)
 //					);
 

@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 		?>
         <h2 class="comments-title">
 			<?php
-			_e( 'Comments', 'wp_meliora' )
+			esc_html_e( 'Comments', 'wp-meliora' )
 			?>
         </h2><!-- .comments-title -->
 
@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp_meliora' ); ?></p>
+            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp-meliora' ); ?></p>
 		<?php
 		endif;
 

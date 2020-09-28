@@ -37,7 +37,7 @@
 
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp_meliora' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-meliora' ),
 					'after'  => '</div>',
 				)
 			);

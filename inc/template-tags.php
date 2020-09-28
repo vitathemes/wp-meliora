@@ -27,7 +27,7 @@ if ( ! function_exists( 'wp_meliora_posted_on' ) ) :
 
 		$posted_on = sprintf(
 		/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'wp_meliora' ),
+			esc_html_x( '%s', 'post date', 'wp-meliora' ),
 			$time_string
 		);
 
@@ -43,7 +43,7 @@ if ( ! function_exists( 'wp_meliora_posted_by' ) ) :
 	function wp_meliora_posted_by() {
 		$byline = sprintf(
 		/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'wp_meliora' ),
+			esc_html_x( '%s', 'post author', 'wp-meliora' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -61,17 +61,17 @@ if ( ! function_exists( 'wp_meliora_entry_footer' ) ) :
 			// Hide category and tag text for pages.
 			if ( 'post' === get_post_type() ) {
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( esc_html__( ', ', 'wp_meliora' ) );
+				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-meliora' ) );
 				if ( $categories_list ) {
 					/* translators: 1: list of categories. */
-					printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp_meliora' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-meliora' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'wp_meliora' ) );
+				$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'wp-meliora' ) );
 				if ( $tags_list ) {
 					/* translators: 1: list of tags. */
-					printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp_meliora' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-meliora' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 
@@ -81,7 +81,7 @@ if ( ! function_exists( 'wp_meliora_entry_footer' ) ) :
 					sprintf(
 						wp_kses(
 						/* translators: %s: post title */
-							__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'wp_meliora' ),
+							__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'wp-meliora' ),
 							array(
 								'span' => array(
 									'class' => array(),
@@ -98,7 +98,7 @@ if ( ! function_exists( 'wp_meliora_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'wp_meliora' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'wp-meliora' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -123,66 +123,74 @@ if ( ! function_exists( 'wp_meliora_entry_category' ) ) :
 			// Hide category and tag text for pages.
 			if ( 'post' === get_post_type() ) {
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( esc_html__( ', ', 'wp_meliora' ) );
+				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-meliora' ) );
 				if ( $categories_list ) {
 					/* translators: 1: list of categories. */
-					printf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html__( '%1$s', 'wp_meliora' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					printf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html__( '%1$s', 'wp-meliora' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 		}
 	}
 endif;
 
-function wp_meliora_post_tags_archive() {
-	$tags = get_the_tags();
-	if ( $tags ) {
-		echo '<div class="c-post__tags">';
-		$i = 0;
-		foreach ( $tags as $tag ) {
-			$i ++;
-			if ( $i <= 3 ) { ?>
-            <a aria-label="<?php echo $tag->name; ?>" class="c-post__tags__tag" href="<?php echo get_tag_link( $tag->term_id ); ?>">#<?php echo $tag->name; ?></a><?php
-			} else {
-				$tags_count = count( $tags ) - 3; ?>
-                <span class="c-post__tags__tag c-post__tags__tag--more"><?php echo "+" . $tags_count; ?></span>
-				<?php
-                break;
+if ( ! function_exists( 'wp_meliora_post_tags_archive' ) ) :
+	function wp_meliora_post_tags_archive() {
+		$tags = get_the_tags();
+		if ( $tags ) {
+			echo '<div class="c-post__tags">';
+			$i = 0;
+			foreach ( $tags as $tag ) {
+				$i ++;
+				if ( $i <= 3 ) { ?>
+                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr(get_tag_link($tag->term_id )); ?>">#<?php echo esc_html( $tag->name ); ?></a><?php
+				} else {
+					$tags_count = count( $tags ) - 3; ?>
+                    <span class="c-post__tags__tag c-post__tags__tag--more"><?php echo "+" . esc_html( $tags_count ); ?></span>
+					<?php
+					break;
+				}
 			}
+			echo '</div>';
 		}
-		echo '</div>';
 	}
-}
+endif;
 
-function wp_meliora_post_tags_single() {
-	$tags = get_the_tags();
-	if ( $tags ) {
-		echo '<div class="c-post__tags">';
-		foreach ( $tags as $tag ) { ?>
-            <a aria-label="<?php echo $tag->name; ?>" class="c-post__tags__tag" href="<?php echo get_tag_link( $tag->term_id ); ?>">#<?php echo $tag->name; ?></a>
-			<?php
+if ( ! function_exists( 'wp_meliora_post_tags_single' ) ) :
+	function wp_meliora_post_tags_single() {
+		$tags = get_the_tags();
+		if ( $tags ) {
+			echo '<div class="c-post__tags">';
+			foreach ( $tags as $tag ) { ?>
+                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr(get_tag_link( $tag->term_id )); ?>">#<?php echo esc_html($tag->name); ?></a>
+				<?php
+			}
+			echo '</div>';
 		}
-		echo '</div>';
 	}
-}
+endif;
 
-function wp_meliora_categories_list() { ?>
-    <li class="<?php if ( is_home() ) {
-		echo "current-cat";
-	} ?>"><a href="<?php echo wp_meliora_get_blog_posts_page_url(); ?>">All</a></li>
-	<?php
-	wp_list_categories( array( 'title_li' => '', 'depth' => 1 ) );
-}
-
-function wp_meliora_get_blog_posts_page_url() {
-
-	// If front page is set to display a static page, get the URL of the posts page.
-	if ( 'page' === get_option( 'show_on_front' ) ) {
-		return get_permalink( get_option( 'page_for_posts' ) );
+if ( ! function_exists( 'wp_meliora_categories_list' ) ) :
+	function wp_meliora_categories_list() { ?>
+        <li class="<?php if ( is_home() ) {
+			echo "current-cat";
+		} ?>"><a href="<?php echo esc_url(wp_meliora_get_blog_posts_page_url()); ?>"><?php esc_html_e('All','wp-meliora'); ?></a></li>
+		<?php
+		wp_list_categories( array( 'title_li' => '', 'depth' => 1 ) );
 	}
+endif;
 
-	// The front page is the posts page. Get its URL.
-	return get_home_url();
-}
+if ( ! function_exists( 'wp_meliora_get_blog_posts_page_url' ) ) :
+	function wp_meliora_get_blog_posts_page_url() {
+
+		// If front page is set to display a static page, get the URL of the posts page.
+		if ( 'page' === get_option( 'show_on_front' ) ) {
+			return get_permalink( get_option( 'page_for_posts' ) );
+		}
+
+		// The front page is the posts page. Get its URL.
+		return get_home_url();
+	}
+endif;
 
 if ( ! function_exists( 'wp_meliora_post_thumbnail' ) ) :
 	/**
@@ -198,8 +206,7 @@ if ( ! function_exists( 'wp_meliora_post_thumbnail' ) ) :
 
 		if ( is_singular() ) :
 			?>
-
-            <div class="post-thumbnail">
+            <div class="c-post__thumbnail">
 				<?php the_post_thumbnail( 'large' ); ?>
             </div><!-- .post-thumbnail -->
 		<?php
@@ -212,7 +219,7 @@ function wp_meliora_post_content() {
 		sprintf(
 			wp_kses(
 			/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp_meliora' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-meliora' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -241,25 +248,25 @@ if ( ! function_exists( 'wp_meliora_socials_links' ) ) :
 	 * Display Social Networks
 	 */
 	function wp_meliora_socials_links() {
-		$wp_meliora_facebook = get_theme_mod('facebook', "");
-		$wp_meliora_twitter = get_theme_mod('twitter', "");
-		$wp_meliora_instagram = get_theme_mod('instagram', "");
-		$wp_meliora_linkedin = get_theme_mod('linkedin', "");
+		$wp_meliora_facebook  = get_theme_mod( 'facebook', "" );
+		$wp_meliora_twitter   = get_theme_mod( 'twitter', "" );
+		$wp_meliora_instagram = get_theme_mod( 'instagram', "" );
+		$wp_meliora_linkedin  = get_theme_mod( 'linkedin', "" );
 
-		if ($wp_meliora_facebook) {
-			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url($wp_meliora_facebook));
+		if ( $wp_meliora_facebook ) {
+			echo sprintf( '<a href="%s" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url( $wp_meliora_facebook ), esc_html__( 'Facebook', 'wp-meliora' ) );
 		}
 
-		if ($wp_meliora_twitter) {
-			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-twitter"></span></a>', esc_url($wp_meliora_twitter));
+		if ( $wp_meliora_twitter ) {
+			echo sprintf( '<a href="%s" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-twitter"></span></a>', esc_url( $wp_meliora_twitter ), esc_html__( 'Twitter', 'wp-meliora' ) );
 		}
 
-		if ($wp_meliora_instagram) {
-			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-instagram"></span></a>', esc_url($wp_meliora_instagram));
+		if ( $wp_meliora_instagram ) {
+			echo sprintf( '<a href="%s" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-instagram"></span></a>', esc_url( $wp_meliora_instagram ), esc_html__( 'Instagram', 'wp-meliora' ) );
 		}
 
-		if ($wp_meliora_linkedin) {
-			echo sprintf('<a href="%s" class="social-link" target="_blank"><span class="dashicons dashicons-linkedin"></span></a>', esc_url($wp_meliora_linkedin));
+		if ( $wp_meliora_linkedin ) {
+			echo sprintf( '<a href="%s" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-linkedin"></span></a>', esc_url( $wp_meliora_linkedin ), esc_html__( 'Linkedin', 'wp-meliora' ) );
 		}
 	}
 endif;
@@ -269,18 +276,18 @@ if ( ! function_exists( 'wp_meliora_site_layout_class' ) ) :
 	 * Generate Site Layout Class
 	 */
 	function wp_meliora_site_layout_class() {
-		$wp_meliora_site_layout = get_theme_mod('site_layout', "left");
+		$wp_meliora_site_layout = get_theme_mod( 'site_layout', "left" );
 
-		if ($wp_meliora_site_layout == "left") {
-			echo esc_html('is-sidebar-content');
+		if ( $wp_meliora_site_layout == "left" ) {
+			echo esc_html( 'is-sidebar-content' );
 		}
 
-		if ($wp_meliora_site_layout == "center") {
-			echo esc_html('no-sidebar');
+		if ( $wp_meliora_site_layout == "center" ) {
+			echo esc_html( 'no-sidebar' );
 		}
 
-		if ($wp_meliora_site_layout == "right") {
-			echo esc_html('is-content-sidebar');
+		if ( $wp_meliora_site_layout == "right" ) {
+			echo esc_html( 'is-content-sidebar' );
 		}
 
 	}

@@ -42,8 +42,8 @@ get_header();
 					the_posts_pagination( array(
 						'screen_reader_text' => ' ',
 						'mid_size'           => 2,
-						'prev_text'          => __( '←', 'wp-manifest' ),
-						'next_text'          => __( '→', 'wp-manifest' ),
+						'prev_text'          => __( '←', 'wp-meliora' ),
+						'next_text'          => __( '→', 'wp-meliora' ),
 					) );
 
 				else :

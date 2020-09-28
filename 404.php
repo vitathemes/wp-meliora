@@ -29,15 +29,15 @@
         </div>
         <section class="error-404 not-found">
             <div>
-                <span class="not-found__error">404</span>
+                <span class="not-found__error"><?php esc_html_e( '404', 'wp-meliora' ); ?></span>
             </div>
             <header class="page-header">
-                <h1 class="page-title"><?php esc_html_e( 'Page not found - 404', 'wp_meliora' ); ?></h1>
+                <h1 class="page-title"><?php esc_html_e( 'Page not found - 404', 'wp-meliora' ); ?></h1>
             </header><!-- .page-header -->
             <div class="page-content">
-                <p><?php esc_html_e( 'This page not found (deleted or never exists). try a phrase in search box or back to home and start again.', 'wp_meliora' ); ?></p>
+                <p><?php esc_html_e( 'This page not found (deleted or never exists). try a phrase in search box or back to home and start again.', 'wp-meliora' ); ?></p>
                 <div class="not-found__actions">
-                    <a class="not-found__actions__link">Take me home
+                    <a class="not-found__actions__link"><?php esc_html_e( 'Take me home', 'wp-meliora' ); ?>
                         <span class="dashicons dashicons-arrow-right-alt2"></span></a>
                 </div>
 				<?php
