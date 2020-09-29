@@ -627,7 +627,7 @@ i {
 
 blockquote {
 	margin: 0;
-	border-left: 2px solid #ABABAB;
+	border-left: 2px solid var(--quaternary-color);
 	padding-left: 64px;
 	color: var(--secondary-color);
 	font-weight: bold;
@@ -804,7 +804,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background-color: #2B2B2B;
+	background-color: var(--quaternary-color);
 }
 
 input[type="text"],
@@ -1000,6 +1000,16 @@ textarea {
 
 .site.no-sidebar .sidebar {
 	display: none;
+}
+
+.site.no-sidebar .c-post__tags {
+	justify-content: flex-start;
+}
+
+@media only screen and (min-width: 1140px) {
+	.site.no-sidebar .c-post__tags {
+		justify-content: flex-end;
+	}
 }
 
 body.error404 {
@@ -1273,7 +1283,7 @@ body.error404 {
 
 @media only screen and (min-width: 1140px) {
 	.main-navigation ul ul {
-		border: 1px solid #ABABAB;
+		border: 1px solid var(--quaternary-color);
 		float: left;
 		position: absolute;
 		top: 100%;
@@ -1310,8 +1320,12 @@ body.error404 {
 	transform-origin: center center;
 }
 
-.main-navigation ul ul li:hover {
+.main-navigation ul ul li:hover, .main-navigation ul ul li:focus-within {
 	background-color: #F4F4F4;
+}
+
+.main-navigation ul ul li:hover a, .main-navigation ul ul li:focus-within a {
+	color: #474747;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1339,6 +1353,10 @@ body.error404 {
 	display: block;
 }
 
+.main-navigation ul.sub-menu {
+	background-color: #FFFFFF;
+}
+
 .main-navigation li {
 	position: relative;
 	margin-right: 48px;
@@ -1349,7 +1367,7 @@ body.error404 {
 	transition: 0.2s;
 	display: block;
 	text-decoration: none;
-	color: #ABABAB;
+	color: var(--quaternary-color);
 	padding: 10px 0;
 }
 
@@ -1362,7 +1380,7 @@ body.error404 {
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
 	color: #474747;
-	border-bottom: 2px solid #ABABAB;
+	border-bottom: 2px solid var(--quaternary-color);
 }
 
 .main-navigation > ul > li.menu-item-has-children {
@@ -1372,7 +1390,7 @@ body.error404 {
 }
 
 .main-navigation > ul > li.menu-item-has-children span {
-	color: #ABABAB;
+	color: var(--quaternary-color);
 	transition: 0.2s;
 	margin-left: 8px;
 	transform-origin: center center;
@@ -1398,7 +1416,7 @@ body.error404 {
 .main-navigation > ul ul li.menu-item-has-children span {
 	transform-origin: center center;
 	transform: rotate(0deg);
-	color: #ABABAB;
+	color: var(--quaternary-color);
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1509,6 +1527,7 @@ body.error404 {
 
 .c-post__meta__date time {
 	font-weight: var(--heading-typography-variant);
+	color: var(--quaternary-color);
 }
 
 .c-post__title {
@@ -1578,12 +1597,13 @@ body.error404 {
 
 .c-post_cats {
 	font-size: 0.75em;
-	color: #ABABAB;
+	color: var(--quaternary-color);
 }
 
 .s-post-meta a {
 	text-decoration: none;
-	color: #ABABAB;
+	color: var(--quaternary-color);
+	font-weight: var(--heading-typography-variant);
 }
 
 .s-post-meta a:hover {
@@ -1593,7 +1613,7 @@ body.error404 {
 .c-post__meta--date-author {
 	margin: 30px 0 24px;
 	font-size: 0.75em;
-	color: #ABABAB;
+	color: var(--quaternary-color);
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1723,7 +1743,7 @@ body.error404 {
 
 .comment .comment-header .time, .comment .comment-header .time * {
 	font-size: 12px;
-	color: #ABABAB;
+	color: var(--quaternary-color);
 	font-weight: var(--heading-typography-variant) !important;
 }
 
@@ -1980,7 +2000,7 @@ ol.children {
 }
 
 .form-submit input:hover, .form-submit [type="submit"]:hover {
-	background-color: #2B2B2B;
+	background-color: var(--quaternary-color);
 }
 
 .no-comments {
@@ -2149,8 +2169,8 @@ ol.children {
 /* Categories List
 --------------------------------------------- */
 .c-categories-list {
-	border-bottom: 1px solid #DFDFDF;
 	margin: 0 12px;
+	padding: 0 20px;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -2164,6 +2184,7 @@ ol.children {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	border-bottom: 1px solid #DFDFDF;
 }
 
 .s-categories-list li {
@@ -2181,14 +2202,14 @@ ol.children {
 
 .s-categories-list li.current-cat a {
 	color: var(--secondary-color);
-	border-bottom: 2px solid #ABABAB;
+	border-bottom: 2px solid var(--quaternary-color);
 }
 
 .s-categories-list a {
 	font-weight: var(--heading-typography-variant);
 	text-decoration: none;
 	padding: 0 4px 8px;
-	color: #ABABAB;
+	color: var(--quaternary-color);
 	word-wrap: normal;
 	white-space: nowrap;
 	display: block;
@@ -2229,14 +2250,16 @@ ol.children {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid var(--tertiary-color);
+	border: 1px solid #F4F4F4;
 	color: var(--tertiary-color);
 	border-radius: 3px;
+	background-color: #F4F4F4;
 }
 
 .pagination .nav-links .page-numbers.next:hover, .pagination .nav-links .page-numbers.prev:hover {
-	color: #FFFFFF;
-	background-color: var(--tertiary-color);
+	color: var(--tertiary-color);
+	background-color: transparent;
+	border-color: var(--tertiary-color);
 }
 
 /* Social Share
@@ -2266,6 +2289,12 @@ ol.children {
 
 .c-social-share__link__icon {
 	color: var(--secondary-color);
+}
+
+.c-social-share__title {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	font-weight: var(--heading-typography-variant);
 }
 
 /* Footer
@@ -2451,38 +2480,31 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 .flickity-prev-next-button {
 	top: 50%;
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	border-radius: 50%;
 	/* vertically center */
 	transform: translateY(-50%);
 	padding: 16px 5px;
 }
 
-@media only screen and (min-width: 1140px) {
-	.flickity-prev-next-button {
-		width: 30px;
-		height: 30px;
-	}
-}
-
 .flickity-prev-next-button.previous {
-	left: -22px;
+	left: -20px;
 }
 
 @media only screen and (min-width: 1140px) {
 	.flickity-prev-next-button.previous {
-		left: -35px;
+		left: -25px;
 	}
 }
 
 .flickity-prev-next-button.next {
-	right: -22px;
+	right: -20px;
 }
 
 @media only screen and (min-width: 1140px) {
 	.flickity-prev-next-button.next {
-		right: -35px;
+		right: -25px;
 	}
 }
 

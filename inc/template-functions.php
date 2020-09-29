@@ -114,6 +114,11 @@ function wp_meliora_typography() {
 	} else {
 		$wp_meliora_secondary_color = get_theme_mod( 'text_typography_color' );
 	}
+	if ( get_theme_mod( 'secondary_typography_color' ) == "" ) {
+		$wp_meliora_quaternary_color = "#8A8A8A";
+	} else {
+		$wp_meliora_quaternary_color = get_theme_mod( 'text_typography_color' );
+	}
 	//}
 
 	$html = ':root {
@@ -131,6 +136,7 @@ function wp_meliora_typography() {
 	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#FFBA9D" ) . ';
 	            --secondary-color: ' . $wp_meliora_secondary_color . ';
 	            --tertiary-color: ' . $wp_meliora_tertiary_color . ';
+	            --quaternary-color: ' . $wp_meliora_quaternary_color . ';
 			}';
 
 	return $html;

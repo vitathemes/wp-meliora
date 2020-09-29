@@ -26,3 +26,9 @@
 .c-social-share__link__icon {
   color: $wp-meliora__secondary-color;
 }
+
+.c-social-share__title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: var(--heading-typography-variant);
+}

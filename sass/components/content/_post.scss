@@ -19,6 +19,7 @@
 
   time {
     font-weight: var(--heading-typography-variant);
+    color:  var(--quaternary-color);
   }
 }
 
@@ -88,14 +89,15 @@
 
 .c-post_cats {
   font-size: 0.75em;
-  color: $wp-meliora__neutral-dark-gray-color;
+  color: $wp-meliora__quaternary-color;
 }
 
 .s-post-meta {
 
   a {
     text-decoration: none;
-    color: $wp-meliora__neutral-dark-gray-color;
+    color: $wp-meliora__quaternary-color;
+    font-weight: var(--heading-typography-variant);
 
     &:hover {
       color: $wp-meliora__primary-color;

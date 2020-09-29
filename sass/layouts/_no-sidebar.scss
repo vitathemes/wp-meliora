@@ -2,6 +2,14 @@
   .sidebar {
     display: none;
   }
+
+  .c-post__tags {
+    justify-content: flex-start;
+
+    @include media(laptop) {
+      justify-content: flex-end;
+    }
+  }
 }
 
 

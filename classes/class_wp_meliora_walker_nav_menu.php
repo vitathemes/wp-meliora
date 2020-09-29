@@ -28,7 +28,7 @@ class Wp_meliora_walker_nav_menu extends Walker_Nav_Menu {
 		}
 
 		if ( $args->walker->has_children ) {
-			$output .= '<span role="button" class="dashicons dashicons-arrow-down-alt2 js-toggle-submenu"></span>';
+			$output .= '<span aria-label="Toggle sub menu" role="button" class="dashicons dashicons-arrow-down-alt2 js-toggle-submenu"></span>';
 		}
 	}
 }

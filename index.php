@@ -44,12 +44,7 @@ get_header();
 
 					endwhile;
 
-					the_posts_pagination( array(
-						'screen_reader_text' => ' ',
-						'mid_size'           => 2,
-						'prev_text'          => '<span class="dashicons dashicons-arrow-left-alt2"></span>',
-						'next_text'          => '<span class="dashicons dashicons-arrow-right-alt2"></span>',
-					) );
+					wp_meliora_posts_pagination();
 
 				else :
 

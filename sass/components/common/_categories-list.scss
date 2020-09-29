@@ -1,6 +1,6 @@
 .c-categories-list {
-  border-bottom: 1px solid $wp-meliora__neutral-gray-color;
   margin: 0 12px;
+  padding: 0 20px;
 
   @include media(laptop) {
     margin: 0;
@@ -12,6 +12,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  border-bottom: 1px solid $wp-meliora__neutral-gray-color;
 }
 
 .s-categories-list {

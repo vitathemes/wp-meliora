@@ -28,12 +28,14 @@
     }
 
     if (!menu.classList.contains('nav-menu')) {
-        menu.classList.add('nav-menu');
+        button.classList.add('nav-menu');
     }
 
     // Toggle the .toggled class and the aria-expanded value each time the button is clicked.
     button.addEventListener('click', function () {
         siteNavigation.classList.toggle('toggled');
+        button.getElementsByTagName('span')[0].classList.toggle('dashicons-menu-alt');
+        button.getElementsByTagName('span')[0].classList.toggle('dashicons-no-alt');
 
         if (button.getAttribute('aria-expanded') === 'true') {
             button.setAttribute('aria-expanded', 'false');

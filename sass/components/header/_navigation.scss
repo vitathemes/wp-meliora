@@ -56,8 +56,12 @@
           transform-origin: center center;
         }
 
-        &:hover {
+        &:hover, &:focus-within {
           background-color: $wp-meliora__neutral-gray-light-color;
+
+          a {
+            color: $wp-meliora__main-primary-light-color;
+          }
         }
 
         @include media(laptop) {
@@ -85,6 +89,10 @@
     li:focus-within > ul {
       left: auto;
       display: block;
+    }
+
+    &.sub-menu {
+      background-color: $wp-meliora__neutral-white;
     }
   }
 

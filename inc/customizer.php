@@ -458,6 +458,14 @@ add_action( 'init', function () {
 		'section'  => 'typography',
 		'default'  => '#565656',
 	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'color',
+		'settings' => 'secondary_typography_color',
+		'label'    => __( 'Secondary Color', 'wp-meliora' ),
+		'section'  => 'typography',
+		'default'  => '#8A8A8A',
+	] );
 // </editor-fold>
 	// -- Typography Fields --
 
