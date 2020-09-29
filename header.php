@@ -40,7 +40,7 @@ if ( function_exists( 'wp_body_open' ) ) {
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="c-header__navigation main-navigation">
-                <button class="c-header__navigation__toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <button aria-label="Toggle menu" class="c-header__navigation__toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                     <span class="dashicons dashicons-menu-alt"></span></button>
 				<?php
 				if ( has_nav_menu( 'menu-1' ) ) {
@@ -55,6 +55,10 @@ if ( function_exists( 'wp_body_open' ) ) {
 				}
 				?>
             </nav><!-- #site-navigation -->
-			<?php get_search_form(); ?>
+			<?php
+			if ( get_theme_mod( 'search_header', true ) ) {
+				get_search_form();
+			}
+			?>
         </div>
     </header><!-- #masthead -->

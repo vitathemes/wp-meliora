@@ -114,6 +114,7 @@ add_action( 'after_setup_theme', 'wp_meliora_setup' );
 function wp_meliora_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'wp_meliora_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'wp_meliora_content_width', 0 );
 
 /**
@@ -134,6 +135,7 @@ function wp_meliora_widgets_init() {
 		)
 	);
 }
+
 add_action( 'widgets_init', 'wp_meliora_widgets_init' );
 
 /**
@@ -145,18 +147,14 @@ function wp_meliora_scripts() {
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'wp_meliora-carousel', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array('wp_meliora-carousel'), _S_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wp_meliora_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+add_action( 'wp_enqueue_scripts', 'wp_meliora_scripts' );
 
 /**
  * Custom template tags for this theme.

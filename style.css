@@ -7,8 +7,8 @@ Description: A minimal & mobile-first blog theme. The best choice for people who
 Version: 1.0.0
 Tested up to: 5.5.1
 Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GPL-2.0-or-later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-meliora
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
@@ -1251,6 +1251,12 @@ body.error404 {
 	margin: 0;
 	padding-left: 0;
 	background-color: #FFFFFF;
+}
+
+@media only screen and (min-width: 1140px) {
+	.main-navigation ul {
+		background: transparent;
+	}
 }
 
 .main-navigation ul ul {

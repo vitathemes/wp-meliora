@@ -64,7 +64,7 @@
 			$wp_meliora_twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&title=" . get_the_title();
 			$wp_meliora_facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
 			?>
-            <span><?php esc_attr_e( 'SHARE', 'wp-meliora' ); ?></span>
+            <span><?php esc_html_e( 'SHARE', 'wp-meliora' ); ?></span>
             <a class="c-social-share__link" target="_blank" href="<?php echo esc_url( $wp_meliora_facebook_url ); ?>">
                 <span class="dashicons dashicons-facebook-alt c-social-share__link__icon"></span>
             </a>

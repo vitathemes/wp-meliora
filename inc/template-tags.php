@@ -175,7 +175,7 @@ if ( ! function_exists( 'wp_meliora_categories_list' ) ) :
 			echo "current-cat";
 		} ?>"><a href="<?php echo esc_url(wp_meliora_get_blog_posts_page_url()); ?>"><?php esc_html_e('All','wp-meliora'); ?></a></li>
 		<?php
-		wp_list_categories( array( 'title_li' => '', 'depth' => 1 ) );
+		wp_list_categories( array( 'title_li' => '', 'depth' => 1) );
 	}
 endif;
 

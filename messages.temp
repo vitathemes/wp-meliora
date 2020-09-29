@@ -1,0 +1,1777 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-29 10:44+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:32
+msgid "404"
+msgstr ""
+
+#: 404.php:35
+msgid "Page not found - 404"
+msgstr ""
+
+#: 404.php:38
+msgid ""
+"This page not found (deleted or never exists). try a phrase in search box or "
+"back to home and start again."
+msgstr ""
+
+#: 404.php:40
+msgid "Take me home"
+msgstr ""
+
+#: archive.php:45
+msgid "←"
+msgstr ""
+
+#: archive.php:46
+msgid "→"
+msgstr ""
+
+#: comments.php:36
+msgid "Comments"
+msgstr ""
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:36
+msgid "WP-Meliora by "
+msgstr ""
+
+#: footer.php:36
+msgid "VitaThemes"
+msgstr ""
+
+#: functions.php:53
+msgid "Primary"
+msgstr ""
+
+#: functions.php:127
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:129
+msgid "Add widgets here."
+msgstr ""
+
+#: header.php:32
+msgid "Skip to content"
+msgstr ""
+
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:3 searchform.php:7
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search"
+msgstr ""
+
+#: classes/class_wp_meliora_walker_comment.php:56
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: classes/class_wp_meliora_walker_comment.php:63
+msgid "Edit"
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "Branding"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Homepage"
+msgstr ""
+
+#: inc/customizer.php:96 inc/kirki/example.php:76
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer.php:103 inc/customizer.php:530
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Header"
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Socials"
+msgstr ""
+
+#: inc/customizer.php:130
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "Search Icon"
+msgstr ""
+
+#: inc/customizer.php:153
+msgid "Headlines"
+msgstr ""
+
+#: inc/customizer.php:427
+msgid "Headings Color"
+msgstr ""
+
+#: inc/customizer.php:435
+msgid "Texts"
+msgstr ""
+
+#: inc/customizer.php:457
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:469 inc/template-tags.php:257
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer.php:477 inc/template-tags.php:261
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer.php:485 inc/template-tags.php:265
+msgid "Instagram"
+msgstr ""
+
+#: inc/customizer.php:493 inc/template-tags.php:269
+msgid "Linkedin"
+msgstr ""
+
+#: inc/customizer.php:504
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer.php:517
+msgid "Primary Color"
+msgstr ""
+
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:64 inc/template-tags.php:126
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:67
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:71
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:74
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:84
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:101 template-parts/content-page.php:35
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:129
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: inc/template-tags.php:176
+msgid "All"
+msgstr ""
+
+#: inc/template-tags.php:222
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/kirki/example.php:34
+msgid "Kirki Demo Panel"
+msgstr ""
+
+#: inc/kirki/example.php:35
+msgid "Contains sections for all kirki controls."
+msgstr ""
+
+#: inc/kirki/example.php:48
+msgid "Background"
+msgstr ""
+
+#: inc/kirki/example.php:49
+msgid "Code"
+msgstr ""
+
+#: inc/kirki/example.php:50 inc/kirki/example.php:678
+msgid "Checkbox"
+msgstr ""
+
+#: inc/kirki/example.php:51 inc/kirki/example.php:526
+msgid "Color"
+msgstr ""
+
+#: inc/kirki/example.php:52
+msgid "Color Palette"
+msgstr ""
+
+#: inc/kirki/example.php:53
+msgid "Custom"
+msgstr ""
+
+#: inc/kirki/example.php:54
+msgid "Dashicons"
+msgstr ""
+
+#: inc/kirki/example.php:55
+msgid "Date"
+msgstr ""
+
+#: inc/kirki/example.php:56
+msgid "Dimension"
+msgstr ""
+
+#: inc/kirki/example.php:57
+msgid "Dimensions"
+msgstr ""
+
+#: inc/kirki/example.php:58
+msgid "Dropdown Pages"
+msgstr ""
+
+#: inc/kirki/example.php:59
+msgid "Editor"
+msgstr ""
+
+#: inc/kirki/example.php:60
+msgid "Font-Awesome"
+msgstr ""
+
+#: inc/kirki/example.php:61
+msgid "Generic"
+msgstr ""
+
+#: inc/kirki/example.php:62
+msgid "Image"
+msgstr ""
+
+#: inc/kirki/example.php:63
+msgid "Multicheck"
+msgstr ""
+
+#: inc/kirki/example.php:64
+msgid "Multicolor"
+msgstr ""
+
+#: inc/kirki/example.php:65
+msgid "Number"
+msgstr ""
+
+#: inc/kirki/example.php:66
+msgid "Palette"
+msgstr ""
+
+#: inc/kirki/example.php:67
+msgid "Preset"
+msgstr ""
+
+#: inc/kirki/example.php:68
+msgid "Radio"
+msgstr ""
+
+#: inc/kirki/example.php:68
+msgid "A plain Radio control."
+msgstr ""
+
+#: inc/kirki/example.php:69
+msgid "Radio Buttonset"
+msgstr ""
+
+#: inc/kirki/example.php:69
+msgid ""
+"Radio-Buttonset controls are essentially radio controls with some fancy "
+"styling to make them look cooler."
+msgstr ""
+
+#: inc/kirki/example.php:70
+msgid "Radio Image"
+msgstr ""
+
+#: inc/kirki/example.php:70
+msgid ""
+"Radio-Image controls are essentially radio controls with some fancy styles "
+"to use images"
+msgstr ""
+
+#: inc/kirki/example.php:71
+msgid "Repeater"
+msgstr ""
+
+#: inc/kirki/example.php:72
+msgid "Select"
+msgstr ""
+
+#: inc/kirki/example.php:73
+msgid "Slider"
+msgstr ""
+
+#: inc/kirki/example.php:74
+msgid "Sortable"
+msgstr ""
+
+#: inc/kirki/example.php:75
+msgid "Switch"
+msgstr ""
+
+#: inc/kirki/example.php:93
+msgid "Test Link Section"
+msgstr ""
+
+#: inc/kirki/example.php:95
+msgid "Pro"
+msgstr ""
+
+#: inc/kirki/example.php:108
+msgid "Background Control"
+msgstr ""
+
+#: inc/kirki/example.php:109
+msgid "Background conrols are pretty complex! (but useful if properly used)"
+msgstr ""
+
+#: inc/kirki/example.php:130
+msgid "Code Control"
+msgstr ""
+
+#: inc/kirki/example.php:131 inc/kirki/example.php:149
+#: inc/kirki/example.php:425 inc/kirki/example.php:435
+#: inc/kirki/example.php:770 inc/kirki/example.php:780
+msgid "Description"
+msgstr ""
+
+#: inc/kirki/example.php:148
+msgid "Checkbox Control"
+msgstr ""
+
+#: inc/kirki/example.php:163
+msgid "Color Control (hex-only)"
+msgstr ""
+
+#: inc/kirki/example.php:164
+msgid "This is a color control - without alpha channel."
+msgstr ""
+
+#: inc/kirki/example.php:173
+msgid "Color Control (with alpha channel)"
+msgstr ""
+
+#: inc/kirki/example.php:174
+msgid "This is a color control - with alpha channel."
+msgstr ""
+
+#: inc/kirki/example.php:186
+msgid "Color Control - hue only."
+msgstr ""
+
+#: inc/kirki/example.php:187
+msgid "This is a color control - hue only."
+msgstr ""
+
+#: inc/kirki/example.php:200
+msgid "Date Control"
+msgstr ""
+
+#: inc/kirki/example.php:201
+msgid "This is a date control."
+msgstr ""
+
+#: inc/kirki/example.php:213
+msgid "First Editor Control"
+msgstr ""
+
+#: inc/kirki/example.php:214
+msgid "This is an editor control."
+msgstr ""
+
+#: inc/kirki/example.php:223
+msgid "Second Editor Control"
+msgstr ""
+
+#: inc/kirki/example.php:224
+msgid ""
+"This is a 2nd editor control just to check that we do not have issues with "
+"multiple instances."
+msgstr ""
+
+#: inc/kirki/example.php:226
+msgid "Default Text"
+msgstr ""
+
+#: inc/kirki/example.php:238 inc/kirki/example.php:252
+#: inc/kirki/example.php:266 inc/kirki/example.php:280
+#: inc/kirki/example.php:294
+msgid "Color-Palette"
+msgstr ""
+
+#: inc/kirki/example.php:239
+msgid "This is a color-palette control"
+msgstr ""
+
+#: inc/kirki/example.php:253
+msgid "Material Design Colors - all"
+msgstr ""
+
+#: inc/kirki/example.php:267
+msgid "Material Design Colors - primary"
+msgstr ""
+
+#: inc/kirki/example.php:281
+msgid "Material Design Colors - red"
+msgstr ""
+
+#: inc/kirki/example.php:295
+msgid "Material Design Colors - A100"
+msgstr ""
+
+#: inc/kirki/example.php:314
+msgid "Dashicons Control"
+msgstr ""
+
+#: inc/kirki/example.php:315
+msgid "Using a custom array of dashicons"
+msgstr ""
+
+#: inc/kirki/example.php:333
+msgid "All Dashicons"
+msgstr ""
+
+#: inc/kirki/example.php:334
+msgid "Showing all dashicons"
+msgstr ""
+
+#: inc/kirki/example.php:346 inc/kirki/example.php:362
+#: inc/kirki/example.php:375
+msgid "Dimension Control"
+msgstr ""
+
+#: inc/kirki/example.php:347 inc/kirki/example.php:363
+#: inc/kirki/example.php:376 inc/kirki/example.php:391
+#: inc/kirki/example.php:409 inc/kirki/example.php:464
+#: inc/kirki/example.php:474 inc/kirki/example.php:487
+msgid "Description Here."
+msgstr ""
+
+#: inc/kirki/example.php:390
+msgid "Spacing Control"
+msgstr ""
+
+#: inc/kirki/example.php:408
+msgid "Dropdown Pages Control"
+msgstr ""
+
+#: inc/kirki/example.php:424
+msgid "Text Control"
+msgstr ""
+
+#: inc/kirki/example.php:434
+msgid "Textarea Control"
+msgstr ""
+
+#: inc/kirki/example.php:444
+msgid "Custom input Control."
+msgstr ""
+
+#: inc/kirki/example.php:445
+msgid ""
+"The \"generic\" control allows you to add any input type you want. In this "
+"case we use type=\"password\" and define custom styles."
+msgstr ""
+
+#: inc/kirki/example.php:463
+msgid "Image Control (URL)"
+msgstr ""
+
+#: inc/kirki/example.php:473
+msgid "Image Control (ID)"
+msgstr ""
+
+#: inc/kirki/example.php:486
+msgid "Image Control (array)"
+msgstr ""
+
+#: inc/kirki/example.php:502
+msgid "Multickeck Control"
+msgstr ""
+
+#: inc/kirki/example.php:507 inc/kirki/example.php:585
+#: inc/kirki/example.php:605 inc/kirki/example.php:697
+#: inc/kirki/example.php:715 inc/kirki/example.php:753
+msgid "Option 1"
+msgstr ""
+
+#: inc/kirki/example.php:508 inc/kirki/example.php:586
+#: inc/kirki/example.php:606 inc/kirki/example.php:698
+#: inc/kirki/example.php:716 inc/kirki/example.php:754
+msgid "Option 2"
+msgstr ""
+
+#: inc/kirki/example.php:509 inc/kirki/example.php:587
+#: inc/kirki/example.php:607 inc/kirki/example.php:699
+#: inc/kirki/example.php:717 inc/kirki/example.php:755
+msgid "Option 3"
+msgstr ""
+
+#: inc/kirki/example.php:510 inc/kirki/example.php:588
+#: inc/kirki/example.php:700 inc/kirki/example.php:718
+#: inc/kirki/example.php:756
+msgid "Option 4"
+msgstr ""
+
+#: inc/kirki/example.php:511 inc/kirki/example.php:589
+#: inc/kirki/example.php:701 inc/kirki/example.php:719
+#: inc/kirki/example.php:757
+msgid "Option 5"
+msgstr ""
+
+#: inc/kirki/example.php:522
+msgid "Multicolor Control"
+msgstr ""
+
+#: inc/kirki/example.php:527
+msgid "Hover"
+msgstr ""
+
+#: inc/kirki/example.php:528
+msgid "Active"
+msgstr ""
+
+#: inc/kirki/example.php:545
+msgid "Number Control"
+msgstr ""
+
+#: inc/kirki/example.php:562
+msgid "Palette Control"
+msgstr ""
+
+#: inc/kirki/example.php:580
+msgid "Radio Control"
+msgstr ""
+
+#: inc/kirki/example.php:581 inc/kirki/example.php:601
+#: inc/kirki/example.php:619 inc/kirki/example.php:637
+#: inc/kirki/example.php:692 inc/kirki/example.php:710
+#: inc/kirki/example.php:731
+msgid "The description here."
+msgstr ""
+
+#: inc/kirki/example.php:600
+msgid "Radio-Buttonset Control"
+msgstr ""
+
+#: inc/kirki/example.php:618
+msgid "Radio-Image Control"
+msgstr ""
+
+#: inc/kirki/example.php:636
+msgid "Repeater Control"
+msgstr ""
+
+#: inc/kirki/example.php:641
+msgid "Kirki Site"
+msgstr ""
+
+#: inc/kirki/example.php:647
+msgid "Kirki Repository"
+msgstr ""
+
+#: inc/kirki/example.php:656
+msgid "Link Text"
+msgstr ""
+
+#: inc/kirki/example.php:657
+msgid "This will be the label for your link"
+msgstr ""
+
+#: inc/kirki/example.php:662
+msgid "Link URL"
+msgstr ""
+
+#: inc/kirki/example.php:663
+msgid "This will be the link URL"
+msgstr ""
+
+#: inc/kirki/example.php:668
+msgid "Link Target"
+msgstr ""
+
+#: inc/kirki/example.php:669
+msgid "This will be the link target"
+msgstr ""
+
+#: inc/kirki/example.php:672
+msgid "New Window"
+msgstr ""
+
+#: inc/kirki/example.php:673
+msgid "Same Frame"
+msgstr ""
+
+#: inc/kirki/example.php:691 inc/kirki/example.php:709
+msgid "Select Control"
+msgstr ""
+
+#: inc/kirki/example.php:695
+msgid "Select an option"
+msgstr ""
+
+#: inc/kirki/example.php:730
+msgid "Slider Control"
+msgstr ""
+
+#: inc/kirki/example.php:749
+msgid "This is a sortable control."
+msgstr ""
+
+#: inc/kirki/example.php:758
+msgid "Option 6"
+msgstr ""
+
+#: inc/kirki/example.php:769
+msgid "Switch Control"
+msgstr ""
+
+#: inc/kirki/example.php:779
+msgid "Switch Control with custom labels"
+msgstr ""
+
+#: inc/kirki/example.php:784
+msgid "Enabled"
+msgstr ""
+
+#: inc/kirki/example.php:785
+msgid "Disabled"
+msgstr ""
+
+#: inc/kirki/example.php:803 inc/kirki/example.php:857
+msgid "Typography Control"
+msgstr ""
+
+#: inc/kirki/example.php:804
+msgid "The full set of options."
+msgstr ""
+
+#: inc/kirki/example.php:858
+msgid "Just the font-family and font-weight."
+msgstr ""
+
+#: inc/kirki/example.php:893
+msgid "Sidebars Select"
+msgstr ""
+
+#: inc/kirki/example.php:894
+msgid "An example of how to implement sidebars selection."
+msgstr ""
+
+#: inc/kirki/upgrade-notifications.php:30
+msgid "Important Upgrade Notice:"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Field.php:259
+#, php-format
+msgid "Typo found in field %s - setting instead of settings."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Field.php:269
+#, php-format
+msgid ""
+"Config not defined for field %1$s - See %2$s for details on how to properly "
+"add fields."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Field.php:380
+#, php-format
+msgid "\"partial_refresh\" invalid entry in field %s"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Field.php:503
+#: inc/kirki/packages/kirki-framework/compatibility/src/Field.php:514
+#: inc/kirki/packages/kirki-framework/module-css/src/CSS.php:96
+#: inc/kirki/packages/kirki-framework/module-css/src/CSS.php:107
+#, php-format
+msgid ""
+"\"output\" invalid format in field %s. The \"output\" argument should be "
+"defined as an array of arrays."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Init.php:206
+msgid ""
+"We detected you're using Kirki\\Compatibility\\Init::get_variables(). Please "
+"use \\Kirki\\Util\\Util::get_variables() instead."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Init.php:255
+msgid ""
+"Your theme uses a Font Awesome field for icons. To avoid issues with missing "
+"icons on your frontend we recommend you install the official Font Awesome "
+"plugin."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Init.php:258
+msgid "Install Plugin"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Init.php:259
+msgid "Don't show this again"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/Kirki.php:167
+msgid ""
+"Kirki fields should not be added on customize_register. Please add them "
+"directly, or on init."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/compatibility/src/deprecated/functions.php:20
+#, php-format
+msgid "%1$s or %2$s"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-checkbox/src/Control/Checkbox_Switch.php:90
+msgid "On"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-checkbox/src/Control/Checkbox_Switch.php:94
+msgid "Off"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:102
+msgid "Admin Menu"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:103
+msgid "Welcome Screen"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:104
+msgid "Post Formats"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:105
+msgid "Media"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:106
+msgid "Image Editing"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:108
+msgid "Posts"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:109
+msgid "Sorting"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:110
+msgid "Social"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:112
+msgid "Products"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:113
+msgid "Taxonomies"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:114
+msgid "Widgets"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:115
+msgid "Notifications"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dashicons/src/Control/Dashicons.php:116
+msgid "Miscelaneous"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-dimension/src/Control/Dimension.php:67
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:75
+msgid "Invalid Value"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-image/src/Control/Image.php:82
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:115
+msgid "No image selected"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-image/src/Control/Image.php:85
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:114
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:426
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:458
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:483
+msgid "Remove"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-image/src/Control/Image.php:87
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:113
+msgid "Default"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-image/src/Control/Image.php:89
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:111
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:116
+msgid "Select image"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:112
+msgid "Change image"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-image/src/Field/Image.php:117
+msgid "Choose image"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-react-select/src/Control/ReactSelect.php:162
+msgid "Select..."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:96
+msgid "row"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:105
+#, php-format
+msgid "Add new %s"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:140
+msgid "Select a Page"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:267
+#, php-format
+msgid "Limit: %s rows"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:416
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:421
+msgid "No Image Selected"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:427
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:431
+msgid "Add Image"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:427
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:429
+msgid "Change Image"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:448
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:453
+msgid "No File Selected"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:459
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:463
+msgid "Add File"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:459
+#: inc/kirki/packages/kirki-framework/control-repeater/src/Control/Repeater.php:461
+msgid "Change File"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:80
+msgid "Background Color"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:96
+msgid "Background Image"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:112
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:116
+msgid "No Repeat"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:117
+msgid "Repeat All"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:118
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:119
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:145
+msgid "Background Position"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:149
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:51
+msgid "Left Top"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:150
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:52
+msgid "Left Center"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:151
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:53
+msgid "Left Bottom"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:152
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:57
+msgid "Center Top"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:153
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:58
+msgid "Center Center"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:154
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:59
+msgid "Center Bottom"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:155
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:54
+msgid "Right Top"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:156
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:55
+msgid "Right Center"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:157
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:56
+msgid "Right Bottom"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:183
+msgid "Background Size"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:187
+msgid "Cover"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:188
+msgid "Contain"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:189
+msgid "Auto"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:215
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:220
+msgid "Scroll"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-background/src/Background.php:221
+msgid "Fixed"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:60
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:289
+msgid "Font Size"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:61
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:205
+msgid "Font Weight"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:62
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:311
+msgid "Line Height"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:63
+msgid "Font Style"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:64
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:330
+msgid "Letter Spacing"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:65
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:349
+msgid "Word Spacing"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:66
+msgid "Top"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:67
+msgid "Bottom"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:68
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:400
+msgid "Left"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:69
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:402
+msgid "Right"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:70
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:401
+msgid "Center"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:71
+msgid "Size"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:72
+msgid "Spacing"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:73
+msgid "Width"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-dimensions/src/Dimensions.php:74
+msgid "Height"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:157
+msgid "Standard Fonts"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:161
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:180
+msgid "Font Family"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:211
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:575
+msgid "100 - Thin"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:212
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:576
+msgid "200 - Extra Light, Ultra Light"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:213
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:577
+msgid "300 - Light"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:214
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:578
+msgid "400 - Normal, Book, Regular"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:215
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:579
+msgid "500 - Medium"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:216
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:580
+msgid "600 - Semi Bold, Demi Bold"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:217
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:581
+msgid "700 - Bold"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:218
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:582
+msgid "800 - Extra Bold, Ultra Bold"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:219
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:583
+msgid "900 - Black, Heavy"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:239
+msgid "Italics"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:245
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:269
+msgid "No"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:246
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:270
+msgid "Yes"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:263
+msgid "Underline"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:368
+msgid "Text Transform"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:374
+msgid "None"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:375
+msgid "Capitalize"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:376
+msgid "Uppercase"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:377
+msgid "Lowercase"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:393
+msgid "Text Align"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:399
+msgid "Initial"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:403
+msgid "Justify"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:419
+msgid "Top Margin"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/field-typography/src/Field/Typography.php:438
+msgid "Bottom Margin"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-sections/src/Section_Types/Nested.php:62
+msgid "Customizing"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-sections/src/Section_Types/Nested.php:65
+#, php-format
+msgid "Customizing &#9656; %s"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:161
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:162
+msgid "Ultra-Light 100"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:163
+msgid "Ultra-Light 100 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:164
+msgid "Light 200"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:165
+msgid "Light 200 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:166
+msgid "Book 300"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:167
+msgid "Book 300 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:168
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:169
+msgid "Normal 400"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:170
+msgid "Normal 400 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:171
+msgid "Medium 500"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:172
+msgid "Medium 500 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:173
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:174
+msgid "Semi-Bold 600"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:175
+msgid "Semi-Bold 600 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:176
+msgid "Bold 700"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:177
+msgid "Bold 700 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:178
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:179
+msgid "Extra-Bold 800"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:180
+msgid "Extra-Bold 800 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:181
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:182
+msgid "Ultra-Bold 900"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/module-webfonts/src/Webfonts/Fonts.php:183
+msgid "Ultra-Bold 900 Italic"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:134
+msgid "Help us improve Kirki."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:135
+msgid ""
+"Sharing anonymous data helps improve both the theme you are using and the "
+"Kirki framework. <strong>The data is completely anonymous and we will never "
+"collect any identifiable information about you or your website.</strong>"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:139
+msgid "Data that will be sent"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:144
+msgid "PHP Version"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:148
+msgid "Theme Name"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:152
+msgid "Theme Author"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:156
+msgid "Theme URI"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:160
+msgid "Field Types Used"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:170
+#, php-format
+msgid ""
+"We believe in complete transparency. You can see the code used on our server "
+"<a href=\"%1$s\" rel=\"nofollow\">here</a>, and the results of the "
+"statistics we're gathering on <a href=\"%2$s\" rel=\"nofollow\">this page</"
+"a>."
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:181
+msgid "I agree"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:182
+msgid "No thanks"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:183
+msgid "Show me the data"
+msgstr ""
+
+#: inc/kirki/packages/kirki-framework/util/src/Telemetry.php:184
+msgid "Collapse data"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:51
+msgid "\n"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:78
+msgid "<"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:84
+#, python-format
+msgid " %s=\"%s\""
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:87
+msgid ">"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:101
+#, python-format
+msgid "</%s>%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py:103
+#, python-format
+msgid "/>%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/input.py:1837
+#: node_modules/node-gyp/gyp/pylib/gyp/input.py:1898
+#, python-format
+msgid "Cycle: %s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:358
+msgid "_MBCS"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:423
+msgid "/safeseh"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:473
+msgid "/FS"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:543
+#, python-format
+msgid "/DEF:\"%s\""
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:575
+msgid "/OUT:"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:578
+msgid "/PDB:"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:581
+msgid "/PGD:"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:604
+#, python-format
+msgid "/STACK:%s%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:643
+msgid "/DYNAMICBASE"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:650
+msgid "/NXCOMPAT"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:692
+msgid "/MANIFESTUAC:NO"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:740
+msgid "/ALLOWISOLATION"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py:785
+msgid "/I"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:72
+#: template-parts/content-single.php:32
+msgid "|"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:76
+msgid "||"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:276
+#, python-format
+msgid "\\U%04x"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:988
+msgid ".name"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:999
+msgid ".path"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py:1066
+msgid "$("
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:481
+#, python-format
+msgid "-isysroot %s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:484
+msgid "-Wconstant-conversion"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:487
+msgid "-funsigned-char"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:490
+msgid "-fasm-blocks"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:494
+msgid "-mdynamic-no-pic"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:502
+msgid "-mpascal-strings"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:509
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:513
+msgid "-gdwarf-2"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:518
+msgid "-fstrict-aliasing"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:520
+msgid "-fno-strict-aliasing"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:523
+msgid "-fvisibility=hidden"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:526
+msgid "-Werror"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:529
+msgid "-Wnewline-eof"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:536
+msgid "-flto"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:559
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:822
+msgid "-arch "
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:563
+msgid "-msse3"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:566
+msgid "-mssse3"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:568
+msgid "-msse4.1"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:570
+msgid "-msse4.2"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:577
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:586
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:840
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:845
+msgid "-F"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:596
+msgid "-ansi"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:613
+#, python-format
+msgid "-std=%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:618
+msgid "-fno-rtti"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:620
+msgid "-fno-exceptions"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:622
+msgid "-fvisibility-inlines-hidden"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:624
+msgid "-fno-threadsafe-statics"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:627
+msgid "-Wno-invalid-offsetof"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:647
+msgid "-fobjc-gc"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:649
+msgid "-fobjc-gc-only"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:653
+msgid "-fobjc-arc"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:658
+msgid "-Wobjc-missing-property-synthesis"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:678
+msgid "-fobjc-call-cxx-cdtors"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:790
+msgid "-Wl,-dead_strip"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:793
+msgid "-Wl,-prebind"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:803
+msgid "-isysroot "
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:806
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:825
+msgid "-L"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:809
+msgid "-Wl,-order_file "
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:829
+msgid "-install_name "
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:832
+msgid "-Wl,-rpath,"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:853
+msgid "-lpkstart"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:856
+msgid "/System/Library/PrivateFrameworks/PlugInKit.framework/PlugInKit"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:857
+msgid "-fapplication-extension"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:858
+msgid "-Xlinker -rpath -Xlinker @executable_path/../../Frameworks"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:950
+#, python-format
+msgid "echo STRIP\\(%s\\)"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:951
+#, python-format
+msgid "strip %s %s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:969
+#, python-format
+msgid "echo DSYMUTIL\\(%s\\)"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:970
+#, python-format
+msgid "dsymutil %s -o %s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py:1618
+#, python-format
+msgid "echo POSTBUILD\\(%s\\) %s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/__init__.py:364
+msgid "USERPROFILE"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/analyzer.py:663
+msgid "all"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/android.py:450
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:982
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1108
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1150
+#, python-format
+msgid "$(%s)"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:376
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py:377
+msgid "${"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py:223
+msgid "1"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1279
+msgid "$(OBJS)"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1501
+#, python-format
+msgid "-Wl,-rpath=\\$$ORIGIN/lib.%s/"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1502
+#, python-format
+msgid "-Wl,-rpath-link=\\$(builddir)/lib.%s/"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1530
+msgid "$(TARGET_POSTBUILDS_$(BUILDTYPE))"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/make.py:1994
+msgid "BUILDTYPE="
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:2946
+msgid "Label"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py:3109
+#, python-format
+msgid "%%(%s)"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1181
+#, python-format
+msgid "-Wl,-rpath=\\$$ORIGIN/%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1182
+#, python-format
+msgid "-Wl,-rpath-link=%s"
+msgstr ""
+
+#: node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py:1415
+#, python-format
+msgid "export %s=%s;"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:21 template-parts/content-search.php:40
+#: template-parts/content-single.php:52 template-parts/content.php:40
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-single.php:67
+msgid "SHARE"
+msgstr ""

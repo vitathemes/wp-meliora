@@ -7,6 +7,10 @@
     padding-left: 0;
     background-color: $wp-meliora__neutral-white;
 
+    @include media(laptop) {
+      background: transparent;
+    }
+
     ul {
       float: left;
       position: relative;
@@ -73,14 +77,6 @@
         padding: 5px 20px;
         text-align: center;
         white-space: nowrap;
-      }
-
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
       }
     }
 

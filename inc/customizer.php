@@ -138,8 +138,8 @@ add_action( 'init', function () {
 // Header
 	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'toggle',
-		'settings' => 'search_icon_header',
-		'label'    => esc_html__( 'Search Icon', 'wp-meliora' ),
+		'settings' => 'search_header',
+		'label'    => esc_html__( 'Display Search', 'wp-meliora' ),
 		'section'  => 'header',
 		'default'  => 1,
 		'priority' => 10,
