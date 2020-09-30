@@ -27,7 +27,7 @@ if ( ! function_exists( 'wp_meliora_posted_on' ) ) :
 
 		$posted_on = sprintf(
 		/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'wp-meliora' ),
+			esc_html( '%s' ),
 			$time_string
 		);
 
@@ -43,7 +43,7 @@ if ( ! function_exists( 'wp_meliora_posted_by' ) ) :
 	function wp_meliora_posted_by() {
 		$byline = sprintf(
 		/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'wp-meliora' ),
+			esc_html( '%s' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -126,7 +126,7 @@ if ( ! function_exists( 'wp_meliora_entry_category' ) ) :
 				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-meliora' ) );
 				if ( $categories_list ) {
 					/* translators: 1: list of categories. */
-					printf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html__( '%1$s', 'wp-meliora' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo  wp_kses_post(sprintf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html( '%1$s' ) . '</span>', $categories_list )); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 		}

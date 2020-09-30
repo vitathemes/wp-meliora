@@ -31,7 +31,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 <div id="page" class="o-page site <?php wp_meliora_site_layout_class(); ?>">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-meliora' ); ?></a>
 
-    <header id="masthead" class="c-header site-header" <?php if (get_header_image()) { echo 'style="background-image: url(' . get_header_image() . ');"';} ?>>
+    <header id="masthead" class="c-header site-header" <?php if (get_header_image()) { echo esc_attr('style="background-image: url(' . esc_url(get_header_image()) . ');"');} ?>>
         <div class="c-header__main u-default-max-width">
             <div class="c-header__branding">
 				<?php
