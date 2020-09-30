@@ -609,7 +609,7 @@ h6, .h6, h6 * {
 	white-space: normal;
 }
 
-*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(b):not(strong):not(strong *) {
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(b):not(strong) {
 	font-weight: var(--text-typography-variant);
 }
 
