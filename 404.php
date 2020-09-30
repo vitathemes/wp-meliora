@@ -37,7 +37,7 @@
             <div class="page-content">
                 <p><?php esc_html_e( 'This page not found (deleted or never exists). try a phrase in search box or back to home and start again.', 'wp-meliora' ); ?></p>
                 <div class="not-found__actions">
-                    <a class="not-found__actions__link"><?php esc_html_e( 'Take me home', 'wp-meliora' ); ?>
+                    <a href="<?php echo site_url(); ?>" class="not-found__actions__link"><?php esc_html_e( 'Take me home', 'wp-meliora' ); ?>
                         <span class="dashicons dashicons-arrow-right-alt2"></span></a>
                 </div>
 				<?php
