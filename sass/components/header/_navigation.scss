@@ -1,14 +1,16 @@
 .main-navigation {
 
   ul {
-    display: none;
+display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
     background-color: $wp-meliora__neutral-white;
 
     @include media(laptop) {
+      position: relative;
       background: transparent;
+      animation: unset;
     }
 
     ul {
@@ -194,6 +196,7 @@
   z-index: 9;
   overflow-y: scroll;
   max-height: 100%;
+  animation: fadeInFromNone 0.4s forwards;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -226,5 +229,25 @@
   .nav-next {
     text-align: end;
     flex: 1 0 50%;
+  }
+}
+
+
+// Animations
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
   }
 }

@@ -1289,7 +1289,9 @@ body.error404 {
 
 @media only screen and (min-width: 1140px) {
 	.main-navigation ul {
+		position: relative;
 		background: transparent;
+		animation: unset;
 	}
 }
 
@@ -1480,6 +1482,7 @@ body.error404 {
 	z-index: 9;
 	overflow-y: scroll;
 	max-height: 100%;
+	animation: fadeInFromNone 0.4s forwards;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -1514,6 +1517,21 @@ body.error404 {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+@keyframes fadeInFromNone {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+	1% {
+		display: block;
+		opacity: 0;
+	}
+	100% {
+		display: block;
+		opacity: 1;
+	}
 }
 
 /* Posts and pages
