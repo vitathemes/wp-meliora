@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: yyyy-mm-dd hh:mm+0000\n"
-"PO-Revision-Date: 2020-09-29 10:46+0300\n"
+"PO-Revision-Date: 2020-09-30 17:11+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -56,16 +56,20 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:138
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:140
 msgid "Add widgets here."
 msgstr ""
 
 #: header.php:32
 msgid "Skip to content"
+msgstr ""
+
+#: index.php:21
+msgid "Recent Posts"
 msgstr ""
 
 #: search.php:22
@@ -103,7 +107,7 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:103 inc/customizer.php:530
+#: inc/customizer.php:103 inc/customizer.php:538
 msgid "Layout"
 msgstr ""
 
@@ -124,7 +128,7 @@ msgid "Copyright"
 msgstr ""
 
 #: inc/customizer.php:142
-msgid "Search Icon"
+msgid "Display Search"
 msgstr ""
 
 #: inc/customizer.php:153
@@ -143,40 +147,32 @@ msgstr ""
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer.php:469 inc/template-tags.php:257
+#: inc/customizer.php:465
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/customizer.php:477 inc/template-tags.php:257
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer.php:477 inc/template-tags.php:261
+#: inc/customizer.php:485 inc/template-tags.php:261
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:485 inc/template-tags.php:265
+#: inc/customizer.php:493 inc/template-tags.php:265
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer.php:493 inc/template-tags.php:269
+#: inc/customizer.php:501 inc/template-tags.php:269
 msgid "Linkedin"
 msgstr ""
 
-#: inc/customizer.php:504
+#: inc/customizer.php:512
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer.php:517
+#: inc/customizer.php:525
 msgid "Primary Color"
-msgstr ""
-
-#: inc/template-tags.php:30
-#, php-format
-msgctxt "post date"
-msgid "%s"
-msgstr ""
-
-#: inc/template-tags.php:46
-#, php-format
-msgctxt "post author"
-msgid "%s"
 msgstr ""
 
 #: inc/template-tags.php:64 inc/template-tags.php:126
@@ -206,11 +202,6 @@ msgstr ""
 #: inc/template-tags.php:101 template-parts/content-page.php:35
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#: inc/template-tags.php:129
-#, php-format
-msgid "%1$s"
 msgstr ""
 
 #: inc/template-tags.php:176
@@ -1441,7 +1432,7 @@ msgid "/I"
 msgstr ""
 
 #: node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py:72
-#: template-parts/content-single.php:32
+#: template-parts/content-single.php:28
 msgid "|"
 msgstr ""
 
@@ -1761,10 +1752,10 @@ msgid ""
 msgstr ""
 
 #: template-parts/content-page.php:21 template-parts/content-search.php:40
-#: template-parts/content-single.php:52 template-parts/content.php:40
+#: template-parts/content-single.php:48 template-parts/content.php:40
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content-single.php:67
-msgid "SHARE"
+#: template-parts/content-single.php:63
+msgid "Share"
 msgstr ""
