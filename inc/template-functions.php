@@ -115,7 +115,7 @@ function wp_meliora_typography() {
 		$wp_meliora_secondary_color = get_theme_mod( 'text_typography_color' );
 	}
 	if ( get_theme_mod( 'secondary_typography_color' ) == "" ) {
-		$wp_meliora_quaternary_color = "#8A8A8A";
+		$wp_meliora_quaternary_color = "#777777";
 	} else {
 		$wp_meliora_quaternary_color = get_theme_mod( 'text_typography_color' );
 	}

@@ -464,7 +464,7 @@ add_action( 'init', function () {
 		'settings' => 'secondary_typography_color',
 		'label'    => __( 'Secondary Color', 'wp-meliora' ),
 		'section'  => 'typography',
-		'default'  => '#8A8A8A',
+		'default'  => '#777777',
 	] );
 // </editor-fold>
 	// -- Typography Fields --
