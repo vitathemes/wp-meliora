@@ -13,6 +13,7 @@ get_header();
     <main id="primary" class="site-main">
         <div class="site-main__container default-max-width">
             <div class="site-main__content">
+                <h2 class="site-main__content__title h1"><?php echo get_the_archive_title(); ?></h2>
                 <div class="c-categories-list">
                     <ul class="c-categories-list__list js-categories-list s-categories-list">
                         <?php wp_meliora_categories_list(); ?>

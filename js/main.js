@@ -11,13 +11,9 @@ if (document.querySelectorAll(".js-categories-list").length) {
          freeScroll: true,
          contain: true,
          pageDots: false,
-         groupCells: true,
+         groupCells: false,
          cellAlign: 'left'
      };
-
-     if (window.matchMedia("(max-width: 720px)").matches) {
-         categoriesCarouselOptions.groupCells = false;
-     }
 
     const categoriesCarousel = new Flickity( '.js-categories-list', categoriesCarouselOptions);
 }

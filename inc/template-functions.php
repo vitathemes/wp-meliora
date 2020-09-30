@@ -51,8 +51,8 @@ function wp_meliora_branding() {
 		<?php
 		else :
 			?>
-            <p class="c-header__branding__title site-title">
-                <a class="c-header__branding__title__link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+            <p class="c-header__branding__title site-title h1">
+                <a class="c-header__branding__title__link h1" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </p>
 		<?php
 		endif;

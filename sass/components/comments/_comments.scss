@@ -140,6 +140,7 @@
   .comment-author, .comment-author a {
     font-size: 0.8em;
     margin-top: 0;
+    text-decoration: none;
     color: $wp-meliora__tertiary-color;
 
     @include media(laptop) {
@@ -214,6 +215,7 @@ ol.children:last-child {
   letter-spacing: 0.1em;
   color: $wp-meliora__secondary-color;
   transition: 0.25s;
+  text-decoration: none;
 
   &:hover {
     color: $wp-meliora__primary-color;
@@ -322,6 +324,18 @@ ol.children:last-child {
 
 .comment-edit-link {
   margin-right: 20px;
+  font-size: 0.8em;
+  margin-top: 0;
+  text-decoration: none;
+  color: $wp-meliora__tertiary-color;
+
+  @include media(laptop) {
+    font-size: 1em;
+  }
+
+  &:hover {
+    color: $wp-meliora__primary-color;
+  }
 }
 
 .comment-reply-title {
@@ -339,7 +353,7 @@ ol.children:last-child {
 
   input, [type="submit"] {
     font-weight: var(--heading-typography-variant);
-    padding: 16px 24px;
+    padding: 10px 24px;
     background-color: $wp-meliora__main-primary-light-color;
     color: $wp-meliora__neutral-white;
     border-radius: $global-radius;

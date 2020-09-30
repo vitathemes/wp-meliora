@@ -73,7 +73,7 @@
   text-decoration: none;
   font-weight: var(--heading-typography-variant);
 
-  &:visited {
+  &:visited, &:focus {
     color: $wp-meliora__secondary-color;
   }
 
