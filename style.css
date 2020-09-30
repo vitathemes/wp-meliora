@@ -701,6 +701,11 @@ body {
 	background: #fff;
 }
 
+body.has-no-scrollbar {
+	height: 100%;
+	overflow: hidden;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -1224,6 +1229,8 @@ body.error404 {
 	background-color: transparent;
 	color: var(--secondary-color);
 	padding: 0;
+	position: relative;
+	z-index: 10;
 }
 
 .c-header__branding__title {
@@ -1377,20 +1384,28 @@ body.error404 {
 	transition: 0.2s;
 	display: block;
 	text-decoration: none;
-	color: var(--quaternary-color);
+	color: var(--tertiary-color);
 	padding: 10px 0;
+}
+
+@media only screen and (min-width: 1140px) {
+	.main-navigation a {
+		color: var(--quaternary-color);
+	}
 }
 
 .main-navigation a:hover {
 	color: #474747;
 }
 
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
-	color: #474747;
-	border-bottom: 2px solid var(--quaternary-color);
+@media only screen and (min-width: 1140px) {
+	.main-navigation .current_page_item > a,
+	.main-navigation .current-menu-item > a,
+	.main-navigation .current_page_ancestor > a,
+	.main-navigation .current-menu-ancestor > a {
+		color: #474747;
+		border-bottom: 2px solid var(--quaternary-color);
+	}
 }
 
 .main-navigation > ul > li.menu-item-has-children {
@@ -1449,11 +1464,15 @@ body.error404 {
 	left: -15px;
 	padding: 0 15px;
 	position: absolute;
-	top: 64px;
+	top: 0;
+	min-height: 100vh;
+	padding-top: 32px;
 	background-color: #FFFFFF;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #F4F4F4;
 	z-index: 9;
+	overflow-y: scroll;
+	max-height: 100%;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -2203,12 +2222,13 @@ ol.children {
 --------------------------------------------- */
 .c-categories-list {
 	margin: 0 12px;
-	padding: 0 20px;
+	padding: 0;
 }
 
 @media only screen and (min-width: 1140px) {
 	.c-categories-list {
 		margin: 0;
+		padding: 0 20px;
 	}
 }
 

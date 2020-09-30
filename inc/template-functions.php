@@ -79,7 +79,7 @@ function wp_meliora_typography() {
 		'letter-spacing' => '0.05em'
 	);
 
-	if ( empty( $wp_meliora_heading_typography ) || $wp_meliora_heading_typography['font-family'] == "" || $wp_meliora_heading_typography['font-size'] == "" || $wp_meliora_heading_typography['variant'] == "" ) {
+	if ( empty( $wp_meliora_heading_typography )) {
 		$wp_meliora_heading_typography = $wp_meliora_default_heading_typography;
 	} else {
 		$wp_meliora_heading_typography = array_merge( $wp_meliora_default_heading_typography, $wp_meliora_heading_typography );

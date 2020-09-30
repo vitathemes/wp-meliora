@@ -36,6 +36,7 @@
         siteNavigation.classList.toggle('toggled');
         button.getElementsByTagName('span')[0].classList.toggle('dashicons-menu-alt');
         button.getElementsByTagName('span')[0].classList.toggle('dashicons-no-alt');
+        document.getElementsByTagName('body')[0].classList.toggle('has-no-scrollbar');
 
         if (button.getAttribute('aria-expanded') === 'true') {
             button.setAttribute('aria-expanded', 'false');

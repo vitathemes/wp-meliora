@@ -110,20 +110,26 @@
     transition: $global-transition;
     display: block;
     text-decoration: none;
-    color: $wp-meliora__neutral-dark-gray-color;
+    color: $wp-meliora__tertiary-color;
     padding: 10px 0;
+
+    @include media(laptop) {
+      color: $wp-meliora__neutral-dark-gray-color;
+    }
 
     &:hover {
       color: $wp-meliora__main-primary-light-color;
     }
   }
 
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a,
-  .current-menu-ancestor > a {
-    color: $wp-meliora__main-primary-light-color;
-    border-bottom: 2px solid $wp-meliora__neutral-dark-gray-color;
+  @include media(laptop) {
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a,
+    .current-menu-ancestor > a {
+      color: $wp-meliora__main-primary-light-color;
+      border-bottom: 2px solid $wp-meliora__neutral-dark-gray-color;
+    }
   }
 
   & > ul > li.menu-item-has-children {
@@ -179,11 +185,15 @@
   left: -15px;
   padding: 0 15px;
   position: absolute;
-  top: 64px;
+  top: 0;
+  min-height: 100vh;
+  padding-top: 32px;
   background-color: $wp-meliora__neutral-white;
   padding-bottom: 10px;
   border-bottom: 1px solid $wp-meliora__neutral-gray-light-color;
   z-index: 9;
+  overflow-y: scroll;
+  max-height: 100%;
 }
 
 @media screen and (min-width: 37.5em) {

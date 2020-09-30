@@ -56,6 +56,8 @@
   background-color: transparent;
   color: $wp-meliora__secondary-color;
   padding: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .c-header__branding__title {
