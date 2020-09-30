@@ -1553,6 +1553,7 @@ body.error404 {
 
 .c-post__tags {
 	display: flex;
+	justify-content: flex-end;
 	flex-wrap: wrap;
 	clear: both;
 }

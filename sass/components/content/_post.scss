@@ -33,6 +33,7 @@
 
 .c-post__tags {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   clear: both;
 }
