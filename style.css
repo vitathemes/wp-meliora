@@ -1165,6 +1165,7 @@ body.error404 {
 --------------------------------------------- */
 .c-header {
 	margin-bottom: 60px;
+	background: center center/cover no-repeat;
 }
 
 .c-header .c-search-form {
