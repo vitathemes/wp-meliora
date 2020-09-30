@@ -15,7 +15,7 @@ if (document.querySelectorAll(".js-categories-list").length) {
          cellAlign: 'left'
      };
 
-     if (window.matchMedia("(max-width: 720px)")) {
+     if (window.matchMedia("(max-width: 720px)").matches) {
          categoriesCarouselOptions.groupCells = false;
      }
 

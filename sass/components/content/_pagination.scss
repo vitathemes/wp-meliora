@@ -32,6 +32,12 @@
         border-radius: $global-radius;
         background-color: $wp-meliora__neutral-gray-light-color;
 
+        span {
+          font-size: 14px;
+          width: 14px;
+          height: 14px;
+        }
+
         &:hover {
           color: $wp-meliora__tertiary-color;
           background-color: transparent;

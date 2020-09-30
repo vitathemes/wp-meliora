@@ -89,7 +89,10 @@
     }
 
     &:hover {
-      color: $wp-meliora__primary-color;
+
+      span {
+        color: $wp-meliora__primary-color;
+      }
     }
   }
 }

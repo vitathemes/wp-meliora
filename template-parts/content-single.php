@@ -20,11 +20,7 @@
 				?>
             </div><!-- .entry-meta -->
 		<?php endif;
-		if ( is_singular() ) :
 			the_title( '<h1 class="c-post__title entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="c-post__title entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 		?>
         <div class="c-post__meta c-post__meta--date-author entry-meta s-post-meta">
 			<?php

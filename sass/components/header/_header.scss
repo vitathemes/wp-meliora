@@ -60,18 +60,25 @@
 
 .c-header__branding__title {
   margin: 0;
+  color: $wp-meliora__secondary-color;
+
+
+  &:hover {
+    color: $wp-meliora__secondary-color;
+  }
 }
 
 .c-header__branding__title__link {
   color: $wp-meliora__secondary-color;
   text-decoration: none;
+  font-weight: var(--heading-typography-variant);
 
   &:visited {
     color: $wp-meliora__secondary-color;
+  }
 
-    &:hover {
-      color: $wp-meliora__primary-color;
-    }
+  &:hover {
+    color: $wp-meliora__secondary-color;
   }
 }
 
