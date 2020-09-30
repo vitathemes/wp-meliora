@@ -1241,7 +1241,7 @@ body.error404 {
 	font-weight: var(--heading-typography-variant);
 }
 
-.c-header__branding__title__link:visited, .c-header__branding__title__link:focus {
+.c-header__branding__title__link:visited, .c-header__branding__title__link:focus, .c-header__branding__title__link:active {
 	color: var(--secondary-color);
 }
 
