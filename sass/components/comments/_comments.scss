@@ -213,7 +213,7 @@ ol.children:last-child {
   line-height: 27px;
   text-align: center;
   letter-spacing: 0.1em;
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__quaternary-color !important;
   transition: 0.25s;
   text-decoration: none;
 
@@ -327,7 +327,7 @@ ol.children:last-child {
   font-size: 0.8em;
   margin-top: 0;
   text-decoration: none;
-  color: $wp-meliora__tertiary-color;
+  color: $wp-meliora__quaternary-color !important;
 
   @include media(laptop) {
     font-size: 1em;

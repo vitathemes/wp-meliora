@@ -560,7 +560,7 @@ h1, .h1, h1 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(1em, var(--heading-typography-font-size), 10em);
 	color: var(--tertiary-color);
-	line-height: 1.5;
+	line-height: var(--heading-typography-font-size);
 	font-weight: var(--heading-typography-variant) !important;
 }
 
@@ -568,7 +568,7 @@ h2, .h2, h2 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(0.85em, calc(var(--heading-typography-font-size) - 0.3em), 8em);
 	color: var(--tertiary-color);
-	line-height: 1.167;
+	line-height: calc(var(--heading-typography-line-height) - 0.1);
 	font-weight: var(--heading-typography-variant) !important;
 }
 
@@ -576,7 +576,7 @@ h3, .h3, h3 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.4em), 7em);
 	color: var(--tertiary-color);
-	line-height: 1.154;
+	line-height: calc(var(--heading-typography-line-height) - 0.2);
 	font-weight: var(--heading-typography-variant);
 }
 
@@ -584,7 +584,7 @@ h4, .h4, h4 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.5em), 6em);
 	color: var(--tertiary-color);
-	line-height: 1.15;
+	line-height: calc(var(--heading-typography-line-height) - 0.3);
 	font-weight: var(--heading-typography-variant) !important;
 }
 
@@ -592,7 +592,7 @@ h5, .h5, h5 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.6em), 5em);
 	color: var(--tertiary-color);
-	line-height: 1.205;
+	line-height: calc(var(--heading-typography-line-height) - 0.4);
 	font-weight: var(--heading-typography-variant) !important;
 }
 
@@ -600,7 +600,7 @@ h6, .h6, h6 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 0.7em), 4em);
 	color: var(--tertiary-color);
-	line-height: 1.194;
+	line-height: calc(var(--heading-typography-line-height) - 0.45);
 	font-weight: var(--heading-typography-variant) !important;
 }
 
@@ -1917,7 +1917,7 @@ ol.children {
 	line-height: 27px;
 	text-align: center;
 	letter-spacing: 0.1em;
-	color: var(--secondary-color);
+	color: var(--quaternary-color) !important;
 	transition: 0.25s;
 	text-decoration: none;
 }
@@ -2035,7 +2035,7 @@ ol.children {
 	font-size: 0.8em;
 	margin-top: 0;
 	text-decoration: none;
-	color: var(--tertiary-color);
+	color: var(--quaternary-color) !important;
 }
 
 @media only screen and (min-width: 1140px) {
