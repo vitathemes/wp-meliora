@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="no-results not-found">
+<section class="no-results not-found c-post c-post--single">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wp-meliora' ); ?></h1>
 	</header><!-- .page-header -->

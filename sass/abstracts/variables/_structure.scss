@@ -34,8 +34,8 @@ $breakpoint_xxl: 1400px;
 
 @include media(tablet) {
   :root {
-    --responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal));
-    --responsive--alignwide-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
+    --responsive--aligndefault-width: calc(#{$breakpoint_md} - var(--responsive--spacing-horizontal));
+    --responsive--alignwide-width: calc(#{$breakpoint_lg} - var(--responsive--spacing-horizontal));
     --responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
     --responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
   }

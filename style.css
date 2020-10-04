@@ -44,8 +44,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media only screen and (min-width: 980px) {
 	:root {
-		--responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal));
-		--responsive--alignwide-width: calc(980px - var(--responsive--spacing-horizontal));
+		--responsive--aligndefault-width: calc(980px - var(--responsive--spacing-horizontal));
+		--responsive--alignwide-width: calc(1140px - var(--responsive--spacing-horizontal));
 		--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 		--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
 	}
@@ -1185,12 +1185,12 @@ body.error404 {
 	display: flex;
 	position: relative;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 @media only screen and (min-width: 1140px) {
 	.c-header__main {
 		flex-direction: row;
-		align-items: center;
 		flex-wrap: nowrap;
 	}
 }
@@ -1240,6 +1240,10 @@ body.error404 {
 	height: 32px;
 }
 
+.c-header__navigation__toggle:hover {
+	background-color: transparent;
+}
+
 .c-header__branding__title {
 	margin: 0;
 	color: var(--secondary-color);
@@ -1287,7 +1291,7 @@ body.error404 {
 	background-color: #FFFFFF;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation ul {
 		position: relative;
 		background: transparent;
@@ -1307,7 +1311,7 @@ body.error404 {
 	left: unset;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation ul ul {
 		border: 1px solid var(--quaternary-color);
 		float: left;
@@ -1326,7 +1330,7 @@ body.error404 {
 	width: 100%;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation ul ul ul {
 		left: -999em;
 		top: 0;
@@ -1353,7 +1357,7 @@ body.error404 {
 	color: #474747;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation ul ul li:hover > ul,
 	.main-navigation ul ul li.focus > ul {
 		display: block;
@@ -1397,7 +1401,7 @@ body.error404 {
 	padding: 10px 0;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation a {
 		color: var(--quaternary-color);
 	}
@@ -1407,7 +1411,7 @@ body.error404 {
 	color: #474747;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation .current_page_item > a,
 	.main-navigation .current-menu-item > a,
 	.main-navigation .current_page_ancestor > a,
@@ -1444,7 +1448,7 @@ body.error404 {
 	flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation > ul ul li.menu-item-has-children {
 		flex-wrap: nowrap;
 	}
@@ -1456,7 +1460,7 @@ body.error404 {
 	color: var(--quaternary-color);
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
 	.main-navigation > ul ul li.menu-item-has-children span {
 		transform: rotate(-90deg);
 	}
@@ -1485,7 +1489,7 @@ body.error404 {
 	animation: fadeInFromNone 0.4s forwards;
 }
 
-@media screen and (min-width: 37.5em) {
+@media only screen and (min-width: 980px) {
 	.menu-toggle {
 		display: none;
 	}

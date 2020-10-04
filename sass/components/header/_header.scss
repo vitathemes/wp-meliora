@@ -18,10 +18,10 @@
   display: flex;
   position: relative;
   flex-wrap: wrap;
+  align-items: center;
 
   @include media(laptop) {
     flex-direction: row;
-    align-items: center;
     flex-wrap: nowrap;
   }
 }
@@ -64,6 +64,10 @@
     font-size: 32px;
     width: 32px;
     height: 32px;
+  }
+
+  &:hover {
+    background-color: transparent;
   }
 }
 
