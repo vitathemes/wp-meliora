@@ -1012,10 +1012,12 @@ body.error404 {
 
 .error-404.not-found {
 	text-align: center;
+	margin-top: 32px;
 }
 
 @media only screen and (min-width: 1140px) {
 	.error-404.not-found {
+		margin-top: 0;
 		max-width: 60%;
 		margin-right: auto;
 		margin-left: auto;
@@ -1038,6 +1040,10 @@ body.error404 {
 	background-color: #FFFFFF;
 }
 
+.error-404.not-found .not-found__actions__link {
+	text-decoration: none;
+}
+
 .error-404.not-found .not-found__actions__link .dashicons {
 	vertical-align: middle;
 	font-size: 1em;
@@ -1048,11 +1054,17 @@ body.error404 {
 }
 
 .error-404.not-found .not-found__error {
-	font-size: 15rem;
+	font-size: 8rem;
 	line-height: 1em;
 	margin-bottom: 24px;
 	color: #FFFFFF;
 	text-shadow: -2px -2px 0 #DFDFDF, 2px -2px 0 #DFDFDF, -2px 2px 0 #DFDFDF, 2px 2px 0 #DFDFDF;
+}
+
+@media only screen and (min-width: 1140px) {
+	.error-404.not-found .not-found__error {
+		font-size: 15rem;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1259,7 +1271,7 @@ body.error404 {
 }
 
 .c-header--404 {
-	margin: 48px 0 0;
+	margin: 16px 0 0;
 }
 
 @media only screen and (min-width: 1140px) {
