@@ -5,7 +5,6 @@
  *
  * @package     WordPress
  * @subpackage  Comment_Walker
- * @author      Boone Software <support@boone.io>
  */
 class Wp_meliora_walker_comment extends Walker_Comment
 {

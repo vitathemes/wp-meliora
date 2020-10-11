@@ -560,7 +560,7 @@ h1, .h1, h1 * {
 	font-family: var(--heading-typography-font-family);
 	font-size: clamp(1em, var(--heading-typography-font-size), 10em);
 	color: var(--tertiary-color);
-	line-height: var(--heading-typography-font-size);
+	line-height: var(--heading-typography-line-height);
 	font-weight: var(--heading-typography-variant) !important;
 }
 

@@ -438,7 +438,7 @@ add_action( 'init', function () {
 			'font-family'    => 'Roboto Mono',
 			'variant'        => '300',
 			'font-size'      => '16px',
-			'line-height'    => '1.6',
+			'line-height'    => '1.5',
 			'letter-spacing' => '0'
 			//'color'       => '#000',
 		],
