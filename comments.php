@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 
 	<?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
+	if ( comments_open() ) :
 		comment_form( array(
 			'label_submit'  => 'Post',
 			'title_reply'   => 'Add a comment',
@@ -38,20 +38,20 @@ if ( post_password_required() ) {
         </h2><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
-
-        <ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'walker'      => new Wp_meliora_walker_comment(),
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'avatar_size' => 70,
-				)
-			);
-			?>
-        </ol><!-- .comment-list -->
-
+<?php if ( have_comments() ) : ?>
+            <ol class="comment-list">
+				<?php
+				wp_list_comments(
+					array(
+						'walker'      => new Wp_meliora_walker_comment(),
+						'style'       => 'ol',
+						'short_ping'  => true,
+						'avatar_size' => 70,
+					)
+				);
+				?>
+            </ol><!-- .comment-list -->
+		<?php endif; ?>
 		<?php
 		the_comments_navigation();
 
