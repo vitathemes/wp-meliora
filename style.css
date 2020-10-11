@@ -630,21 +630,14 @@ i {
 blockquote {
 	margin-top: 1.25rem;
 	margin-bottom: 1.5rem;
-	border-left: 2px solid var(--quaternary-color);
-	padding-left: 64px;
+	margin-left: 0;
+	border-left: 2px solid #DFDFDF;
+	padding-left: 22px;
 	color: var(--secondary-color);
-	font-weight: bold;
-	font-size: 19px;
-	line-height: 32px;
-	letter-spacing: 0.1em;
 }
 
 blockquote cite {
 	color: var(--tertiary-color);
-	font-weight: 400;
-	font-size: 19px;
-	line-height: 32px;
-	letter-spacing: 0.1em;
 }
 
 address {
