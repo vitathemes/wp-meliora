@@ -31,15 +31,16 @@ if ( post_password_required() ) {
 			'comment_field' => '<p class="comment-form-comment"><label for="comment">Comment*</label> <textarea id="comment" name="comment" cols="45" rows="3" maxlength="20000" required="required" spellcheck="false"></textarea></p>'
 		) );
 		?>
+
+
+<?php if ( have_comments() ) : ?>
         <h2 class="comments-title">
 			<?php
 			esc_html_e( 'Comments', 'wp-meliora' )
 			?>
         </h2><!-- .comments-title -->
 
-		<?php the_comments_navigation(); ?>
-<?php if ( have_comments() ) : ?>
-            <ol class="comment-list">
+        <ol class="comment-list">
 				<?php
 				wp_list_comments(
 					array(
@@ -51,6 +52,7 @@ if ( post_password_required() ) {
 				);
 				?>
             </ol><!-- .comment-list -->
+		<?php the_comments_navigation(); ?>
 		<?php endif; ?>
 		<?php
 		the_comments_navigation();
