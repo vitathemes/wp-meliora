@@ -8,8 +8,8 @@
 }
 
 p {
-	margin-top: 0;
-	margin-bottom: 1.5em;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 }
 
 dfn,
@@ -17,10 +17,13 @@ cite,
 em,
 i {
 	font-style: italic;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 }
 
 blockquote {
-	margin: 0;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 	border-left: 2px solid $wp-meliora__quaternary-color;
 	padding-left: 64px;
 	color: $wp-meliora__secondary-color;
@@ -39,14 +42,16 @@ blockquote {
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 }
 
 pre {
 	background: $color__background-pre;
 	font-family: $wp-meliora__secondary-font;
 	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
@@ -74,21 +79,4 @@ ins {
 
 big {
 	font-size: 125%;
-}
-
-
-.is-dark-mode {
-	pre,
-	big,
-	code,
-	kbd,
-	tt,
-	var,
-	abbr,
-	acronym,
-	mark,
-	ins
-	{
-		color: $wp-meliora__tertiary-color;
-	}
 }

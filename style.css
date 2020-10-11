@@ -553,7 +553,7 @@ h6 {
 	clear: both;
 	font-family: var(--heading-typography-font-family);
 	font-weight: var(--heading-typography-variant);
-	margin: 0 0 1.25em;
+	margin: 1.25rem 0 1.25rem;
 }
 
 h1, .h1, h1 * {
@@ -614,8 +614,8 @@ h6, .h6, h6 * {
 }
 
 p {
-	margin-top: 0;
-	margin-bottom: 1.5em;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 }
 
 dfn,
@@ -623,10 +623,13 @@ cite,
 em,
 i {
 	font-style: italic;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 }
 
 blockquote {
-	margin: 0;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 	border-left: 2px solid var(--quaternary-color);
 	padding-left: 64px;
 	color: var(--secondary-color);
@@ -645,14 +648,16 @@ blockquote cite {
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 }
 
 pre {
 	background: #eee;
 	font-family: var(--heading-typography-font-family);
 	line-height: 1.6;
-	margin-bottom: 1.6em;
+	margin-top: 1.25rem;
+	margin-bottom: 1.5rem;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
@@ -680,19 +685,6 @@ ins {
 
 big {
 	font-size: 125%;
-}
-
-.is-dark-mode pre,
-.is-dark-mode big,
-.is-dark-mode code,
-.is-dark-mode kbd,
-.is-dark-mode tt,
-.is-dark-mode var,
-.is-dark-mode abbr,
-.is-dark-mode acronym,
-.is-dark-mode mark,
-.is-dark-mode ins {
-	color: var(--tertiary-color);
 }
 
 /* Elements
