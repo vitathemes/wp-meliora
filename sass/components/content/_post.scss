@@ -1,0 +1,136 @@
+.c-post {
+  padding: 40px 0 48px;
+  border-bottom: 1px solid $wp-meliora__neutral-gray-color;
+  margin: 0;
+
+  &:last-of-type {
+    border-bottom: 0;
+    padding: 0;
+
+    &.c-post--archive {
+      padding: 40px 0 64px;
+    }
+  }
+}
+
+.c-post__meta__date {
+  font-size: 0.75rem;
+  font-weight: var(--heading-typography-variant);
+
+  time {
+    font-weight: var(--heading-typography-variant);
+    color:  var(--quaternary-color);
+  }
+}
+
+.c-post__title {
+  margin: 24px 0 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.c-post__tags {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  clear: both;
+}
+
+.c-post:not(.c-post--archive) .c-post__tags {
+  margin: 40px 0;
+}
+
+.c-post__tags__tag {
+  white-space: nowrap;
+  background-color: $wp-meliora__neutral-gray-light-color;
+  padding: 0 16px;
+  line-height: 30px;
+  height: 30px;
+  border-radius: $global-radius;
+  text-decoration: none;
+  margin: 0 4px 4px 0;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: var(--heading-typography-variant);
+
+  &--more {
+    background-color: $wp-meliora__neutral-gray-color;
+  }
+}
+
+.blog .c-post, .archive .c-post, .search .c-post {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .c-post__header {
+    width: 100%;
+  }
+
+  .c-post__tags {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  @include media(laptop) {
+    flex-wrap: nowrap;
+    .c-post__header {
+      width: 70%;
+      padding-right: 10px;
+    }
+
+    .c-post__tags {
+      width: 30%;
+      margin-top: 0;
+    }
+  }
+}
+
+.c-post_cats {
+  font-size: 0.75em;
+  color: $wp-meliora__quaternary-color;
+}
+
+.s-post-meta {
+
+  a {
+    text-decoration: none;
+    color: $wp-meliora__quaternary-color;
+    font-weight: var(--heading-typography-variant);
+
+    &:hover {
+      color: $wp-meliora__primary-color;
+    }
+  }
+}
+
+.c-post__meta--date-author {
+  margin: 30px 0 24px;
+  font-size: 0.75em;
+  color: $wp-meliora__neutral-dark-gray-color;
+
+
+  @include media(laptop) {
+    margin: 40px 0 48px;
+  }
+}
+
+.c-post__thumbnail {
+  margin-bottom: 24px;
+
+  @include media(laptop) {
+    margin-bottom: 48px;
+  }
+}
+
+.c-post.c-post--single {
+  padding-bottom: 24px;
+  border-bottom: 1px solid $wp-meliora__neutral-gray-color;
+  margin-bottom: 48px;
+
+  .c-post__tags {
+    justify-content: flex-start;
+  }
+}

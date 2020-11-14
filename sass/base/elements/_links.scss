@@ -1,0 +1,23 @@
+a {
+	color: $wp-meliora__secondary-color;
+	transition: $global-transition;
+
+	&:visited {
+		color: $wp-meliora__secondary-color;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $wp-meliora__primary-color;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

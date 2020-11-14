@@ -1,0 +1,53 @@
+.c-categories-list {
+  margin: 0 12px;
+  padding: 0;
+
+  @include media(laptop) {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+.c-categories-list__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid $wp-meliora__neutral-gray-color;
+}
+
+.s-categories-list {
+
+  li {
+    margin-right: 24px;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
+
+    @include media(laptop) {
+      margin-right: 48px;
+    }
+  }
+
+  li.current-cat {
+
+    a {
+      color: $wp-meliora__secondary-color;
+      border-bottom: 2px solid $wp-meliora__neutral-dark-gray-color;
+    }
+  }
+
+  a {
+    font-weight: var(--heading-typography-variant);
+    text-decoration: none;
+    padding: 0 4px 8px;
+    color: $wp-meliora__neutral-dark-gray-color;
+    word-wrap: normal;
+    white-space: nowrap;
+    display: block;
+
+    &:hover {
+      color: $wp-meliora__secondary-color;
+    }
+  }
+}

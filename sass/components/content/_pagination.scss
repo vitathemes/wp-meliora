@@ -1,0 +1,49 @@
+.pagination {
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+
+    .page-numbers {
+      color: $wp-meliora__tertiary-color;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 0 5px;
+      margin: 0 10px 0 0;
+      text-decoration: none;
+
+      &:hover {
+        color: $wp-meliora__primary-color;
+      }
+
+      &.current {
+        color: $wp-meliora__primary-color;
+      }
+
+      &.next , &.prev {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $wp-meliora__neutral-gray-light-color;
+        color: $wp-meliora__tertiary-color;
+        border-radius: $global-radius;
+        background-color: $wp-meliora__neutral-gray-light-color;
+
+        span {
+          font-size: 14px;
+          width: 14px;
+          height: 14px;
+        }
+
+        &:hover {
+          color: $wp-meliora__tertiary-color;
+          background-color: transparent;
+          border-color: $wp-meliora__tertiary-color;
+        }
+      }
+    }
+  }
+}

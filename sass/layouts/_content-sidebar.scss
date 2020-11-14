@@ -1,0 +1,38 @@
+.site.is-content-sidebar {
+  .site-main__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media(laptop) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .site-main__content {
+    flex-grow: 1;
+    order: 2;
+    width: 100%;
+
+    @include media(laptop) {
+      width: 62%;
+    }
+  }
+
+  .c-sidebar {
+    width: 100%;
+    order: 2;
+
+    @include media(laptop) {
+      width: $size__site-sidebar;
+      padding-left: 100px;
+    }
+  }
+}
+
+.site-header {
+  width: 100%;
+}
+
+.site-footer {
+  width: 100%;
+}

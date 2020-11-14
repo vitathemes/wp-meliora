@@ -1,0 +1,75 @@
+.site.no-sidebar {
+  .sidebar {
+    display: none;
+  }
+
+  .c-post__tags {
+    justify-content: flex-start;
+
+    @include media(laptop) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+// 404 page - no sidebar
+body.error404 {
+  background-color: $wp-meliora__neutral-gray-light-color;
+}
+
+.error-404.not-found {
+  text-align: center;
+  margin-top: 32px;
+
+  @include media(laptop) {
+    margin-top: 0;
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .page-content p {
+    font-size: 1rem;
+    line-height: 2em;
+  }
+
+  .search-form {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 48px;
+
+    input {
+      background-color: $wp-meliora__neutral-white;
+    }
+  }
+
+  .not-found__actions__link {
+    text-decoration: none;
+
+    .dashicons {
+      vertical-align: middle;
+      font-size: 1em;
+    }
+  }
+
+  .error-404__image {
+    max-width: 100%;
+  }
+
+  .not-found__error {
+    font-size: 8rem;
+    line-height: 1em;
+    margin-bottom: 24px;
+    color: $wp-meliora__neutral-white;
+    text-shadow: -2px -2px 0 $wp-meliora__neutral-gray-color,
+    2px -2px 0 $wp-meliora__neutral-gray-color,
+    -2px 2px 0 $wp-meliora__neutral-gray-color,
+    2px 2px 0 $wp-meliora__neutral-gray-color;
+
+    @include media(laptop) {
+      font-size: 15rem;
+    }
+  }
+}

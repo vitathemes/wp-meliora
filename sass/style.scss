@@ -1,0 +1,91 @@
+/*!
+Theme Name: WP-Meliora
+Theme URI: https://vitathemes.com/theme/wp-meliora/
+Author: VitaThemes
+Author URI: https://vitathemes.com
+Description: A minimal & mobile-first blog theme. The best choice for people who want to start blogging as soon as possible.
+Version: 1.0.0
+Tested up to: 5.5.1
+Requires PHP: 5.6
+License: GPL-2.0-or-later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-meliora
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/structure";
+@import "layouts/content-sidebar";
+@import "layouts/sidebar-content";
+@import "layouts/no-sidebar";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+@import "plugins/jetpack/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/* Structure
+--------------------------------------------- */
+@import "utilities/structure";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# External
+--------------------------------------------------------------*/
+@import "external/flickity";
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks/blocks";

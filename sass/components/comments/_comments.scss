@@ -1,0 +1,373 @@
+.c-comments {
+  width: 100%;
+  margin-top: 40px;
+
+  @include media(tablet) {
+    margin-top: 48px;
+  }
+
+  .form-submit {
+    margin: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+
+  .comment-list {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.comments-title {
+  margin: 0 0 48px;
+  line-height: 1.75;
+}
+
+.comments-header {
+  margin-bottom: 48px;
+
+  @include media(laptop) {
+    margin: 0 0 64px;
+  }
+}
+
+
+.comment-content a {
+  word-wrap: break-word;
+  color: $wp-meliora__secondary-color;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+.c-comments .comment-list > li, .c-comments .comment-list > .comment {
+  padding: 24px 0;
+  margin: 0;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.comment {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+
+  .comment-respond {
+    margin-top: 40px;
+
+    .comment-form {
+      margin-bottom: 24px;
+    }
+  }
+
+  & > li > ol.children {
+    border-bottom: 0;
+  }
+
+  .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .comment-avatar {
+    margin-right: 24px;
+    min-width: 36px;
+    min-height: 36px;
+    width: 36px;
+    height: 36px;
+
+    @include media(laptop) {
+      width: 70px;
+      height: 70px;
+      min-width: 70px;
+      min-height: 70px;
+    }
+  }
+
+  .comment-header .time, .comment-header .time * {
+    font-size: 12px;
+    color: $wp-meliora__neutral-dark-gray-color;
+    font-weight: var(--heading-typography-variant) !important;
+  }
+
+  .comment-info {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+  }
+
+  .avatar {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .comment {
+    padding: 20px 10px 10px;
+    margin: 20px 0 0;
+  }
+
+  .comment-meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .comment-metadata a * {
+    font-size: 0.813em;
+    text-decoration: none;
+    color: #888888;
+    font-weight: 400;
+  }
+
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  .comment-author {
+    margin-right: 24px;
+  }
+
+  .comment-author, .comment-author a {
+    font-size: 0.8em;
+    margin-top: 0;
+    text-decoration: none;
+    color: $wp-meliora__tertiary-color;
+
+    @include media(laptop) {
+      font-size: 1em;
+    }
+  }
+}
+
+
+ol.children {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 10px;
+  margin-left: 5px;
+
+  @include media(laptop) {
+    margin-top: 15px;
+    padding-left: 30px;
+  }
+}
+
+ol.children:last-child {
+
+}
+
+.comment-navigation {
+  margin-bottom: 40px;
+}
+
+.comments > .comment:first-child {
+  border-top: 0;
+}
+
+.comment-content p, .screen-reader-text.says {
+  font-weight: 400;
+}
+
+.comment-content p {
+  margin-bottom: 16px;
+  color: $wp-meliora__main-primary-light-color;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-weight: var(--text-typography-variant);
+
+  a {
+    font-weight: var(--text-typography-variant);
+  }
+
+  @include media(laptop) {
+    font-size: 1rem;
+  }
+}
+
+.comment-content a {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+
+  @include media(laptop) {
+    font-size: 1rem;
+  }
+}
+
+
+.comment-reply-link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: $wp-meliora__quaternary-color !important;
+  transition: 0.25s;
+  text-decoration: none;
+
+  &:hover {
+    color: $wp-meliora__primary-color;
+  }
+}
+
+
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 64px;
+
+  @include media(laptop) {
+    margin-bottom: 96px;
+  }
+}
+
+.comment-form-author, .comment-form-email, .comment-form-url {
+  width: 100%;
+
+  label {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    font-weight: var(--heading-typography-variant);
+    color: $wp-meliora__secondary-color;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  @include media(laptop) {
+    width: 30%;
+  }
+}
+
+.comment-form-cookies {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+
+
+  input {
+    margin: 5px 10px 0 0;
+  }
+}
+
+.comment-form-comment {
+  width: 100%;
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: var(--heading-typography-variant);
+  color: $wp-meliora__secondary-color;
+
+  label {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    font-weight: var(--heading-typography-variant);
+    color: $wp-meliora__secondary-color;
+  }
+
+  @include media(laptop) {
+    margin-top: 24px;
+  }
+
+  textarea {
+    max-height: 100px;
+  }
+}
+
+.comment-form-cookies-consent {
+  display: flex;
+  align-items: flex-start;
+
+  input {
+    margin-top: 0.4em;
+    margin-right: 0.5em;
+  }
+
+  label {
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    font-weight: var(--heading-typography-variant);
+    color: $wp-meliora__secondary-color;
+  }
+}
+
+#cancel-comment-reply-link {
+  font-size: 0.75rem;
+  margin-left: 2em;
+}
+
+.comment-edit-link {
+  margin-right: 20px;
+  font-size: 0.8em;
+  margin-top: 0;
+  text-decoration: none;
+  color: $wp-meliora__quaternary-color !important;
+
+  @include media(laptop) {
+    font-size: 1em;
+  }
+
+  &:hover {
+    color: $wp-meliora__primary-color;
+  }
+}
+
+.comment-reply-title {
+  font-size: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+.comment-notes {
+  font-size: 0.75em;
+  font-weight: var(--text-typography-variant);
+}
+
+.form-submit {
+  width: 100%;
+
+  input, [type="submit"] {
+    font-weight: var(--heading-typography-variant);
+    padding: 10px 24px;
+    background-color: $wp-meliora__main-primary-light-color;
+    color: $wp-meliora__neutral-white;
+    border-radius: $global-radius;
+    cursor: pointer;
+    transition: $global-transition;
+
+    &:hover {
+      background-color: $wp-meliora__quaternary-color;
+    }
+  }
+}
+
+.no-comments {
+  margin-top: 24px;
+  font-weight: var(--heading-typography-variant);
+  text-align: center;
+}
