@@ -55,7 +55,6 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 		);
 
 		$args = array(
-			'default-image'      => get_template_directory_uri() . 'img/default-image.jpg',
 			'default-text-color' => '000',
 			'width'              => 1000,
 			'height'             => 250,
