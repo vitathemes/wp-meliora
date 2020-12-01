@@ -40,7 +40,7 @@ if ( function_exists( 'wp_body_open' ) ) {
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="c-header__navigation main-navigation">
-                <button aria-label="Toggle menu" class="c-header__navigation__toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <button aria-label="Toggle menu" class="c-header__navigation__toggle js-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                     <span class="dashicons dashicons-menu-alt"></span></button>
 				<?php
 				if ( has_nav_menu( 'menu-1' ) ) {
@@ -49,6 +49,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 							'walker'         => new Wp_meliora_walker_nav_menu(),
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
+							'menu_class' => 'menu js-primary-menu',
 							'container'      => ''
 						)
 					);
