@@ -45,6 +45,7 @@
   width: auto;
   flex-grow: 1;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  min-height: calc(100vh - 341px);
 }
 
 .widget-area {

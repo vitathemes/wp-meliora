@@ -912,6 +912,7 @@ textarea {
 	flex-grow: 1;
 	overflow: hidden;
 	/* Resolves issue with <pre> elements forcing full width. */
+	min-height: calc(100vh - 341px);
 }
 
 .widget-area {
@@ -1394,6 +1395,7 @@ body.error404 {
 @media only screen and (min-width: 980px) {
 	.main-navigation > ul ul li.menu-item-has-children span {
 		transform: rotate(-90deg);
+		margin-left: auto;
 	}
 }
 
@@ -1628,6 +1630,23 @@ body.error404 {
 
 .c-post.c-post--single .c-post__tags {
 	justify-content: flex-start;
+}
+
+.no-results.not-found.c-post--not-found {
+	display: block;
+}
+
+.no-results.not-found.c-post--not-found .page-title {
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.no-results.not-found.c-post--not-found .page-content {
+	margin-top: 10px;
+}
+
+.no-results.not-found.c-post--not-found .page-content p {
+	margin-top: 10px;
 }
 
 /* Comments

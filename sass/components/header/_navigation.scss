@@ -171,6 +171,7 @@
 
       @include media(tablet) {
         transform: rotate(-90deg);
+        margin-left: auto;
       }
 
       &::before {
