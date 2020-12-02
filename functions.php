@@ -197,5 +197,3 @@ require get_template_directory() . '/classes/class_wp_meliora_walker_nav_menu.ph
  * Comments walker
  */
 require get_template_directory() . '/classes/class_wp_meliora_walker_comment.php';
-
-//add_theme_support( 'custom-background' );

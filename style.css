@@ -5,7 +5,7 @@ Author: VitaThemes
 Author URI: https://vitathemes.com
 Description: A minimal & mobile-first blog theme. The best choice for people who want to start blogging as soon as possible.
 Version: 1.0.0
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Requires PHP: 5.6
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -912,7 +912,13 @@ textarea {
 	flex-grow: 1;
 	overflow: hidden;
 	/* Resolves issue with <pre> elements forcing full width. */
-	min-height: calc(100vh - 341px);
+	padding: 0 var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 980px) {
+	.site-main {
+		padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	}
 }
 
 .widget-area {
@@ -1096,7 +1102,7 @@ body.error404 {
 /* header
 --------------------------------------------- */
 .c-header {
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 	background: center center/cover no-repeat;
 }
 
@@ -1110,6 +1116,7 @@ body.error404 {
 	.c-header .c-search-form {
 		width: auto;
 		margin-top: 0;
+		margin-bottom: 60px;
 	}
 }
 
@@ -2336,6 +2343,7 @@ ol.children {
 	background-color: #F4F4F4;
 	padding: 0;
 	font-size: 0.75rem;
+	margin-top: auto;
 }
 
 .c-footer__top {

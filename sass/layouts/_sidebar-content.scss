@@ -45,7 +45,11 @@
   width: auto;
   flex-grow: 1;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  min-height: calc(100vh - 341px);
+  padding: 0 var(--global--spacing-horizontal);
+
+  @include media(tablet) {
+    padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+  }
 }
 
 .widget-area {

@@ -25,10 +25,12 @@ var menuListItems = menu.querySelectorAll('li');
 
 var focus, isToggleItem, isBackward;
 var lastIndex = menuListItems.length - 1;
+var lastParentIndex = document.querySelectorAll('.c-header__navigation > ul > li').length - 1;
+console.log(lastParentIndex);
 document.addEventListener('focusin', function () {
     focus = document.activeElement;
     if (isToggleItem && focus !== menuLinks[0]) {
-        menuLinks[lastIndex].focus();
+        document.querySelectorAll('.c-header__navigation > ul > li')[lastParentIndex].querySelector('a').focus();
     }
 
     if (focus === menuToggle) {
