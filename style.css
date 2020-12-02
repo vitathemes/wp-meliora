@@ -1116,7 +1116,6 @@ body.error404 {
 	.c-header .c-search-form {
 		width: auto;
 		margin-top: 0;
-		margin-bottom: 60px;
 	}
 }
 
@@ -2604,6 +2603,15 @@ https://flickity.metafizzy.co
 --------------------------------------------------------------*/
 .wp-block-button {
 	margin: 1rem 0;
+}
+
+/*--------------------------------------------------------------
+# Objects
+--------------------------------------------------------------*/
+.o-page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
