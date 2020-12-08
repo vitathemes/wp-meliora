@@ -207,7 +207,7 @@ if ( ! function_exists( 'wp_meliora_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
             <div class="c-post__thumbnail">
-				<?php the_post_thumbnail( 'large' ); ?>
+				<?php the_post_thumbnail( 'full' ); ?>
             </div><!-- .post-thumbnail -->
 		<?php
 		endif; // End is_singular().
