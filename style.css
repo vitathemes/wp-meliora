@@ -1666,6 +1666,11 @@ body.error404 {
 	margin-top: 10px;
 }
 
+.search.search-results .page-title {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #DFDFDF;
+}
+
 /* Comments
 --------------------------------------------- */
 .c-comments {
