@@ -9,10 +9,15 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php //wp_meliora_post_thumbnail(); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('c-page'); ?>>
 
-	<div class="entry-content">
+    <header class="c-page__header entry-header">
+		<?php
+		the_title( '<h1 class="c-page__title entry-title">', '</h1>' );
+		?>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
 		<?php
 		the_content();
 
@@ -23,15 +28,15 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+        <footer class="entry-footer">
 			<?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
+					/* translators: %s: Name of current post. Only visible to screen readers */
 						__( 'Edit <span class="screen-reader-text">%s</span>', 'wp-meliora' ),
 						array(
 							'span' => array(
@@ -45,6 +50,6 @@
 				'</span>'
 			);
 			?>
-		</footer><!-- .entry-footer -->
+        </footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
