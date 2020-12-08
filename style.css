@@ -1573,6 +1573,11 @@ body.error404 {
 	background-color: #DFDFDF;
 }
 
+.c-post__tags__tag:hover {
+	background-color: #DFDFDF;
+	color: #474747;
+}
+
 .blog .c-post, .archive .c-post, .search .c-post {
 	display: flex;
 	align-items: center;

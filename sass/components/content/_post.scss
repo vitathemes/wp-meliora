@@ -58,6 +58,11 @@
   &--more {
     background-color: $wp-meliora__neutral-gray-color;
   }
+
+  &:hover {
+    background-color: $wp-meliora__neutral-gray-color;
+    color: $wp-meliora__main-primary-light-color;
+  }
 }
 
 .blog .c-post, .archive .c-post, .search .c-post {
