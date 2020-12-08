@@ -38,7 +38,7 @@ get_header();
 
 					endwhile;
 
-					the_posts_navigation();
+					wp_meliora_posts_pagination();
 
 				else :
 

@@ -3,10 +3,6 @@
   white-space: normal;
 }
 
-*:not(h1, h2, h3, h4, h5, h6, b, strong) {
-	font-weight: var(--text-typography-variant);
-}
-
 p {
 	margin-top: 1.25rem;
 	margin-bottom: 1.5rem;
@@ -41,8 +37,6 @@ address {
 
 pre {
 	background: $color__background-pre;
-	font-family: $wp-meliora__secondary-font;
-	line-height: $font__line-height-pre;
 	margin-top: 1.25rem;
 	margin-bottom: 1.5rem;
 	max-width: 100%;
@@ -55,7 +49,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: $wp-meliora__secondary-font;
+
 }
 
 abbr,

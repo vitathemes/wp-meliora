@@ -5,9 +5,6 @@ select,
 optgroup,
 textarea {
 	color: $wp-meliora__secondary-color;
-	font-family: $wp-meliora__primary-font;
-	font-size: $wp-meliora_base-font-size;
-	line-height: $font__line-height-body;
 }
 
 @import "headings";

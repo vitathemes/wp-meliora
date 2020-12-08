@@ -31,7 +31,7 @@ if ( ! function_exists( 'wp_meliora_posted_on' ) ) :
 			$time_string
 		);
 
-		echo '<span class="c-post__meta__date posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="c-post__meta__date posted-on">' . $posted_on . ' </span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;

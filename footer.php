@@ -21,25 +21,25 @@
     </div>
     <div class="c-footer__bottom site-info">
         <div class="u-default-max-width">
-          <div class="c-footer__grid">
-              <div class="c-footer__copyright">
-                  <?php $allowed_html = [
-	                  'a'      => [
-		                  'href'  => [],
-		                  'title' => [],
-	                  ],
-	                  'br'     => [],
-	                  'em'     => [],
-	                  'strong' => [],
-	                  'p' => [],
-                  ];
-                  echo wp_kses( get_theme_mod('copyright_text', sprintf('</span>%s <a href="%s" class="customize-unpreviewable">%s</a>.', esc_html__('WP-Meliora by ', 'wp-meliora'), esc_url('https://vitathemes.com'), esc_html__('VitaThemes', 'wp-meliora'))), $allowed_html );
-                   ?>
-              </div>
-              <div class="c-footer__socials s-footer-socials">
-                  <?php wp_meliora_socials_links(); ?>
-              </div>
-          </div>
+            <div class="c-footer__grid">
+                <div class="c-footer__copyright">
+					<?php $allowed_html = [
+						'a'      => [
+							'href'  => [],
+							'title' => [],
+						],
+						'br'     => [],
+						'em'     => [],
+						'strong' => [],
+						'p'      => [],
+					];
+					echo wp_kses( get_theme_mod( 'copyright_text', sprintf( '</span>%s <a href="%s" class="customize-unpreviewable">%s</a>.', esc_html__( 'WP-Meliora by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ) ), $allowed_html );
+					?>
+                </div>
+                <div class="c-footer__socials s-footer-socials">
+					<?php wp_meliora_socials_links(); ?>
+                </div>
+            </div>
         </div><!-- .site-info -->
     </div>
 </footer><!-- #colophon -->

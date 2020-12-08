@@ -134,3 +134,26 @@
     justify-content: flex-start;
   }
 }
+
+.no-results.not-found.c-post--not-found {
+  display: block;
+
+  .page-title {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  .page-content {
+    margin-top: 10px;
+
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.search {
+  .page-title {
+
+  }
+}

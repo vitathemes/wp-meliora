@@ -30,8 +30,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 ?>
 <div id="page" class="o-page site <?php wp_meliora_site_layout_class(); ?>">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-meliora' ); ?></a>
-
-    <header id="masthead" class="c-header site-header" <?php if (get_header_image()) { echo esc_attr('style="background-image: url(' . esc_url(get_header_image()) . ');"');} ?>>
+    <header id="masthead" class="c-header site-header">
         <div class="c-header__main u-default-max-width">
             <div class="c-header__branding">
 				<?php
@@ -40,7 +39,7 @@ if ( function_exists( 'wp_body_open' ) ) {
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="c-header__navigation main-navigation">
-                <button aria-label="Toggle menu" class="c-header__navigation__toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <button aria-label="Toggle menu" class="c-header__navigation__toggle js-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                     <span class="dashicons dashicons-menu-alt"></span></button>
 				<?php
 				if ( has_nav_menu( 'menu-1' ) ) {
@@ -49,6 +48,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 							'walker'         => new Wp_meliora_walker_nav_menu(),
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'menu js-primary-menu',
 							'container'      => ''
 						)
 					);

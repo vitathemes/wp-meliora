@@ -54,16 +54,6 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 			)
 		);
 
-		$args = array(
-			'default-image'      => get_template_directory_uri() . 'img/default-image.jpg',
-			'default-text-color' => '000',
-			'width'              => 1000,
-			'height'             => 250,
-			'flex-width'         => true,
-			'flex-height'        => true,
-		);
-		add_theme_support( 'custom-header', $args );
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

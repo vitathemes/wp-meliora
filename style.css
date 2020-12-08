@@ -5,7 +5,7 @@ Author: VitaThemes
 Author URI: https://vitathemes.com
 Description: A minimal & mobile-first blog theme. The best choice for people who want to start blogging as soon as possible.
 Version: 1.0.0
-Tested up to: 5.5.1
+Tested up to: 5.5.3
 Requires PHP: 5.6
 License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -539,9 +539,6 @@ select,
 optgroup,
 textarea {
 	color: var(--secondary-color);
-	font-family: var(--text-typography-font-family);
-	font-size: var(--text-typography-font-size);
-	line-height: 1.5;
 }
 
 h1,
@@ -551,66 +548,12 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: var(--heading-typography-font-family);
-	font-weight: var(--heading-typography-variant);
-	margin: 1.25rem 0 1.25rem;
-}
-
-h1, .h1, h1 * {
-	font-family: var(--heading-typography-font-family);
-	font-size: clamp(1em, var(--heading-typography-font-size), 10em);
-	color: var(--tertiary-color);
-	line-height: var(--heading-typography-line-height);
-	font-weight: var(--heading-typography-variant) !important;
-}
-
-h2, .h2, h2 * {
-	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.85em, calc(var(--heading-typography-font-size) - 0.3em), 8em);
-	color: var(--tertiary-color);
-	line-height: calc(var(--heading-typography-line-height) - 0.1);
-	font-weight: var(--heading-typography-variant) !important;
-}
-
-h3, .h3, h3 * {
-	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.75em, calc(var(--heading-typography-font-size) - 0.4em), 7em);
-	color: var(--tertiary-color);
-	line-height: calc(var(--heading-typography-line-height) - 0.2);
-	font-weight: var(--heading-typography-variant);
-}
-
-h4, .h4, h4 * {
-	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.65em, calc(var(--heading-typography-font-size) - 0.5em), 6em);
-	color: var(--tertiary-color);
-	line-height: calc(var(--heading-typography-line-height) - 0.3);
-	font-weight: var(--heading-typography-variant) !important;
-}
-
-h5, .h5, h5 * {
-	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.5em, calc(var(--heading-typography-font-size) - 0.6em), 5em);
-	color: var(--tertiary-color);
-	line-height: calc(var(--heading-typography-line-height) - 0.4);
-	font-weight: var(--heading-typography-variant) !important;
-}
-
-h6, .h6, h6 * {
-	font-family: var(--heading-typography-font-family);
-	font-size: clamp(0.45em, calc(var(--heading-typography-font-size) - 0.7em), 4em);
-	color: var(--tertiary-color);
-	line-height: calc(var(--heading-typography-line-height) - 0.45);
-	font-weight: var(--heading-typography-variant) !important;
+	margin: 0 0 1.25rem;
 }
 
 * {
 	word-wrap: break-word;
 	white-space: normal;
-}
-
-*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(b):not(strong) {
-	font-weight: var(--text-typography-variant);
 }
 
 p {
@@ -647,21 +590,12 @@ address {
 
 pre {
 	background: #eee;
-	font-family: var(--heading-typography-font-family);
-	line-height: 1.6;
 	margin-top: 1.25rem;
 	margin-bottom: 1.5rem;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
 	color: var(--secondary-color);
-}
-
-code,
-kbd,
-tt,
-var {
-	font-family: var(--heading-typography-font-family);
 }
 
 abbr,
@@ -978,6 +912,13 @@ textarea {
 	flex-grow: 1;
 	overflow: hidden;
 	/* Resolves issue with <pre> elements forcing full width. */
+	padding: 0 var(--global--spacing-horizontal);
+}
+
+@media only screen and (min-width: 980px) {
+	.site-main {
+		padding: var(--global--spacing-unit) var(--global--spacing-horizontal);
+	}
 }
 
 .widget-area {
@@ -1004,6 +945,17 @@ textarea {
 	.site.no-sidebar .c-post__tags {
 		justify-content: flex-end;
 	}
+}
+
+.site.no-sidebar .site-main {
+	--responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal) + 46px);
+	--responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal) + 46px);
+	--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+}
+
+.site.no-sidebar .site-main__content {
+	width: 100%;
 }
 
 body.error404 {
@@ -1161,7 +1113,7 @@ body.error404 {
 /* header
 --------------------------------------------- */
 .c-header {
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 	background: center center/cover no-repeat;
 }
 
@@ -1460,6 +1412,7 @@ body.error404 {
 @media only screen and (min-width: 980px) {
 	.main-navigation > ul ul li.menu-item-has-children span {
 		transform: rotate(-90deg);
+		margin-left: auto;
 	}
 }
 
@@ -1696,6 +1649,23 @@ body.error404 {
 	justify-content: flex-start;
 }
 
+.no-results.not-found.c-post--not-found {
+	display: block;
+}
+
+.no-results.not-found.c-post--not-found .page-title {
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.no-results.not-found.c-post--not-found .page-content {
+	margin-top: 10px;
+}
+
+.no-results.not-found.c-post--not-found .page-content p {
+	margin-top: 10px;
+}
+
 /* Comments
 --------------------------------------------- */
 .c-comments {
@@ -1725,7 +1695,7 @@ body.error404 {
 }
 
 .comments-title {
-	margin: 0 0 48px;
+	margin: 0 0 28px;
 	line-height: 1.75;
 }
 
@@ -2383,6 +2353,7 @@ ol.children {
 	background-color: #F4F4F4;
 	padding: 0;
 	font-size: 0.75rem;
+	margin-top: auto;
 }
 
 .c-footer__top {
@@ -2643,6 +2614,15 @@ https://flickity.metafizzy.co
 --------------------------------------------------------------*/
 .wp-block-button {
 	margin: 1rem 0;
+}
+
+/*--------------------------------------------------------------
+# Objects
+--------------------------------------------------------------*/
+.o-page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -93,9 +93,10 @@ add_action( 'init', function () {
 
 // Typography
 	Kirki::add_section( 'typography', array(
-		'title'    => esc_html__( 'Typography', 'wp-meliora' ),
-		'panel'    => '',
-		'priority' => 4,
+		'title'      => esc_html__( 'Typography', 'wp-meliora' ),
+		'panel'      => '',
+		'priority'   => 4,
+		'capability' => 'edit_theme_options',
 	) );
 
 // Elements
@@ -115,8 +116,8 @@ add_action( 'init', function () {
 
 // Footer
 	Kirki::add_panel( 'footer', array(
-		'priority'    => 10,
-		'title'       => esc_html__( 'Footer', 'kirki' ),
+		'priority' => 10,
+		'title'    => esc_html__( 'Footer', 'kirki' ),
 	) );
 
 
@@ -155,7 +156,7 @@ add_action( 'init', function () {
 		'default'   => [
 			'font-family'    => 'Roboto Mono',
 			'font-size'      => '24px',
-			'variant'        => 'regular',
+			'font-weight'    => '300',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0'
 		],
@@ -171,14 +172,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => 'h2',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 0.5em)',
+				'value_pattern' => 'calc($ - 0.3125rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => 'h2',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => 'h2',
@@ -192,18 +193,24 @@ add_action( 'init', function () {
 				'value_pattern' => '$',
 				'choice'        => 'letter-spacing',
 			),
+			array(
+				'element'       => 'h2',
+				'property'      => 'line-height',
+				'value_pattern' => '$',
+				'choice'        => 'line-height',
+			),
 
 			array(
 				'element'       => '.h2',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 0.5em)',
+				'value_pattern' => 'calc($ - 0.3125rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => '.h2',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => '.h2',
@@ -221,14 +228,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => 'h3',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 0.75em)',
+				'value_pattern' => 'calc($ - 0.38rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => 'h3',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => 'h3',
@@ -246,14 +253,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => '.h3',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 0.75em)',
+				'value_pattern' => 'calc($ - 0.38rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => '.h3',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => '.h3',
@@ -271,14 +278,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => 'h4',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 0.5208‬‬em)',
+				'value_pattern' => 'calc($ - 0.44rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => 'h4',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => 'h4',
@@ -296,14 +303,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => '.h4',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 0.5208‬em‬)',
+				'value_pattern' => 'calc($ - 0.44rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => '.h4',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => '.h4',
@@ -321,14 +328,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => 'h5',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 1.25em)',
+				'value_pattern' => 'calc($ - 0.52rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => 'h5',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => 'h5',
@@ -346,14 +353,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => '.h5',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 1.25em)',
+				'value_pattern' => 'calc($ - 0.52rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => '.h5',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => '.h5',
@@ -371,14 +378,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => 'h6',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 1.5em)',
+				'value_pattern' => 'calc($ - 0.6rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => 'h6',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => 'h6',
@@ -396,14 +403,14 @@ add_action( 'init', function () {
 			array(
 				'element'       => '.h6',
 				'property'      => 'font-size',
-				'value_pattern' => 'calc($ - 1.5em)',
+				'value_pattern' => 'calc($ - 0.6rem)',
 				'choice'        => 'font-size',
 			),
 			array(
 				'element'       => '.h6',
 				'property'      => 'font-weight',
 				'value_pattern' => '$',
-				'choice'        => 'variant',
+				'choice'        => 'font-weight',
 			),
 			array(
 				'element'       => '.h6',
@@ -446,7 +453,34 @@ add_action( 'init', function () {
 		'priority'  => 10,
 		'output'    => array(
 			array(
-				'element' => 'body',
+				'element'       => 'body',
+				'property'      => 'font-size',
+				'value_pattern' => '$',
+				'choice'        => 'font-size',
+			),
+			array(
+				'element'       => 'body',
+				'property'      => 'line-height',
+				'value_pattern' => '$',
+				'choice'        => 'line-height',
+			),
+			array(
+				'element'       => 'body',
+				'property'      => 'font-weight',
+				'value_pattern' => '$',
+				'choice'        => 'font-weight',
+			),
+			array(
+				'element'       => 'body',
+				'property'      => 'font-family',
+				'value_pattern' => '$',
+				'choice'        => 'font-family',
+			),
+			array(
+				'element'       => 'body',
+				'property'      => 'letter-spacing',
+				'value_pattern' => '$',
+				'choice'        => 'letter-spacing',
 			),
 		),
 	] );
@@ -511,7 +545,7 @@ add_action( 'init', function () {
 		'settings' => 'copyright_text',
 		'label'    => esc_html__( 'Copyright Text', 'wp-meliora' ),
 		'section'  => 'copyright',
-		'default' => '<a href="https://wordpress.org/" class="customize-unpreviewable">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: WP-Meliora by <a href="https://vitathemes.com" class="customize-unpreviewable">VitaThemes</a>.',
+		'default'  => '<a href="https://wordpress.org/" class="customize-unpreviewable">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: WP-Meliora by <a href="https://vitathemes.com" class="customize-unpreviewable">VitaThemes</a>.',
 		'priority' => 10,
 	] );
 	// -- Copyright --
@@ -537,9 +571,9 @@ add_action( 'init', function () {
 		'settings' => 'site_layout',
 		'label'    => __( 'Layout', 'wp-meliora' ),
 		'section'  => 'layout',
-		'default'     => 'left',
-		'priority'    => 10,
-		'choices'     => [
+		'default'  => 'left',
+		'priority' => 10,
+		'choices'  => [
 			'left'   => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWElEQVR42mNgGAXDE4RCQMDAKONaBQINWqtWrWBatQDIaxg8ygYqQIAOYwC6bwHUmYNH2eBPSMhgBQXKRr0w6oVRL4x6YdQLo14Y9cKoF0a9QCO3jYLhBADvmFlNY69qsQAAAABJRU5ErkJggg==',
 			'center' => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAQMAAABknzrDAAAABlBMVEX////V1dXUdjOkAAAAPUlEQVRIx2NgGAUkAcb////Y/+d/+P8AdcQoc8vhH/X/5P+j2kG+GA3CCgrwi43aMWrHqB2jdowEO4YpAACyKSE0IzIuBgAAAABJRU5ErkJggg==',
 			'right'  => 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABqAgMAAAAjP0ATAAAACVBMVEX///8+yP/V1dXG9YqxAAAAWUlEQVR42mNgGAUjB4iGgkEIzZStAoEVTECiQWsVkLdiECkboAABOmwBF9BtUGcOImUDEiCkJCQU0ECBslEvjHph1AujXhj1wqgXRr0w6oVRLwyEF0bBUAUAz/FTNXm+R/MAAAAASUVORK5CYII=',
