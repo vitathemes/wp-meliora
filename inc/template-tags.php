@@ -126,7 +126,7 @@ if ( ! function_exists( 'wp_meliora_entry_category' ) ) :
 				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-meliora' ) );
 				if ( $categories_list ) {
 					/* translators: 1: list of categories. */
-					echo  wp_kses_post(sprintf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html( '%1$s' ) . '</span>', $categories_list )); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo wp_kses_post( sprintf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html( '%1$s' ) . '</span>', $categories_list ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 		}
@@ -142,7 +142,7 @@ if ( ! function_exists( 'wp_meliora_post_tags_archive' ) ) :
 			foreach ( $tags as $tag ) {
 				$i ++;
 				if ( $i <= 3 ) { ?>
-                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr(get_tag_link($tag->term_id )); ?>">#<?php echo esc_html( $tag->name ); ?></a><?php
+                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr( get_tag_link( $tag->term_id ) ); ?>">#<?php echo esc_html( $tag->name ); ?></a><?php
 				} else {
 					$tags_count = count( $tags ) - 3; ?>
                     <span class="c-post__tags__tag c-post__tags__tag--more"><?php echo "+" . esc_html( $tags_count ); ?></span>
@@ -161,7 +161,7 @@ if ( ! function_exists( 'wp_meliora_post_tags_single' ) ) :
 		if ( $tags ) {
 			echo '<div class="c-post__tags">';
 			foreach ( $tags as $tag ) { ?>
-                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr(get_tag_link( $tag->term_id )); ?>">#<?php echo esc_html($tag->name); ?></a>
+                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr( get_tag_link( $tag->term_id ) ); ?>">#<?php echo esc_html( $tag->name ); ?></a>
 				<?php
 			}
 			echo '</div>';
@@ -169,13 +169,30 @@ if ( ! function_exists( 'wp_meliora_post_tags_single' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'wp_meliora_categories_list' ) ) :
-	function wp_meliora_categories_list() { ?>
-        <li class="<?php if ( is_home() ) {
-			echo "current-cat";
-		} ?>"><a href="<?php echo esc_url(wp_meliora_get_blog_posts_page_url()); ?>"><?php esc_html_e('All','wp-meliora'); ?></a></li>
-		<?php
-		wp_list_categories( array( 'title_li' => '', 'depth' => 1) );
+if ( ! function_exists( 'wp_meliora_slider_menu' ) ) :
+	function wp_meliora_slider_menu() {
+		$menu_name            = 'menu-2';
+		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
+			$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+			$menu_items       = wp_get_nav_menu_items( $menu->term_id );
+			$menu_items_count = count( (array) $menu_items );
+			foreach ( (array) $menu_items as $key => $menu_item ) :
+				$title = $menu_item->title;
+				$url          = $menu_item->url;
+				?>
+                <li class="<?php wp_meliora_current_menu_item( esc_url($url) ); ?>"><a href="<?= esc_url($url); ?>"><?= esc_html($title); ?></a></li>
+				<?php
+			endforeach;
+		endif;
+		?>
+
+        <!--            <li class="--><?php //if ( is_home() ) {
+		//				echo "";
+		//			} ?><!--">-->
+        <!--                <a href="--><?php //echo esc_url( wp_meliora_get_blog_posts_page_url() ); ?><!--">--><?php //esc_html_e( 'All', 'wp-meliora' ); ?><!--</a>-->
+        <!--            </li>-->
+        <!--			--><?php
+//			wp_list_categories( array( 'title_li' => '', 'depth' => 1 ) );
 	}
 endif;
 
@@ -306,3 +323,11 @@ if ( ! function_exists( 'wp_meliora_posts_pagination' ) ) :
 		) );
 	}
 endif;
+
+function wp_meliora_current_menu_item( $url ) {
+	global $wp;
+	$current_url = home_url( $wp->request );
+	if ( rtrim( $url, '/' ) === rtrim( $current_url, '/' ) ) {
+		echo esc_attr("current-cat");
+	}
+}

@@ -113,6 +113,19 @@ add_action( 'init', function () {
 		'priority' => 6,
 	) );
 
+	// Posts
+	Kirki::add_section( 'posts_opts', array(
+		'title'    => esc_html__( 'Posts Options', 'wp-meliora' ),
+		'panel'    => '',
+		'priority' => 6,
+	) );
+
+	// Global
+	Kirki::add_section( 'global_opts', array(
+		'title'    => esc_html__( 'Global Options', 'wp-meliora' ),
+		'panel'    => '',
+		'priority' => 7,
+	) );
 
 // Footer
 	Kirki::add_panel( 'footer', array(
@@ -581,4 +594,63 @@ add_action( 'init', function () {
 	] );
 
 // </editor-fold>
+
+	// Posts
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_posts_thumbnail',
+		'label'    => esc_html__( 'Show posts thumbnail', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_share_icons',
+		'label'    => esc_html__( 'Show share buttons', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+// Posts
+
+	// Posts
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_index',
+		'label'    => esc_html__( 'Show Slider Menu on Home/Blog page', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_cats',
+		'label'    => esc_html__( 'Show Slider Menu on Category pages', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_tags',
+		'label'    => esc_html__( 'Show Slider Menu on Tags pages', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_archive',
+		'label'    => esc_html__( 'Show Slider Menu on Archive pages', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+// Posts
 } );
