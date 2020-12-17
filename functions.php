@@ -7,9 +7,10 @@
  * @package wp_meliora
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( '_WP_MELIORA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	$wp_meliora_theme_data = wp_get_theme();
+	define( '_WP_MELIORA_VERSION', $wp_meliora_theme_data->get( 'Version' ));
 }
 
 if ( ! function_exists( 'wp_meliora_setup' ) ) :
@@ -143,12 +144,12 @@ add_action( 'widgets_init', 'wp_meliora_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_meliora_scripts() {
-	wp_enqueue_style( 'wp_meliora-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'wp_meliora-style', get_stylesheet_uri(), array(), _WP_MELIORA_VERSION );
 	wp_style_add_data( 'wp_meliora-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-carousel', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), _S_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _WP_MELIORA_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-carousel', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), _WP_MELIORA_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), _WP_MELIORA_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
