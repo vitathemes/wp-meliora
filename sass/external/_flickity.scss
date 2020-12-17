@@ -154,3 +154,12 @@ https://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
     opacity: 1;
 }
+
+
+// RTL Styles
+.rtl {
+    .flickity-prev-next-button {
+        transform-origin: center;
+        transform: rotate(-180deg) translateY(18px)
+    }
+}

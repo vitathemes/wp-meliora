@@ -2624,6 +2624,11 @@ https://flickity.metafizzy.co
 	opacity: 1;
 }
 
+.rtl .flickity-prev-next-button {
+	transform-origin: center;
+	transform: rotate(-180deg) translateY(18px);
+}
+
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
