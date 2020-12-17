@@ -162,6 +162,22 @@ add_action( 'init', function () {
 	// -- Typography Fields --
 	// <editor-fold desc="Typography">
 	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'use_google_fonts',
+		'label'    => esc_html__( 'Use google Fonts', 'wp-meliora' ),
+		'section'  => 'typography',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'active_callback' => [
+			[
+				'setting'  => 'use_google_fonts',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
 		'type'      => 'typography',
 		'settings'  => 'headings_typography',
 		'label'     => esc_html__( 'Headlines', 'wp-meliora' ),
@@ -450,6 +466,13 @@ add_action( 'init', function () {
 	] );
 
 	Kirki::add_field( 'wp-meliora', [
+		'active_callback' => [
+			[
+				'setting'  => 'use_google_fonts',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
 		'type'      => 'typography',
 		'settings'  => 'text_typography',
 		'label'     => esc_html__( 'Texts', 'wp-meliora' ),
