@@ -865,6 +865,7 @@ textarea {
 .site.is-sidebar-content .site-main__container {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1017,6 +1018,10 @@ body.error404 {
 	.error-404.not-found .not-found__error {
 		font-size: 15rem;
 	}
+}
+
+.site-main {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -2320,6 +2325,10 @@ ol.children {
 	color: var(--tertiary-color);
 	background-color: transparent;
 	border-color: var(--tertiary-color);
+}
+
+.rtl .pagination .nav-links .page-numbers.next, .rtl .pagination .nav-links .page-numbers.prev {
+	transform: rotateY(180deg);
 }
 
 /* Social Share
