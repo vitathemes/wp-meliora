@@ -178,20 +178,20 @@ add_action( 'init', function () {
 				'value'    => true,
 			]
 		],
-		'type'      => 'typography',
-		'settings'  => 'headings_typography',
-		'label'     => esc_html__( 'Headlines', 'wp-meliora' ),
-		'section'   => 'typography',
-		'default'   => [
+		'type'            => 'typography',
+		'settings'        => 'headings_typography',
+		'label'           => esc_html__( 'Headlines', 'wp-meliora' ),
+		'section'         => 'typography',
+		'default'         => [
 			'font-family'    => 'Roboto Mono',
 			'font-size'      => '24px',
 			'font-weight'    => '300',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0'
 		],
-		'transport' => 'auto',
-		'priority'  => 10,
-		'output'    => array(
+		'transport'       => 'auto',
+		'priority'        => 10,
+		'output'          => array(
 			array(
 				'element' => 'h1',
 			),
@@ -473,11 +473,11 @@ add_action( 'init', function () {
 				'value'    => true,
 			]
 		],
-		'type'      => 'typography',
-		'settings'  => 'text_typography',
-		'label'     => esc_html__( 'Texts', 'wp-meliora' ),
-		'section'   => 'typography',
-		'default'   => [
+		'type'            => 'typography',
+		'settings'        => 'text_typography',
+		'label'           => esc_html__( 'Texts', 'wp-meliora' ),
+		'section'         => 'typography',
+		'default'         => [
 			'font-family'    => 'Roboto Mono',
 			'variant'        => '300',
 			'font-size'      => '16px',
@@ -485,9 +485,9 @@ add_action( 'init', function () {
 			'letter-spacing' => '0'
 			//'color'       => '#000',
 		],
-		'transport' => 'auto',
-		'priority'  => 10,
-		'output'    => array(
+		'transport'       => 'auto',
+		'priority'        => 10,
+		'output'          => array(
 			array(
 				'element'       => 'body',
 				'property'      => 'font-size',
@@ -636,10 +636,27 @@ add_action( 'init', function () {
 		'default'  => 1,
 		'priority' => 10,
 	] );
-// Posts
 
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_post_date',
+		'label'    => esc_html__( 'Show Published Date', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_post_author',
+		'label'    => esc_html__( 'Show Author Name', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
 	// Posts
 
+	// Slider Menu
 	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'toggle',
 		'settings' => 'show_slider_menu_index',
@@ -675,5 +692,5 @@ add_action( 'init', function () {
 		'default'  => 1,
 		'priority' => 10,
 	] );
-// Posts
+	// Slider Menu
 } );

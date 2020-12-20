@@ -19,10 +19,6 @@ class Wp_meliora_walker_nav_menu extends Walker_Nav_Menu {
 
 		$output .= $title;
 
-		if ( $description != '' && $depth == 0 ) {
-			$output .= '<small class="description">' . $description . '</small>';
-		}
-
 		if ( $permalink ) {
 			$output .= '</a>';
 		}
