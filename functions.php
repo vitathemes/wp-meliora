@@ -74,16 +74,7 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'wp_meliora_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
+		add_theme_support( 'custom-background' );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -148,7 +139,7 @@ function wp_meliora_scripts() {
 	wp_style_add_data( 'wp_meliora-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _WP_MELIORA_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-carousel', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), _WP_MELIORA_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-carousel', get_template_directory_uri() . '/js/vendor.min.js', array(), _WP_MELIORA_VERSION, true );
 	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), _WP_MELIORA_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -172,13 +163,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 /**
  * Kirki
