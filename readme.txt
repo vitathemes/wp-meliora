@@ -1,7 +1,7 @@
-=== WP Indigo ===
+=== WP Meliora ===
 Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 5.6
 Requires PHP: 5.6
 Stable tag: 1.0.0
 License: GPL-2.0-or-later
@@ -12,8 +12,6 @@ WP-Meliora is a WordPress minimal & Fast-loading theme for people who want to ha
 == Description ==
 
 WP-Meliora is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
-
-It's based on the [indigo](https://github.com/sergiokopplin/indigo), that originally builds for Jekyll.
 
 = Features =
 * No additional JS
@@ -43,12 +41,8 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 == Installation ==
 
 1. Simply install as a normal WordPress theme and activate.
-2. Make a page called Home and set the Page template to Home.
-3. Make another page called Blog and set the Page template to Blog.
-4. In your admin panel, navigate to `Settings > Reading`.
-5. Select `A static page (select below)` and select the pages created.
-6. In your admin panel, navigate to `Appearance > Customize`.
-7. Put the finishing touches on your website by adding a logo, typography settings, custom colors and etc.
+2. In your admin panel, navigate to `Appearance > Customize`.
+3. Put the finishing touches on your website by adding a logo, typography settings, custom colors and etc.
 
 == Screenshots ==
 
