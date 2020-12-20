@@ -48,6 +48,6 @@
     </div><!-- .entry-content -->
 	<?php wp_meliora_post_tags_single();
 
-	wp_meliora_share_links();
+	do_action('wp_meliora_share_socials_area');
 	?>
 </article><!-- #post-<?php the_ID(); ?> -->

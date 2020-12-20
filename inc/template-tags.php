@@ -185,7 +185,7 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 				$url   = $menu_item->url;
 
 				echo sprintf( '<li class="%s">', wp_meliora_current_menu_item( esc_url( $url ) ) );
-				echo sprintf( '<a href="%s">%s</a></li>', esc_url( $url ),  esc_html( $title ));
+				echo sprintf( '<a href="%s">%s</a></li>', esc_url( $url ), esc_html( $title ) );
 
 			endforeach;
 		endif;
@@ -204,6 +204,12 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 		}
 	}
 }
+function wp_meliora_show_slider_menu_in_code_area_name()
+{
+	wp_meliora_slider_menu();
+}
+add_action('wp_meliora_slider_menu_area', 'wp_meliora_show_slider_menu_in_code_area_name');
+
 
 
 if ( ! function_exists( 'wp_meliora_get_blog_posts_page_url' ) ) :
@@ -241,22 +247,24 @@ if ( ! function_exists( 'wp_meliora_post_thumbnail' ) ) :
 	}
 endif;
 
-function wp_meliora_post_content() {
-	the_content(
-		sprintf(
-			wp_kses(
-			/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-meliora' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			wp_kses_post( get_the_title() )
-		)
-	);
-}
+if ( ! function_exists( 'wp_meliora_post_content' ) ) :
+	function wp_meliora_post_content() {
+		the_content(
+			sprintf(
+				wp_kses(
+				/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-meliora' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			)
+		);
+	}
+endif;
 
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
@@ -334,11 +342,13 @@ if ( ! function_exists( 'wp_meliora_posts_pagination' ) ) :
 	}
 endif;
 
-function wp_meliora_current_menu_item( $url ) {
-	global $wp;
-	$current_url = home_url( $wp->request );
-	if ( rtrim( $url, '/' ) === rtrim( $current_url, '/' ) ) {
-		return esc_attr( "current-cat" );
+if ( ! function_exists( 'wp_meliora_current_menu_item' ) ) {
+	function wp_meliora_current_menu_item( $url ) {
+		global $wp;
+		$current_url = home_url( $wp->request );
+		if ( rtrim( $url, '/' ) === rtrim( $current_url, '/' ) ) {
+			return esc_attr( "current-cat" );
+		}
 	}
 }
 
@@ -359,3 +369,8 @@ if ( ! function_exists( 'wp_meliora_share_links' ) ) {
 		}
 	}
 }
+function wp_meliora_show_socials_in_code_area_name()
+{
+	wp_meliora_share_links();
+}
+add_action('wp_meliora_share_socials_area', 'wp_meliora_show_socials_in_code_area_name');

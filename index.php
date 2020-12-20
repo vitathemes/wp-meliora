@@ -19,7 +19,8 @@ get_header();
         <div class="site-main__container default-max-width">
             <div class="site-main__content">
                 <h2 class="site-main__content__title h1"><?php esc_html_e( 'Recent Posts', 'wp-meliora' ); ?></h2>
-				<?php wp_meliora_slider_menu();
+				<?php
+				do_action('wp_meliora_slider_menu_area');
 
 				if ( have_posts() ) :
 
