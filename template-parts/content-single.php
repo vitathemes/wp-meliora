@@ -21,8 +21,7 @@
 		?>
         <div class="c-post__meta c-post__meta--date-author entry-meta s-post-meta">
 			<?php
-			wp_meliora_posted_on();
-			wp_meliora_posted_by();
+			do_action( 'wp_meliora_post_meta_area' );
 			?>
         </div><!-- .entry-meta -->
 
@@ -46,8 +45,7 @@
 		);
 		?>
     </div><!-- .entry-content -->
-	<?php wp_meliora_post_tags_single();
-
-	do_action('wp_meliora_share_socials_area');
+	<?php
+	do_action( 'wp_meliora_post_footer' );
 	?>
 </article><!-- #post-<?php the_ID(); ?> -->

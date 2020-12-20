@@ -38,6 +38,14 @@ if ( ! function_exists( 'wp_meliora_posted_on' ) ) :
 		}
 	}
 endif;
+function wp_meliora_show_archive_post_meta()
+{
+	wp_meliora_posted_on();
+	if (is_singular()) {
+		wp_meliora_posted_by();
+    }
+}
+add_action('wp_meliora_post_meta_area', 'wp_meliora_show_archive_post_meta');
 
 if ( ! function_exists( 'wp_meliora_posted_by' ) ) :
 	/**
@@ -158,6 +166,11 @@ if ( ! function_exists( 'wp_meliora_post_tags_archive' ) ) :
 		}
 	}
 endif;
+function wp_meliora_archive_post_tags()
+{
+	wp_meliora_post_tags_archive();
+}
+add_action('wp_meliora_archive_post_tags_area', 'wp_meliora_archive_post_tags');
 
 if ( ! function_exists( 'wp_meliora_post_tags_single' ) ) :
 	function wp_meliora_post_tags_single() {
@@ -371,6 +384,7 @@ if ( ! function_exists( 'wp_meliora_share_links' ) ) {
 }
 function wp_meliora_show_socials_in_code_area_name()
 {
+	wp_meliora_post_tags_single();
 	wp_meliora_share_links();
 }
-add_action('wp_meliora_share_socials_area', 'wp_meliora_show_socials_in_code_area_name');
+add_action('wp_meliora_post_footer', 'wp_meliora_show_socials_in_code_area_name');

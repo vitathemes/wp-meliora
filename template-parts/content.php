@@ -12,9 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'c-post c-post--archive' ); ?>>
     <header class="c-post__header entry-header">
         <div class="c-post__meta entry-meta">
-			<?php
-			wp_meliora_posted_on();
-			?>
+	        <?php
+	        do_action('wp_meliora_post_meta_area');
+	        ?>
         </div><!-- .entry-meta -->
 		<?php
 		the_title( '<h2 class="c-post__title entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -40,9 +40,9 @@
         <footer class="c-post__footer entry-footer">
 			<?php wp_meliora_entry_footer(); ?>
         </footer><!-- .entry-footer -->
-	<?php else: ?>
-
-		<?php wp_meliora_post_tags_archive(); ?>
+	<?php else:
+		do_action('wp_meliora_archive_post_tags_area');
+		?>
 
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
