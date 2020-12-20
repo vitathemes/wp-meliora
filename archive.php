@@ -13,15 +13,9 @@ get_header();
     <main id="primary" class="site-main">
         <div class="site-main__container default-max-width">
             <div class="site-main__content">
-                <h2 class="site-main__content__title h1"><?php echo wp_kses_post(get_the_archive_title()); ?></h2>
-	            <?php if ( has_nav_menu( 'menu-2' ) &&  get_theme_mod( 'show_slider_menu_archive', true ) == true ) : ?>
-                    <div class="c-categories-list">
-                        <ul class="c-categories-list__list js-categories-list s-categories-list" data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "variableWidth": true}'>
-				            <?php wp_meliora_slider_menu(); ?>
-                        </ul>
-                    </div>
-	            <?php endif; ?>
-				<?php
+                <h2 class="site-main__content__title h1"><?php echo wp_kses_post( get_the_archive_title() ); ?></h2>
+				<?php wp_meliora_slider_menu();
+
 				if ( have_posts() ) :
 
 					if ( is_home() && ! is_front_page() ) :

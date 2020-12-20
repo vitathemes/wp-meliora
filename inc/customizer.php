@@ -686,8 +686,8 @@ add_action( 'init', function () {
 
 	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'toggle',
-		'settings' => 'show_slider_menu_archive',
-		'label'    => esc_html__( 'Show Slider Menu on Archive pages', 'wp-meliora' ),
+		'settings' => 'show_slider_menu_author',
+		'label'    => esc_html__( 'Show Slider Menu on Author pages', 'wp-meliora' ),
 		'section'  => 'global_opts',
 		'default'  => 1,
 		'priority' => 10,
