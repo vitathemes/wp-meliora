@@ -24,7 +24,7 @@
 }
 
 .c-post__title {
-  margin: 24px 0 0;
+  margin: 12px 0 0;
 
   a {
     text-decoration: none;
@@ -57,6 +57,11 @@
 
   &--more {
     background-color: $wp-meliora__neutral-gray-color;
+  }
+
+  &:hover {
+    background-color: $wp-meliora__neutral-gray-color;
+    color: $wp-meliora__main-primary-light-color;
   }
 }
 
@@ -107,13 +112,13 @@
 }
 
 .c-post__meta--date-author {
-  margin: 30px 0 24px;
+  margin: 20px 0 16px;
   font-size: 0.75em;
   color: $wp-meliora__neutral-dark-gray-color;
 
 
   @include media(laptop) {
-    margin: 40px 0 48px;
+    margin: 16px 0 32px;
   }
 }
 

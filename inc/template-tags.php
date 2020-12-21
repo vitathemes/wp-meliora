@@ -12,27 +12,30 @@ if ( ! function_exists( 'wp_meliora_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function wp_meliora_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		if ( get_theme_mod( 'show_post_date', true ) ) {
+			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+				$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			}
+
+			$time_string = sprintf(
+				$time_string,
+				esc_attr( get_the_date( DATE_W3C ) ),
+				esc_html( get_the_date() ),
+				esc_attr( get_the_modified_date( DATE_W3C ) ),
+				esc_html( get_the_modified_date() )
+			);
+
+			$posted_on = sprintf(
+			/* translators: %s: post date. */
+				esc_html( '%s' ),
+				$time_string
+			);
 		}
-
-		$time_string = sprintf(
-			$time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
-		);
-
-		$posted_on = sprintf(
-		/* translators: %s: post date. */
-			esc_html( '%s' ),
-			$time_string
-		);
-
 		echo '<span class="c-post__meta__date posted-on">' . $posted_on . ' </span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
+		if ( get_theme_mod( 'show_post_author', true ) && get_theme_mod( 'show_post_date', true && is_singular() ) ) {
+			echo esc_html( '|', 'wp-meliora' );
+		}
 	}
 endif;
 
@@ -41,14 +44,15 @@ if ( ! function_exists( 'wp_meliora_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function wp_meliora_posted_by() {
-		$byline = sprintf(
-		/* translators: %s: post author. */
-			esc_html( '%s' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
+		if ( get_theme_mod( 'show_post_author', true ) ) {
+			$byline = sprintf(
+			/* translators: %s: post author. */
+				esc_html( '%s' ),
+				'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
+			echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
 	}
 endif;
 
@@ -126,7 +130,7 @@ if ( ! function_exists( 'wp_meliora_entry_category' ) ) :
 				$categories_list = get_the_category_list( esc_html__( ', ', 'wp-meliora' ) );
 				if ( $categories_list ) {
 					/* translators: 1: list of categories. */
-					echo  wp_kses_post(sprintf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html( '%1$s' ) . '</span>', $categories_list )); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo wp_kses_post( sprintf( '<span class="c-post_cats s-post-meta cat-links">' . esc_html( '%1$s' ) . '</span>', $categories_list ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 			}
 		}
@@ -137,12 +141,12 @@ if ( ! function_exists( 'wp_meliora_post_tags_archive' ) ) :
 	function wp_meliora_post_tags_archive() {
 		$tags = get_the_tags();
 		if ( $tags ) {
-			echo '<div class="c-post__tags">';
+			echo '<div class="c-post__tags">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			$i = 0;
 			foreach ( $tags as $tag ) {
 				$i ++;
 				if ( $i <= 3 ) { ?>
-                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr(get_tag_link($tag->term_id )); ?>">#<?php echo esc_html( $tag->name ); ?></a><?php
+                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr( get_tag_link( $tag->term_id ) ); ?>">#<?php echo esc_html( $tag->name ); ?></a><?php
 				} else {
 					$tags_count = count( $tags ) - 3; ?>
                     <span class="c-post__tags__tag c-post__tags__tag--more"><?php echo "+" . esc_html( $tags_count ); ?></span>
@@ -161,7 +165,7 @@ if ( ! function_exists( 'wp_meliora_post_tags_single' ) ) :
 		if ( $tags ) {
 			echo '<div class="c-post__tags">';
 			foreach ( $tags as $tag ) { ?>
-                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr(get_tag_link( $tag->term_id )); ?>">#<?php echo esc_html($tag->name); ?></a>
+                <a aria-label="<?php echo esc_attr( $tag->name ); ?>" class="c-post__tags__tag" href="<?php echo esc_attr( get_tag_link( $tag->term_id ) ); ?>">#<?php echo esc_html( $tag->name ); ?></a>
 				<?php
 			}
 			echo '</div>';
@@ -169,15 +173,38 @@ if ( ! function_exists( 'wp_meliora_post_tags_single' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'wp_meliora_categories_list' ) ) :
-	function wp_meliora_categories_list() { ?>
-        <li class="<?php if ( is_home() ) {
-			echo "current-cat";
-		} ?>"><a href="<?php echo esc_url(wp_meliora_get_blog_posts_page_url()); ?>"><?php esc_html_e('All','wp-meliora'); ?></a></li>
-		<?php
-		wp_list_categories( array( 'title_li' => '', 'depth' => 1) );
+if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
+	function wp_meliora_slider_menu_items() {
+		$menu_name = 'menu-2';
+		if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
+			$menu             = wp_get_nav_menu_object( $locations[ $menu_name ] );
+			$menu_items       = wp_get_nav_menu_items( $menu->term_id );
+			$menu_items_count = count( (array) $menu_items );
+			foreach ( (array) $menu_items as $key => $menu_item ) :
+				$title = $menu_item->title;
+				$url   = $menu_item->url;
+
+				echo sprintf( '<li class="%s">', wp_meliora_current_menu_item( esc_url( $url ) ) );
+				echo sprintf( '<a href="%s">%s</a></li>', esc_url( $url ),  esc_html( $title ));
+
+			endforeach;
+		endif;
 	}
-endif;
+}
+
+if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
+	function wp_meliora_slider_menu() {
+		if ( has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_index', true ) && is_home() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_author', true ) && is_author() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_tags', true ) && is_tag() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_cats', true ) && is_category() ) {
+			echo '<div class="c-categories-list">';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<ul class="c-categories-list__list js-categories-list s-categories-list" data-slick=\'{"slidesToShow": 4, "slidesToScroll": 4, "variableWidth": true}\'>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			wp_meliora_slider_menu_items();
+			echo '</ul>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+		}
+	}
+}
+
 
 if ( ! function_exists( 'wp_meliora_get_blog_posts_page_url' ) ) :
 	function wp_meliora_get_blog_posts_page_url() {
@@ -207,7 +234,7 @@ if ( ! function_exists( 'wp_meliora_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
             <div class="c-post__thumbnail">
-				<?php the_post_thumbnail( 'large' ); ?>
+				<?php the_post_thumbnail( 'full' ); ?>
             </div><!-- .post-thumbnail -->
 		<?php
 		endif; // End is_singular().
@@ -306,3 +333,29 @@ if ( ! function_exists( 'wp_meliora_posts_pagination' ) ) :
 		) );
 	}
 endif;
+
+function wp_meliora_current_menu_item( $url ) {
+	global $wp;
+	$current_url = home_url( $wp->request );
+	if ( rtrim( $url, '/' ) === rtrim( $current_url, '/' ) ) {
+		return esc_attr( "current-cat" );
+	}
+}
+
+
+if ( ! function_exists( 'wp_meliora_share_links' ) ) {
+	function wp_meliora_share_links() {
+		if ( get_theme_mod( 'show_share_icons', true ) ) {
+			$wp_meliora_linkedin_url = "https://www.linkedin.com/shareArticle?mini=true&url=" . get_permalink() . "&title=" . get_the_title();
+			$wp_meliora_twitter_url  = "https://twitter.com/intent/tweet?url=" . get_permalink() . "&title=" . get_the_title();
+			$wp_meliora_facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
+
+			echo '<div class="c-social-share">';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo sprintf( '<span class="c-social-share__title">%s</span>', esc_html_e( 'Share', 'wp-meliora' ) );
+			echo sprintf( '<a class="c-social-share__link" target="_blank" href="%s"><span class="dashicons dashicons-facebook-alt c-social-share__link__icon"></span></a>', esc_url( $wp_meliora_facebook_url ) );
+			echo sprintf( '<a class="c-social-share__link" target="_blank" href="%s"><span class="dashicons dashicons-twitter c-social-share__link__icon"></span></a>', esc_url( $wp_meliora_twitter_url ) );
+			echo sprintf( '<a class="c-social-share__link" target="_blank" href="%s"><span class="dashicons dashicons-linkedin c-social-share__link__icon"></span></a>', esc_url( $wp_meliora_linkedin_url ) );
+			echo '</div>';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}

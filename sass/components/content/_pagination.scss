@@ -47,3 +47,10 @@
     }
   }
 }
+
+// RTL Styles
+.rtl {
+  .pagination .nav-links .page-numbers.next, .pagination .nav-links .page-numbers.prev {
+    transform: rotateY(180deg);
+  }
+}

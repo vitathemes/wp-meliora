@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('c-post c-post--archive'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'c-post c-post--archive' ); ?>>
     <header class="c-post__header entry-header">
 		<?php
 		if ( 'post' === get_post_type() ) :
@@ -17,7 +17,6 @@
             <div class="c-post__meta entry-meta">
 				<?php
 				wp_meliora_posted_on();
-				//wp_meliora_posted_by();
 				?>
             </div><!-- .entry-meta -->
 		<?php endif;
@@ -29,28 +28,6 @@
 		?>
     </header><!-- .entry-header -->
 
-	<?php if (is_singular()): ?>
-        <div class="c-post__content entry-content">
-			<?php wp_meliora_post_content(); ?>
-			<?php
+	<?php wp_meliora_post_tags_archive(); ?>
 
-
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-meliora' ),
-					'after'  => '</div>',
-				)
-			);
-			?>
-        </div><!-- .entry-content -->
-
-
-        <footer class="c-post__footer entry-footer">
-			<?php wp_meliora_entry_footer(); ?>
-        </footer><!-- .entry-footer -->
-	<?php else: ?>
-
-		<?php wp_meliora_post_tags_archive(); ?>
-
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

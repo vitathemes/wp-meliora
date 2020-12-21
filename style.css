@@ -865,6 +865,7 @@ textarea {
 .site.is-sidebar-content .site-main__container {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1017,6 +1018,10 @@ body.error404 {
 	.error-404.not-found .not-found__error {
 		font-size: 15rem;
 	}
+}
+
+.site-main {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1537,7 +1542,7 @@ body.error404 {
 }
 
 .c-post__title {
-	margin: 24px 0 0;
+	margin: 12px 0 0;
 }
 
 .c-post__title a {
@@ -1571,6 +1576,11 @@ body.error404 {
 
 .c-post__tags__tag--more {
 	background-color: #DFDFDF;
+}
+
+.c-post__tags__tag:hover {
+	background-color: #DFDFDF;
+	color: #474747;
 }
 
 .blog .c-post, .archive .c-post, .search .c-post {
@@ -1618,14 +1628,14 @@ body.error404 {
 }
 
 .c-post__meta--date-author {
-	margin: 30px 0 24px;
+	margin: 20px 0 16px;
 	font-size: 0.75em;
 	color: var(--quaternary-color);
 }
 
 @media only screen and (min-width: 1140px) {
 	.c-post__meta--date-author {
-		margin: 40px 0 48px;
+		margin: 16px 0 32px;
 	}
 }
 
@@ -1664,6 +1674,11 @@ body.error404 {
 
 .no-results.not-found.c-post--not-found .page-content p {
 	margin-top: 10px;
+}
+
+.search.search-results .page-title {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #DFDFDF;
 }
 
 /* Comments
@@ -2044,7 +2059,7 @@ ol.children {
 }
 
 .form-submit input:hover, .form-submit [type="submit"]:hover {
-	background-color: var(--quaternary-color);
+	background-color: #2B2B2B;
 }
 
 .no-comments {
@@ -2312,6 +2327,10 @@ ol.children {
 	border-color: var(--tertiary-color);
 }
 
+.rtl .pagination .nav-links .page-numbers.next, .rtl .pagination .nav-links .page-numbers.prev {
+	transform: rotateY(180deg);
+}
+
 /* Social Share
 --------------------------------------------- */
 .c-social-share {
@@ -2539,6 +2558,10 @@ https://flickity.metafizzy.co
 	padding: 16px 5px;
 }
 
+.flickity-prev-next-button:hover .flickity-button-icon {
+	fill: #DFDFDF;
+}
+
 .flickity-prev-next-button.previous {
 	left: -20px;
 }
@@ -2576,6 +2599,7 @@ https://flickity.metafizzy.co
 	top: 20%;
 	width: 60%;
 	height: 60%;
+	transition: 0.2s;
 }
 
 /* ---- page dots ---- */
@@ -2607,6 +2631,11 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot.is-selected {
 	opacity: 1;
+}
+
+.rtl .flickity-prev-next-button {
+	transform-origin: center;
+	transform: rotate(-180deg) translateY(18px);
 }
 
 /*--------------------------------------------------------------

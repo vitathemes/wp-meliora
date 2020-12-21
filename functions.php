@@ -7,9 +7,10 @@
  * @package wp_meliora
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'WP_MELIORA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	$wp_meliora_theme_data = wp_get_theme();
+	define( 'WP_MELIORA_VERSION', $wp_meliora_theme_data->get( 'Version' ));
 }
 
 if ( ! function_exists( 'wp_meliora_setup' ) ) :
@@ -51,6 +52,7 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'wp-meliora' ),
+				'menu-2' => esc_html__( 'Slider Menu', 'wp-meliora' ),
 			)
 		);
 
@@ -72,16 +74,7 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'wp_meliora_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
+		add_theme_support( 'custom-background' );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -142,12 +135,12 @@ add_action( 'widgets_init', 'wp_meliora_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_meliora_scripts() {
-	wp_enqueue_style( 'wp_meliora-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'wp_meliora-style', get_stylesheet_uri(), array(), WP_MELIORA_VERSION );
 	wp_style_add_data( 'wp_meliora-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-carousel', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), _S_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), WP_MELIORA_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-carousel', get_template_directory_uri() . '/js/vendor.min.js', array(), WP_MELIORA_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), WP_MELIORA_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -170,13 +163,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 /**
  * Kirki

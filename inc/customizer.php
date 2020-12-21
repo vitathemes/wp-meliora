@@ -56,7 +56,7 @@ function wp_meliora_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function wp_meliora_customize_preview_js() {
-	wp_enqueue_script( 'wp_meliora-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'wp_meliora-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), WP_MELIORA_VERSION, true );
 }
 
 add_action( 'customize_preview_init', 'wp_meliora_customize_preview_js' );
@@ -113,6 +113,19 @@ add_action( 'init', function () {
 		'priority' => 6,
 	) );
 
+	// Posts
+	Kirki::add_section( 'posts_opts', array(
+		'title'    => esc_html__( 'Posts Options', 'wp-meliora' ),
+		'panel'    => '',
+		'priority' => 6,
+	) );
+
+	// Global
+	Kirki::add_section( 'global_opts', array(
+		'title'    => esc_html__( 'Global Options', 'wp-meliora' ),
+		'panel'    => '',
+		'priority' => 7,
+	) );
 
 // Footer
 	Kirki::add_panel( 'footer', array(
@@ -149,20 +162,36 @@ add_action( 'init', function () {
 	// -- Typography Fields --
 	// <editor-fold desc="Typography">
 	Kirki::add_field( 'wp-meliora', [
-		'type'      => 'typography',
-		'settings'  => 'headings_typography',
-		'label'     => esc_html__( 'Headlines', 'wp-meliora' ),
-		'section'   => 'typography',
-		'default'   => [
+		'type'     => 'toggle',
+		'settings' => 'use_google_fonts',
+		'label'    => esc_html__( 'Use google Fonts', 'wp-meliora' ),
+		'section'  => 'typography',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'active_callback' => [
+			[
+				'setting'  => 'use_google_fonts',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+		'type'            => 'typography',
+		'settings'        => 'headings_typography',
+		'label'           => esc_html__( 'Headlines', 'wp-meliora' ),
+		'section'         => 'typography',
+		'default'         => [
 			'font-family'    => 'Roboto Mono',
 			'font-size'      => '24px',
 			'font-weight'    => '300',
 			'line-height'    => '1.5',
 			'letter-spacing' => '0'
 		],
-		'transport' => 'auto',
-		'priority'  => 10,
-		'output'    => array(
+		'transport'       => 'auto',
+		'priority'        => 10,
+		'output'          => array(
 			array(
 				'element' => 'h1',
 			),
@@ -437,11 +466,18 @@ add_action( 'init', function () {
 	] );
 
 	Kirki::add_field( 'wp-meliora', [
-		'type'      => 'typography',
-		'settings'  => 'text_typography',
-		'label'     => esc_html__( 'Texts', 'wp-meliora' ),
-		'section'   => 'typography',
-		'default'   => [
+		'active_callback' => [
+			[
+				'setting'  => 'use_google_fonts',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+		'type'            => 'typography',
+		'settings'        => 'text_typography',
+		'label'           => esc_html__( 'Texts', 'wp-meliora' ),
+		'section'         => 'typography',
+		'default'         => [
 			'font-family'    => 'Roboto Mono',
 			'variant'        => '300',
 			'font-size'      => '16px',
@@ -449,9 +485,9 @@ add_action( 'init', function () {
 			'letter-spacing' => '0'
 			//'color'       => '#000',
 		],
-		'transport' => 'auto',
-		'priority'  => 10,
-		'output'    => array(
+		'transport'       => 'auto',
+		'priority'        => 10,
+		'output'          => array(
 			array(
 				'element'       => 'body',
 				'property'      => 'font-size',
@@ -581,4 +617,80 @@ add_action( 'init', function () {
 	] );
 
 // </editor-fold>
+
+	// Posts
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_posts_thumbnail',
+		'label'    => esc_html__( 'Show posts thumbnail', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_share_icons',
+		'label'    => esc_html__( 'Show share buttons', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_post_date',
+		'label'    => esc_html__( 'Show Published Date', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_post_author',
+		'label'    => esc_html__( 'Show Author Name', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+	// Posts
+
+	// Slider Menu
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_index',
+		'label'    => esc_html__( 'Show Slider Menu on Home/Blog page', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_cats',
+		'label'    => esc_html__( 'Show Slider Menu on Category pages', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_tags',
+		'label'    => esc_html__( 'Show Slider Menu on Tags pages', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_slider_menu_author',
+		'label'    => esc_html__( 'Show Slider Menu on Author pages', 'wp-meliora' ),
+		'section'  => 'global_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+	// Slider Menu
 } );

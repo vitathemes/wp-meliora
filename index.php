@@ -18,13 +18,9 @@ get_header();
     <main id="primary" class="site-main">
         <div class="site-main__container default-max-width">
             <div class="site-main__content">
-                <h2 class="site-main__content__title h1"><?php esc_html_e('Recent Posts', 'wp-meliora'); ?></h2>
-                <div class="c-categories-list">
-                    <ul class="c-categories-list__list js-categories-list s-categories-list" data-slick='{"slidesToShow": 4, "slidesToScroll": 4, "variableWidth": true}'>
-	                    <?php wp_meliora_categories_list(); ?>
-                    </ul>
-                </div>
-				<?php
+                <h2 class="site-main__content__title h1"><?php esc_html_e( 'Recent Posts', 'wp-meliora' ); ?></h2>
+				<?php wp_meliora_slider_menu();
+
 				if ( have_posts() ) :
 
 					if ( is_home() && ! is_front_page() ) :
