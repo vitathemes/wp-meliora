@@ -33,7 +33,7 @@ if ( ! function_exists( 'wp_meliora_posted_on' ) ) :
 			);
 		}
 		echo '<span class="c-post__meta__date posted-on">' . $posted_on . ' </span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		if ( get_theme_mod( 'show_post_author', true ) && get_theme_mod( 'show_post_date', true && is_singular() ) ) {
+		if ( is_singular() && get_theme_mod( 'show_post_author', true ) && get_theme_mod( 'show_post_date', true && is_singular() ) ) {
 			echo esc_html( '|', 'wp-meliora' );
 		}
 	}

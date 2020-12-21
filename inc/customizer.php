@@ -718,7 +718,7 @@ function wp_indigo_add_edit_icons( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'show_post_date', array(
-		'selector' => '.c-post__meta__date',
+		'selector' => '.c-post--single .c-post__meta__date',
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'show_post_author', array(
