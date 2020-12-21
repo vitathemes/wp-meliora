@@ -109,11 +109,11 @@ https://flickity.metafizzy.co
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
     left: auto;
-    right: 10px;
+    right: -25px;
 }
 .flickity-rtl .flickity-prev-next-button.next {
     right: auto;
-    left: 10px;
+    left: -25px;
 }
 
 .flickity-prev-next-button .flickity-button-icon {

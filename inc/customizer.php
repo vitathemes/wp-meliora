@@ -694,3 +694,40 @@ add_action( 'init', function () {
 	] );
 	// Slider Menu
 } );
+
+
+function wp_indigo_add_edit_icons( $wp_customize ) {
+	$wp_customize->selective_refresh->add_partial( 'show_slider_menu_index', array(
+		'selector' => '.c-categories-list',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'search_header', array(
+		'selector' => '.c-header .c-search-form',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
+		'selector' => '.c-footer__copyright',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'facebook', array(
+		'selector' => '.c-footer__socials',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'show_posts_thumbnail', array(
+		'selector' => '.c-post__thumbnail',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'show_post_date', array(
+		'selector' => '.c-post__meta__date',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'show_post_author', array(
+		'selector' => '.byline .author',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'show_share_icons', array(
+		'selector' => '.c-social-share',
+	) );
+}
+
+add_action( 'customize_preview_init', 'wp_indigo_add_edit_icons' );

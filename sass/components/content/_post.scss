@@ -124,6 +124,7 @@
 
 .c-post__thumbnail {
   margin-bottom: 24px;
+  text-align: center;
 
   @include media(laptop) {
     margin-bottom: 48px;

@@ -209,7 +209,7 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 	function wp_meliora_slider_menu() {
 		if ( has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_index', true ) && is_home() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_author', true ) && is_author() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_tags', true ) && is_tag() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_cats', true ) && is_category() ) {
 			echo '<div class="c-categories-list">';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo '<ul class="c-categories-list__list js-categories-list s-categories-list" data-slick=\'{"slidesToShow": 4, "slidesToScroll": 4, "variableWidth": true}\'>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo sprintf('<ul class="c-categories-list__list js-categories-list s-categories-list" data-aligncells="right" data-rtl="%s">', esc_attr(wp_meliora_is_rtl())); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			wp_meliora_slider_menu_items();
 			echo '</ul>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -388,3 +388,11 @@ function wp_meliora_show_socials_in_code_area_name()
 	wp_meliora_share_links();
 }
 add_action('wp_meliora_post_footer', 'wp_meliora_show_socials_in_code_area_name');
+
+function wp_meliora_is_rtl() {
+    if (is_rtl()) {
+        return 1;
+    } else {
+        return 0;
+    }
+}

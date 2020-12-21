@@ -26,9 +26,7 @@
         </div><!-- .entry-meta -->
 
 		<?php if ( get_theme_mod( 'show_posts_thumbnail', true ) ) : ?>
-            <div class="c-post__thumbnail">
-				<?php wp_meliora_post_thumbnail(); ?>
-            </div>
+			<?php wp_meliora_post_thumbnail(); ?>
 		<?php endif; ?>
     </header><!-- .entry-header -->
 
