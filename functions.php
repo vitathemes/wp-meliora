@@ -52,7 +52,7 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'wp-meliora' ),
-				'menu-2' => esc_html__( 'Slider Menu', 'wp-meliora' ),
+				'menu-2' => esc_html__( 'Secondary', 'wp-meliora' ),
 			)
 		);
 

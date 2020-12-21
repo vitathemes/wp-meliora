@@ -18,10 +18,8 @@
 
 .s-categories-list {
 
-  li {
+  div {
     margin-right: 24px;
-    display: inline-block;
-    width: auto;
     margin-bottom: 0;
 
     @include media(laptop) {
@@ -29,7 +27,7 @@
     }
   }
 
-  li.current-cat {
+  div.current-cat {
 
     a {
       color: $wp-meliora__secondary-color;

@@ -74,7 +74,7 @@ function wp_meliora_typography() {
 	if ( get_theme_mod( 'secondary_typography_color' ) == "" ) {
 		$wp_meliora_quaternary_color = "#777777";
 	} else {
-		$wp_meliora_quaternary_color = get_theme_mod( 'text_typography_color' );
+		$wp_meliora_quaternary_color = get_theme_mod( 'secondary_typography_color' );
 	}
 
 

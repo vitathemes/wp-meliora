@@ -197,8 +197,8 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 				$title = $menu_item->title;
 				$url   = $menu_item->url;
 
-				echo sprintf( '<li class="%s">', wp_meliora_current_menu_item( esc_url( $url ) ) );
-				echo sprintf( '<a href="%s">%s</a></li>', esc_url( $url ), esc_html( $title ) );
+				echo sprintf( '<div class="%s">', wp_meliora_current_menu_item( esc_url( $url ) ) );
+				echo sprintf( '<a href="%s">%s</a></div>', esc_url( $url ), esc_html( $title ) );
 
 			endforeach;
 		endif;
@@ -208,11 +208,11 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 	function wp_meliora_slider_menu() {
 		if ( has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_index', true ) && is_home() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_author', true ) && is_author() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_tags', true ) && is_tag() || has_nav_menu( 'menu-2' ) && get_theme_mod( 'show_slider_menu_cats', true ) && is_category() ) {
-			echo '<div class="c-categories-list">';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo sprintf('<ul class="c-categories-list__list js-categories-list s-categories-list" data-aligncells="right" data-rtl="%s">', esc_attr(wp_meliora_is_rtl())); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<nav class="c-categories-list">';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo sprintf('<div class="c-categories-list__list js-categories-list s-categories-list" data-rtl="%s">', esc_attr(wp_meliora_is_rtl())); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			wp_meliora_slider_menu_items();
-			echo '</ul>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '</nav>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		}
 	}
