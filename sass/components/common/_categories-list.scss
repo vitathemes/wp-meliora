@@ -18,7 +18,7 @@
 
 .s-categories-list {
 
-  div {
+  .c-categories-list__slide {
     margin-right: 24px;
     margin-bottom: 0;
 
@@ -27,7 +27,7 @@
     }
   }
 
-  div.current-cat {
+  .c-categories-list__slide.current-cat {
 
     a {
       color: $wp-meliora__secondary-color;

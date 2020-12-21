@@ -2247,18 +2247,18 @@ ol.children {
 	border-bottom: 1px solid #DFDFDF;
 }
 
-.s-categories-list div {
+.s-categories-list .c-categories-list__slide {
 	margin-right: 24px;
 	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 1140px) {
-	.s-categories-list div {
+	.s-categories-list .c-categories-list__slide {
 		margin-right: 48px;
 	}
 }
 
-.s-categories-list div.current-cat a {
+.s-categories-list .c-categories-list__slide.current-cat a {
 	color: var(--secondary-color);
 	border-bottom: 2px solid var(--quaternary-color);
 }

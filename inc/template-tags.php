@@ -197,7 +197,7 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 				$title = $menu_item->title;
 				$url   = $menu_item->url;
 
-				echo sprintf( '<div class="%s">', wp_meliora_current_menu_item( esc_url( $url ) ) );
+				echo sprintf( '<div class="c-categories-list__slide %s">', wp_meliora_current_menu_item( esc_url( $url ) ) );
 				echo sprintf( '<a href="%s">%s</a></div>', esc_url( $url ), esc_html( $title ) );
 
 			endforeach;
