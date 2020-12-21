@@ -6,7 +6,6 @@ if (document.querySelectorAll(".js-categories-list").length) {
         }
     });
 
-     const cellAlignAttr = document.querySelector('.js-categories-list').getAttribute('data-aligncells');
      const rtlAttr = document.querySelector('.js-categories-list').getAttribute('data-rtl');
 
      const categoriesCarouselOptions = {
@@ -15,12 +14,10 @@ if (document.querySelectorAll(".js-categories-list").length) {
          contain: true,
          pageDots: false,
          groupCells: false,
-         cellAlign: cellAlignAttr,
          rightToLeft: parseInt(rtlAttr)
      };
 
     const categoriesCarousel = new Flickity( '.js-categories-list', categoriesCarouselOptions);
-    console.log(categoriesCarousel);
 }
 
 var menuToggle = document.querySelector('.js-menu-toggle');
