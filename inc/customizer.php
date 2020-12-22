@@ -577,11 +577,11 @@ add_action( 'init', function () {
 
 	// -- Copyright --
 	Kirki::add_field( 'wp-meliora', [
-		'type'     => 'editor',
+		'type'     => 'textarea',
 		'settings' => 'copyright_text',
 		'label'    => esc_html__( 'Copyright Text', 'wp-meliora' ),
 		'section'  => 'copyright',
-		'default'  => '<a href="https://wordpress.org/" class="customize-unpreviewable">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: WP-Meliora by <a href="https://vitathemes.com" class="customize-unpreviewable">VitaThemes</a>.',
+		'default'  =>  sprintf( '%s <a href="%s" target="_blank">%s</a>.', esc_html__( 'Designed by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ),
 		'priority' => 10,
 	] );
 	// -- Copyright --
