@@ -1684,7 +1684,7 @@ body.error404 {
 }
 
 .c-post__content__main a:hover {
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 
 .search.search-results .page-title {
