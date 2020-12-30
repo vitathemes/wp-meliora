@@ -939,8 +939,8 @@ textarea {
 .site.no-sidebar .site-main {
 	--responsive--aligndefault-width: calc(720px - var(--responsive--spacing-horizontal) + 46px);
 	--responsive--alignwide-width: calc(720px - var(--responsive--spacing-horizontal) + 46px);
-	--responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-	--responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+	--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+	--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
 }
 
 .site.no-sidebar .site-main__content {
@@ -1526,11 +1526,6 @@ body.error404 {
 
 .c-post:not(.c-post--archive) .c-post__tags {
 	margin: 40px 0;
-}
-
-.c-post__meta {
-	font-size: 0.75rem;
-	font-weight: var(--heading-typography-variant);
 }
 
 .c-post__tags__tag {
