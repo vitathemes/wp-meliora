@@ -17,7 +17,13 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+}
+?>
 <main id="primary" class="site-main">
     <div class="site-main__container default-max-width">
         <div class="c-header--404">
