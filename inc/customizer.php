@@ -536,6 +536,36 @@ add_action( 'init', function () {
 		'section'  => 'typography',
 		'default'  => '#777777',
 	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'active_callback' => [
+			[
+				'setting'  => 'use_google_fonts',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+		'type'            => 'typography',
+		'settings'        => 'links_typography',
+		'label'           => esc_html__( 'Links styles', 'wp-meliora' ),
+		'section'         => 'typography',
+		'default'         => [
+			'font-family'    => 'Roboto Mono',
+			'variant'        => '300',
+			'font-size'      => '16px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#000',
+		],
+		'transport'       => 'auto',
+		'priority'        => 10,
+		'output'          => array(
+			array(
+				'element' => '.c-post__content__main a',
+			),
+
+		),
+	] );
 // </editor-fold>
 	// -- Typography Fields --
 
@@ -581,7 +611,7 @@ add_action( 'init', function () {
 		'settings' => 'copyright_text',
 		'label'    => esc_html__( 'Copyright Text', 'wp-meliora' ),
 		'section'  => 'copyright',
-		'default'  =>  sprintf( '%s <a href="%s" target="_blank">%s</a>.', esc_html__( 'Designed by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ),
+		'default'  => sprintf( '%s <a href="%s" target="_blank">%s</a>.', esc_html__( 'Designed by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ),
 		'priority' => 10,
 	] );
 	// -- Copyright --
@@ -652,6 +682,24 @@ add_action( 'init', function () {
 		'label'    => esc_html__( 'Show Author Name', 'wp-meliora' ),
 		'section'  => 'posts_opts',
 		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_tags_archive',
+		'label'    => esc_html__( 'Show tags in archives', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_post_excerpt',
+		'label'    => esc_html__( 'Show posts excerpt', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 0,
 		'priority' => 10,
 	] );
 	// Posts
