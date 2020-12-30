@@ -200,7 +200,7 @@
   animation: fadeInFromNone 0.4s forwards;
 }
 
-@include media(tablet){
+@include media(tablet) {
 
   .menu-toggle {
     display: none;

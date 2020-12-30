@@ -1,23 +1,23 @@
 a {
-	color: $wp-meliora__secondary-color;
-	transition: $global-transition;
+  color: $wp-meliora__secondary-color;
+  transition: $global-transition;
 
-	&:visited {
-		color: $wp-meliora__secondary-color;
-	}
+  &:visited {
+    color: $wp-meliora__secondary-color;
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $wp-meliora__primary-color;
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    color: $wp-meliora__primary-color;
+  }
 
-	&:focus {
-		outline: thin dotted;
-	}
+  &:focus {
+    outline: thin dotted;
+  }
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
