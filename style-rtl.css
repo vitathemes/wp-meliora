@@ -1528,6 +1528,11 @@ body.error404 {
 	margin: 40px 0;
 }
 
+.c-post__meta {
+	font-size: 0.75rem;
+	font-weight: var(--heading-typography-variant);
+}
+
 .c-post__tags__tag {
 	white-space: nowrap;
 	background-color: #F4F4F4;
@@ -1567,11 +1572,9 @@ body.error404 {
 }
 
 @media only screen and (min-width: 1140px) {
-	.blog .c-post, .archive .c-post, .search .c-post {
-		flex-wrap: nowrap;
-	}
 	.blog .c-post .c-post__header, .archive .c-post .c-post__header, .search .c-post .c-post__header {
 		width: 70%;
+		flex-grow: 1;
 		padding-left: 10px;
 	}
 	.blog .c-post .c-post__tags, .archive .c-post .c-post__tags, .search .c-post .c-post__tags {
@@ -1580,8 +1583,27 @@ body.error404 {
 	}
 }
 
+.s-post-archive p {
+	margin-bottom: 0;
+}
+
+.c-post__main {
+	order: unset;
+	width: 100%;
+}
+
+@media only screen and (min-width: 980px) {
+	.c-post__main {
+		order: 2;
+	}
+}
+
 .c-post_cats {
 	font-size: 0.75em;
+	color: var(--quaternary-color);
+}
+
+.s-post-meta {
 	color: var(--quaternary-color);
 }
 
@@ -1643,6 +1665,10 @@ body.error404 {
 
 .no-results.not-found.c-post--not-found .page-content p {
 	margin-top: 10px;
+}
+
+.c-post__content__main a:hover {
+	color: var(--secondary-color);
 }
 
 .search.search-results .page-title {
@@ -2193,6 +2219,16 @@ ol.children {
 
 /* Sidebar
 --------------------------------------------- */
+.c-sidebar {
+	margin-top: 48px;
+}
+
+@media only screen and (min-width: 1140px) {
+	.c-sidebar {
+		margin-top: 0;
+	}
+}
+
 /* Categories List
 --------------------------------------------- */
 .c-categories-list {

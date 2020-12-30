@@ -105,11 +105,11 @@
 }
 
 .c-post__main {
-  order: 2;
+  order: unset;
   width: 100%;
 
   @include media(tablet) {
-    order: unset
+    order: 2;
   }
 }
 

@@ -1604,13 +1604,13 @@ body.error404 {
 }
 
 .c-post__main {
-	order: 2;
+	order: unset;
 	width: 100%;
 }
 
 @media only screen and (min-width: 980px) {
 	.c-post__main {
-		order: unset;
+		order: 2;
 	}
 }
 
