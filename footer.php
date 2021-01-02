@@ -24,8 +24,8 @@
             <div class="c-footer__grid">
                 <div class="c-footer__copyright">
 	                <?php if ( get_theme_mod( 'show_branding_in_footer', true ) ) : ?>
-                        <div class="c-footer__branding">
-                            <?php wp_meliora_branding(); ?>
+                        <div class="c-footer__branding s-footer-branding">
+                            <?php wp_meliora_branding(true); ?>
                         </div>
 	                <?php endif; ?>
                     <p>

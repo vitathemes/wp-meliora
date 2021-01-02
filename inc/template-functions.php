@@ -39,7 +39,7 @@ function wp_meliora_pingback_header() {
 
 add_action( 'wp_head', 'wp_meliora_pingback_header' );
 
-function wp_meliora_branding( $is_footer = true ) {
+function wp_meliora_branding( $is_footer = false ) {
 	if ( $is_footer ) {
 		if ( has_custom_logo() ) {
 			the_custom_logo();

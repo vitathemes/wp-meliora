@@ -2486,7 +2486,11 @@ ol.children {
 	}
 }
 
-.c-footer__branding img {
+.s-footer-branding a {
+	text-decoration: none;
+}
+
+.s-footer-branding img {
 	height: 28px;
 	width: auto;
 }
