@@ -612,7 +612,7 @@ add_action( 'init', function () {
 		'settings' => 'show_branding_in_footer',
 		'label'    => esc_html__( 'Show site branding in footer', 'wp-meliora' ),
 		'section'  => 'copyright',
-		'default'  => 0,
+		'default'  => 1,
 		'priority' => 10,
 	] );
 
