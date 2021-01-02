@@ -606,6 +606,16 @@ add_action( 'init', function () {
 	// -- Socials --
 
 	// -- Copyright --
+
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_branding_in_footer',
+		'label'    => esc_html__( 'Show site branding in footer', 'wp-meliora' ),
+		'section'  => 'copyright',
+		'default'  => 1,
+		'priority' => 10,
+	] );
+
 	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'textarea',
 		'settings' => 'copyright_text',
@@ -649,6 +659,15 @@ add_action( 'init', function () {
 // </editor-fold>
 
 	// Posts
+	Kirki::add_field( 'wp-meliora', [
+		'type'     => 'toggle',
+		'settings' => 'show_posts_thumbnail_Archive',
+		'label'    => esc_html__( 'Show posts thumbnail on archives', 'wp-meliora' ),
+		'section'  => 'posts_opts',
+		'default'  => 0,
+		'priority' => 10,
+	] );
+
 	Kirki::add_field( 'wp-meliora', [
 		'type'     => 'toggle',
 		'settings' => 'show_posts_thumbnail',

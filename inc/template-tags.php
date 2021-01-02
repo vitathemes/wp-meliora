@@ -255,6 +255,11 @@ if ( ! function_exists( 'wp_meliora_post_thumbnail' ) ) :
 				<?php the_post_thumbnail( 'full' ); ?>
             </div><!-- .post-thumbnail -->
 		<?php
+		else: ?>
+            <div class="c-post__thumbnail">
+				<?php the_post_thumbnail( 'full' ); ?>
+            </div><!-- .post-thumbnail -->
+		<?php
 		endif; // End is_singular().
 	}
 endif;
@@ -410,9 +415,19 @@ if ( ! function_exists( 'wp_meliora_post_excerpt' ) ) {
 }
 
 if ( ! function_exists( 'wp_meliora_post_main' ) ) {
-    function wp_meliora_post_main () {
-	    wp_meliora_post_excerpt();
-    }
+	function wp_meliora_post_main() {
+		wp_meliora_post_excerpt();
+	}
 }
 
 add_action( 'wp_meliora_archive_post_main', 'wp_meliora_post_main' );
+
+if ( ! function_exists( 'wp_meliora_footer_socials' ) ) {
+	function wp_meliora_footer_socials() {
+		if ( get_theme_mod( 'facebook', "" ) || get_theme_mod( 'twitter', "" ) || get_theme_mod( 'linkedin', "" ) || get_theme_mod( 'instagram', "" ) ) {
+			echo '<div class="c-footer__socials s-footer-socials">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			wp_meliora_socials_links();
+			echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+}

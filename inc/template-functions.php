@@ -39,7 +39,16 @@ function wp_meliora_pingback_header() {
 
 add_action( 'wp_head', 'wp_meliora_pingback_header' );
 
-function wp_meliora_branding() {
+function wp_meliora_branding( $is_footer = true ) {
+	if ( $is_footer ) {
+		if ( has_custom_logo() ) {
+			the_custom_logo();
+		} else { ?>
+            <a class="c-footer__branding__title h1" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		<?php }
+
+		return;
+	}
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {

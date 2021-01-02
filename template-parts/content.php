@@ -10,6 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'c-post c-post--archive' ); ?>>
+	<?php if ( get_theme_mod( 'show_posts_thumbnail_Archive', false ) ) : ?>
+		<?php wp_meliora_post_thumbnail(); ?>
+	<?php endif; ?>
     <header class="c-post__header entry-header">
         <div class="c-post__meta entry-meta s-post-meta">
 			<?php
