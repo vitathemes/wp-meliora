@@ -7,6 +7,10 @@ if (document.querySelectorAll(".js-categories-list").length) {
     });
 
      const rtlAttr = document.querySelector('.js-categories-list').getAttribute('data-rtl');
+     let cellsAligment = 'left';
+     if (parseInt(rtlAttr)) {
+         cellsAligment = 'right';
+     }
 
      const categoriesCarouselOptions = {
          initialIndex: initIndex,
@@ -14,6 +18,7 @@ if (document.querySelectorAll(".js-categories-list").length) {
          contain: true,
          pageDots: false,
          groupCells: false,
+         cellAlign: cellsAligment,
          rightToLeft: parseInt(rtlAttr)
      };
 

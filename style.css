@@ -1547,15 +1547,21 @@ body.error404 {
 .c-post__tags__tag {
 	white-space: nowrap;
 	background-color: #F4F4F4;
-	padding: 0 16px;
+	padding: 0 12px;
 	line-height: 30px;
 	height: 30px;
 	border-radius: 3px;
 	text-decoration: none;
 	margin: 0 4px 4px 0;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 0.75rem;
 	font-weight: var(--heading-typography-variant);
+}
+
+@media only screen and (min-width: 980px) {
+	.c-post__tags__tag {
+		font-size: 0.6rem;
+	}
 }
 
 .c-post__tags__tag--more {
@@ -1616,6 +1622,7 @@ body.error404 {
 
 .s-post-meta {
 	color: var(--quaternary-color);
+	font-size: 0.75rem;
 }
 
 .s-post-meta a {

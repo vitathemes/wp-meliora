@@ -45,15 +45,19 @@
 .c-post__tags__tag {
   white-space: nowrap;
   background-color: $wp-meliora__neutral-gray-light-color;
-  padding: 0 16px;
+  padding: 0 12px;
   line-height: 30px;
   height: 30px;
   border-radius: $global-radius;
   text-decoration: none;
   margin: 0 4px 4px 0;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: var(--heading-typography-variant);
+
+  @include media(tablet) {
+    font-size: 0.6rem;
+  }
 
   &--more {
     background-color: $wp-meliora__neutral-gray-color;
@@ -115,6 +119,8 @@
 
 .s-post-meta {
   color: $wp-meliora__quaternary-color;
+  font-size: 0.75rem;
+
 
   a {
     text-decoration: none;
