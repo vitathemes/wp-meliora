@@ -74,8 +74,30 @@ if ( function_exists( 'Kirki' ) ) {
 			'option_type' => 'theme_mod'
 		) );
 
+		// Add Panels
+		Kirki::add_panel( 'elements', array(
+			'priority'    => 10,
+			'title'       => esc_html__( 'Elements', 'kirki' ),
+			'description' => esc_html__( 'My panel description', 'kirki' ),
+		) );
+
 // Add sections \\
 // <editor-fold desc="Sections">
+		// Header
+		Kirki::add_section( 'header', array(
+			'title'    => esc_html__( 'Header', 'wp-meliora' ),
+			'panel'    => '',
+			'priority' => 1,
+		) );
+
+		// Footer
+		Kirki::add_section( 'footer', array(
+			'title'    => esc_html__( 'Footer', 'wp-meliora' ),
+			'panel'    => '',
+			'priority' => 2,
+		) );
+
+
 // Branding
 		Kirki::add_section( 'colors', array(
 			'title'    => esc_html__( 'Colors', 'wp-meliora' ),
@@ -103,46 +125,31 @@ if ( function_exists( 'Kirki' ) ) {
 		Kirki::add_section( 'layout', array(
 			'title'    => esc_html__( 'Layout', 'wp-meliora' ),
 			'panel'    => '',
-			'priority' => 5,
-		) );
-
-		// Header
-		Kirki::add_section( 'header', array(
-			'title'    => esc_html__( 'Header', 'wp-meliora' ),
-			'panel'    => '',
-			'priority' => 6,
+			'priority' => 3,
 		) );
 
 		// Posts
-		Kirki::add_section( 'posts_opts', array(
-			'title'    => esc_html__( 'Posts Options', 'wp-meliora' ),
-			'panel'    => '',
+		Kirki::add_section( 'single_opts', array(
+			'title'    => esc_html__( 'Single Options', 'wp-meliora' ),
+			'panel'    => 'elements',
 			'priority' => 6,
 		) );
 
-		// Global
-		Kirki::add_section( 'global_opts', array(
-			'title'    => esc_html__( 'Global Options', 'wp-meliora' ),
-			'panel'    => '',
+		Kirki::add_section( 'archive_opts', array(
+			'title'    => esc_html__( 'Archive Options', 'wp-meliora' ),
+			'panel'    => 'elements',
+			'priority' => 6,
+		) );
+
+		Kirki::add_section( 'secondary_menu', array(
+			'title'    => esc_html__( 'Secondary Menu', 'wp-meliora' ),
+			'panel'    => 'elements',
 			'priority' => 7,
 		) );
-
-// Footer
-		Kirki::add_panel( 'footer', array(
-			'priority' => 10,
-			'title'    => esc_html__( 'Footer', 'kirki' ),
-		) );
-
 
 		Kirki::add_section( 'socials', array(
 			'title'    => esc_html__( 'Social Networks', 'wp-meliora' ),
 			'panel'    => '',
-			'priority' => 6,
-		) );
-
-		Kirki::add_section( 'copyright', array(
-			'title'    => esc_html__( 'Copyright', 'wp-meliora' ),
-			'panel'    => 'footer',
 			'priority' => 6,
 		) );
 
@@ -359,7 +366,7 @@ if ( function_exists( 'Kirki' ) ) {
 			],
 			'type'            => 'typography',
 			'settings'        => 'text_typography',
-			'label'           => esc_html__( 'Texts', 'wp-meliora' ),
+			'label'           => esc_html__( 'Base font', 'wp-meliora' ),
 			'section'         => 'typography',
 			'default'         => [
 				'font-family'    => 'Roboto Mono',
@@ -519,9 +526,9 @@ if ( function_exists( 'Kirki' ) ) {
 
 		Kirki::add_field( 'wp-meliora', [
 			'type'     => 'toggle',
-			'settings' => 'show_colors_in_footer',
-			'label'    => esc_html__( 'Show site colors in footer', 'wp-meliora' ),
-			'section'  => 'copyright',
+			'settings' => 'show_branding_in_footer',
+			'label'    => esc_html__( 'Show site logo/title in footer', 'wp-meliora' ),
+			'section'  => 'footer',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -530,7 +537,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'textarea',
 			'settings' => 'copyright_text',
 			'label'    => esc_html__( 'Copyright Text', 'wp-meliora' ),
-			'section'  => 'copyright',
+			'section'  => 'footer',
 			'default'  => sprintf( '%s <a href="%s" target="_blank">%s</a>.', esc_html__( 'Designed by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ),
 			'priority' => 10,
 		] );
@@ -604,8 +611,8 @@ if ( function_exists( 'Kirki' ) ) {
 		Kirki::add_field( 'wp-meliora', [
 			'type'     => 'toggle',
 			'settings' => 'show_posts_thumbnail_Archive',
-			'label'    => esc_html__( 'Show posts thumbnail on archives', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'label'    => esc_html__( 'Show posts thumbnail', 'wp-meliora' ),
+			'section'  => 'archive_opts',
 			'default'  => 0,
 			'priority' => 10,
 		] );
@@ -614,7 +621,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_posts_thumbnail',
 			'label'    => esc_html__( 'Show posts thumbnail', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'section'  => 'single_opts',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -623,7 +630,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_share_icons',
 			'label'    => esc_html__( 'Show share buttons', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'section'  => 'single_opts',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -632,7 +639,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_post_date',
 			'label'    => esc_html__( 'Show Published Date', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'section'  => 'single_opts',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -641,7 +648,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_post_author',
 			'label'    => esc_html__( 'Show Author Name', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'section'  => 'single_opts',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -649,8 +656,8 @@ if ( function_exists( 'Kirki' ) ) {
 		Kirki::add_field( 'wp-meliora', [
 			'type'     => 'toggle',
 			'settings' => 'show_tags_archive',
-			'label'    => esc_html__( 'Show tags in archives', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'label'    => esc_html__( 'Show tags', 'wp-meliora' ),
+			'section'  => 'archive_opts',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -659,18 +666,18 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_post_excerpt',
 			'label'    => esc_html__( 'Show posts excerpt', 'wp-meliora' ),
-			'section'  => 'posts_opts',
+			'section'  => 'archive_opts',
 			'default'  => 0,
 			'priority' => 10,
 		] );
 		// Posts
 
-		// Slider Menu
+		// Secondary Menu
 		Kirki::add_field( 'wp-meliora', [
 			'type'     => 'toggle',
 			'settings' => 'show_slider_menu_index',
 			'label'    => esc_html__( 'Show Slider Menu on Home/Blog page', 'wp-meliora' ),
-			'section'  => 'global_opts',
+			'section'  => 'secondary_menu',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -679,7 +686,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_slider_menu_cats',
 			'label'    => esc_html__( 'Show Slider Menu on Category pages', 'wp-meliora' ),
-			'section'  => 'global_opts',
+			'section'  => 'secondary_menu',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -688,7 +695,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_slider_menu_tags',
 			'label'    => esc_html__( 'Show Slider Menu on Tags pages', 'wp-meliora' ),
-			'section'  => 'global_opts',
+			'section'  => 'secondary_menu',
 			'default'  => 1,
 			'priority' => 10,
 		] );
@@ -697,7 +704,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'type'     => 'toggle',
 			'settings' => 'show_slider_menu_author',
 			'label'    => esc_html__( 'Show Slider Menu on Author pages', 'wp-meliora' ),
-			'section'  => 'global_opts',
+			'section'  => 'secondary_menu',
 			'default'  => 1,
 			'priority' => 10,
 		] );
