@@ -63,7 +63,7 @@ add_action( 'customize_preview_init', 'wp_meliora_customize_preview_js' );
 
 
 // Custom Fields
-if (  function_exists( 'Kirki' )) {
+if ( function_exists( 'Kirki' ) ) {
 	add_action( 'init', function () {
 // Disable Kiriki help notice
 		add_filter( 'kirki_telemetry', '__return_false' );
@@ -214,239 +214,138 @@ if (  function_exists( 'Kirki' )) {
 			'priority'        => 10,
 			'output'          => array(
 				array(
-					'element' => array('h1', '.h1'),
+					'element' => array( 'h1', '.h1' ),
 				),
 				array(
-					'element'       => array('h2', '.h2'),
+					'element'       => array( 'h2', '.h2' ),
 					'property'      => 'font-size',
 					'value_pattern' => 'calc($ - 0.3125rem)',
 					'choice'        => 'font-size',
 				),
 				array(
-					'element'       => array('h2', '.h2'),
+					'element'       => array( 'h2', '.h2' ),
 					'property'      => 'font-weight',
 					'value_pattern' => '$',
 					'choice'        => 'font-weight',
 				),
 				array(
-					'element'       => array('h2', '.h2'),
+					'element'       => array( 'h2', '.h2' ),
 					'property'      => 'font-family',
 					'value_pattern' => '$',
 					'choice'        => 'font-family',
 				),
 				array(
-					'element'       => array('h2', '.h2'),
+					'element'       => array( 'h2', '.h2' ),
 					'property'      => 'letter-spacing',
 					'value_pattern' => '$',
 					'choice'        => 'letter-spacing',
 				),
 				array(
-					'element'       => array('h2', '.h2'),
+					'element'       => array( 'h2', '.h2' ),
 					'property'      => 'line-height',
 					'value_pattern' => '$',
 					'choice'        => 'line-height',
 				),
-				
+
 				array(
-					'element'       => 'h3',
+					'element'       => array( 'h3', '.h3' ),
 					'property'      => 'font-size',
 					'value_pattern' => 'calc($ - 0.38rem)',
 					'choice'        => 'font-size',
 				),
 				array(
-					'element'       => 'h3',
+					'element'       => array( 'h3', '.h3' ),
 					'property'      => 'font-weight',
 					'value_pattern' => '$',
 					'choice'        => 'font-weight',
 				),
 				array(
-					'element'       => 'h3',
+					'element'       => array( 'h3', '.h3' ),
 					'property'      => 'font-family',
 					'value_pattern' => '$',
 					'choice'        => 'font-family',
 				),
 				array(
-					'element'       => 'h3',
+					'element'       => array( 'h3', '.h3' ),
 					'property'      => 'letter-spacing',
 					'value_pattern' => '$',
 					'choice'        => 'letter-spacing',
 				),
 
 				array(
-					'element'       => '.h3',
-					'property'      => 'font-size',
-					'value_pattern' => 'calc($ - 0.38rem)',
-					'choice'        => 'font-size',
-				),
-				array(
-					'element'       => '.h3',
-					'property'      => 'font-weight',
-					'value_pattern' => '$',
-					'choice'        => 'font-weight',
-				),
-				array(
-					'element'       => '.h3',
-					'property'      => 'font-family',
-					'value_pattern' => '$',
-					'choice'        => 'font-family',
-				),
-				array(
-					'element'       => '.h3',
-					'property'      => 'letter-spacing',
-					'value_pattern' => '$',
-					'choice'        => 'letter-spacing',
-				),
-
-				array(
-					'element'       => 'h4',
+					'element'       => array( 'h4', '.h4' ),
 					'property'      => 'font-size',
 					'value_pattern' => 'calc($ - 0.44rem)',
 					'choice'        => 'font-size',
 				),
 				array(
-					'element'       => 'h4',
+					'element'       => array( 'h4', '.h4' ),
 					'property'      => 'font-weight',
 					'value_pattern' => '$',
 					'choice'        => 'font-weight',
 				),
 				array(
-					'element'       => 'h4',
+					'element'       => array( 'h4', '.h4' ),
 					'property'      => 'font-family',
 					'value_pattern' => '$',
 					'choice'        => 'font-family',
 				),
 				array(
-					'element'       => 'h4',
+					'element'       => array( 'h4', '.h4' ),
 					'property'      => 'letter-spacing',
 					'value_pattern' => '$',
 					'choice'        => 'letter-spacing',
 				),
 
 				array(
-					'element'       => '.h4',
-					'property'      => 'font-size',
-					'value_pattern' => 'calc($ - 0.44rem)',
-					'choice'        => 'font-size',
-				),
-				array(
-					'element'       => '.h4',
-					'property'      => 'font-weight',
-					'value_pattern' => '$',
-					'choice'        => 'font-weight',
-				),
-				array(
-					'element'       => '.h4',
-					'property'      => 'font-family',
-					'value_pattern' => '$',
-					'choice'        => 'font-family',
-				),
-				array(
-					'element'       => '.h4',
-					'property'      => 'letter-spacing',
-					'value_pattern' => '$',
-					'choice'        => 'letter-spacing',
-				),
-
-				array(
-					'element'       => 'h5',
+					'element'       => array( 'h5', '.h5' ),
 					'property'      => 'font-size',
 					'value_pattern' => 'calc($ - 0.52rem)',
 					'choice'        => 'font-size',
 				),
 				array(
-					'element'       => 'h5',
+					'element'       => array( 'h5', '.h5' ),
 					'property'      => 'font-weight',
 					'value_pattern' => '$',
 					'choice'        => 'font-weight',
 				),
 				array(
-					'element'       => 'h5',
+					'element'       => array( 'h5', '.h5' ),
 					'property'      => 'font-family',
 					'value_pattern' => '$',
 					'choice'        => 'font-family',
 				),
 				array(
-					'element'       => 'h5',
+					'element'       => array( 'h5', '.h5' ),
 					'property'      => 'letter-spacing',
 					'value_pattern' => '$',
 					'choice'        => 'letter-spacing',
 				),
 
 				array(
-					'element'       => '.h5',
-					'property'      => 'font-size',
-					'value_pattern' => 'calc($ - 0.52rem)',
-					'choice'        => 'font-size',
-				),
-				array(
-					'element'       => '.h5',
-					'property'      => 'font-weight',
-					'value_pattern' => '$',
-					'choice'        => 'font-weight',
-				),
-				array(
-					'element'       => '.h5',
-					'property'      => 'font-family',
-					'value_pattern' => '$',
-					'choice'        => 'font-family',
-				),
-				array(
-					'element'       => '.h5',
-					'property'      => 'letter-spacing',
-					'value_pattern' => '$',
-					'choice'        => 'letter-spacing',
-				),
-
-				array(
-					'element'       => 'h6',
+					'element'       => array( 'h6', '.h6' ),
 					'property'      => 'font-size',
 					'value_pattern' => 'calc($ - 0.6rem)',
 					'choice'        => 'font-size',
 				),
 				array(
-					'element'       => 'h6',
+					'element'       => array( 'h6', '.h6' ),
 					'property'      => 'font-weight',
 					'value_pattern' => '$',
 					'choice'        => 'font-weight',
 				),
 				array(
-					'element'       => 'h6',
+					'element'       => array( 'h6', '.h6' ),
 					'property'      => 'font-family',
 					'value_pattern' => '$',
 					'choice'        => 'font-family',
 				),
 				array(
-					'element'       => 'h6',
+					'element'       => array( 'h6', '.h6' ),
 					'property'      => 'letter-spacing',
 					'value_pattern' => '$',
 					'choice'        => 'letter-spacing',
 				),
-
-				array(
-					'element'       => '.h6',
-					'property'      => 'font-size',
-					'value_pattern' => 'calc($ - 0.6rem)',
-					'choice'        => 'font-size',
-				),
-				array(
-					'element'       => '.h6',
-					'property'      => 'font-weight',
-					'value_pattern' => '$',
-					'choice'        => 'font-weight',
-				),
-				array(
-					'element'       => '.h6',
-					'property'      => 'font-family',
-					'value_pattern' => '$',
-					'choice'        => 'font-family',
-				),
-				array(
-					'element'       => '.h6',
-					'property'      => 'letter-spacing',
-					'value_pattern' => '$',
-					'choice'        => 'letter-spacing',
-				),
-
 			),
 		] );
 
