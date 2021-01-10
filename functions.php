@@ -74,7 +74,7 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background' );
+		//add_theme_support( 'custom-background' );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -163,11 +163,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Kirki
- */
-require get_template_directory() . '/inc/kirki/kirki.php';
 
 /**
  * Hooks

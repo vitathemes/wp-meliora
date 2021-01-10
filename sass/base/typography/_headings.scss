@@ -7,3 +7,46 @@ h6 {
   clear: both;
   margin: 0 0 1.25rem;
 }
+
+
+h1, .h1 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+h2, .h2 {
+  font-size: calc(24px - 0.3125rem);
+  font-weight: 400;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+h3, .h3 {
+  font-size: calc(24px - 0.38rem);
+  font-weight: 400;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+h4, .h4 {
+  font-size: calc(24px - 0.44rem);
+  font-weight: 400;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+h5, .h5 {
+  font-size: calc(24px - 0.52rem);
+  font-weight: 400;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+h6, .h6 {
+  font-size: calc(24px - 0.6rem);
+  font-weight: 400;
+  font-family: inherit;
+  line-height: inherit;
+}

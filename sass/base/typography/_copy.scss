@@ -23,10 +23,10 @@ blockquote {
   margin-left: 0;
   border-left: 2px solid $wp-meliora__neutral-gray-color;
   padding-left: 22px;
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__base-font-color;
 
   cite {
-    color: $wp-meliora__tertiary-color;
+    color: $wp-meliora__heading-color;
   }
 }
 
@@ -42,7 +42,7 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__base-font-color;
 }
 
 code,
@@ -54,7 +54,7 @@ var {
 
 abbr,
 acronym {
-  border-bottom: 1px dotted $color__border-abbr;
+  border-bottom: 1px dotted #666;
   cursor: help;
 }
 

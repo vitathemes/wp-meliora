@@ -12,6 +12,6 @@ input[type="submit"] {
   transition: $global-transition;
 
   &:hover {
-    background-color: $wp-meliora__quaternary-color;
+    background-color: $wp-meliora__base-font-color;
   }
 }

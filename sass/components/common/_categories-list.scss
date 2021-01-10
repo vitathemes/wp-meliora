@@ -30,8 +30,8 @@
   .c-categories-list__slide.current-cat {
 
     a {
-      color: $wp-meliora__secondary-color;
-      border-bottom: 2px solid $wp-meliora__neutral-dark-gray-color;
+      color: $wp-meliora__base-font-color;
+      border-bottom: 2px solid $wp-meliora__base-font-color;
     }
   }
 
@@ -39,13 +39,13 @@
     font-weight: var(--heading-typography-variant);
     text-decoration: none;
     padding: 0 4px 8px;
-    color: $wp-meliora__neutral-dark-gray-color;
+    color: $wp-meliora__base-font-color;
     word-wrap: normal;
     white-space: nowrap;
     display: block;
 
     &:hover {
-      color: $wp-meliora__secondary-color;
+      color: $wp-meliora__base-font-color;
     }
   }
 }

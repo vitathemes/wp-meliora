@@ -1,9 +1,9 @@
 a {
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__base-font-color;
   transition: $global-transition;
 
   &:visited {
-    color: $wp-meliora__secondary-color;
+    color: $wp-meliora__base-font-color;
   }
 
   &:hover,
