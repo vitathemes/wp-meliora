@@ -1,6 +1,6 @@
 === WP Meliora ===
 Contributors: vitathemes, kashani, mrmolaei, mostafas1990
-Requires at least: 5.0
+Requires at least: 5.5.3
 Tested up to: 5.6
 Requires PHP: 5.6
 Stable tag: 1.0.0
@@ -34,6 +34,10 @@ WP-Meliora is a WordPress minimal & Fast-loading theme for people who want to ha
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+
+= 1.1.0 =
+* Added theme setup
+* Removed Kirki framework
 
 = 1.0.0 =
 * Initial version
