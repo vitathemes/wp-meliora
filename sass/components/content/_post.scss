@@ -19,7 +19,7 @@
 
   time {
     font-weight: var(--heading-typography-variant);
-    color:  var(--quaternary-color);
+    color: var(--quaternary-color);
   }
 }
 
@@ -45,15 +45,19 @@
 .c-post__tags__tag {
   white-space: nowrap;
   background-color: $wp-meliora__neutral-gray-light-color;
-  padding: 0 16px;
+  padding: 0 12px;
   line-height: 30px;
   height: 30px;
   border-radius: $global-radius;
   text-decoration: none;
   margin: 0 4px 4px 0;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: var(--heading-typography-variant);
+
+  @include media(tablet) {
+    font-size: 0.6rem;
+  }
 
   &--more {
     background-color: $wp-meliora__neutral-gray-color;
@@ -80,9 +84,9 @@
   }
 
   @include media(laptop) {
-    flex-wrap: nowrap;
     .c-post__header {
       width: 70%;
+      flex-grow: 1;
       padding-right: 10px;
     }
 
@@ -93,16 +97,34 @@
   }
 }
 
+.s-post-archive {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.c-post__main {
+  order: unset;
+  width: 100%;
+
+  @include media(tablet) {
+    order: 2;
+  }
+}
+
 .c-post_cats {
   font-size: 0.75em;
-  color: $wp-meliora__quaternary-color;
+  color: $wp-meliora__base-font-color;
 }
 
 .s-post-meta {
+  color: $wp-meliora__base-font-color;
+  font-size: 0.75rem;
+
 
   a {
     text-decoration: none;
-    color: $wp-meliora__quaternary-color;
+    color: $wp-meliora__base-font-color;
     font-weight: var(--heading-typography-variant);
 
     &:hover {
@@ -114,7 +136,7 @@
 .c-post__meta--date-author {
   margin: 20px 0 16px;
   font-size: 0.75em;
-  color: $wp-meliora__neutral-dark-gray-color;
+  color: $wp-meliora__base-font-color;
 
 
   @include media(laptop) {
@@ -124,6 +146,8 @@
 
 .c-post__thumbnail {
   margin-bottom: 24px;
+  text-align: center;
+  width: 100%;
 
   @include media(laptop) {
     margin-bottom: 48px;
@@ -160,5 +184,18 @@
 .search {
   .page-title {
 
+  }
+}
+
+.c-post__content__main a:hover {
+  color: var(--secondary-color);
+}
+
+
+// Archive
+.c-post--archive {
+
+  .c-post__thumbnail {
+    margin-bottom: 24px;
   }
 }

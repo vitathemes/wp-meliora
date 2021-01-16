@@ -55,7 +55,7 @@
 
 .c-header__navigation__toggle {
   background-color: transparent;
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__base-font-color;
   padding: 0;
   position: relative;
   z-index: 10;
@@ -73,25 +73,25 @@
 
 .c-header__branding__title {
   margin: 0;
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__base-font-color;
 
 
   &:hover {
-    color: $wp-meliora__secondary-color;
+    color: $wp-meliora__base-font-color;
   }
 }
 
 .c-header__branding__title__link {
-  color: $wp-meliora__secondary-color;
+  color: $wp-meliora__base-font-color;
   text-decoration: none;
   font-weight: var(--heading-typography-variant);
 
   &:visited, &:focus, &:active {
-    color: $wp-meliora__secondary-color;
+    color: $wp-meliora__base-font-color;
   }
 
   &:hover {
-    color: $wp-meliora__secondary-color;
+    color: $wp-meliora__base-font-color;
   }
 }
 

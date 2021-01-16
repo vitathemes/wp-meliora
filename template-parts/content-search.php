@@ -16,7 +16,7 @@
 			?>
             <div class="c-post__meta entry-meta">
 				<?php
-				wp_meliora_posted_on();
+				do_action('wp_meliora_post_meta_area');
 				?>
             </div><!-- .entry-meta -->
 		<?php endif;
@@ -28,6 +28,6 @@
 		?>
     </header><!-- .entry-header -->
 
-	<?php wp_meliora_post_tags_archive(); ?>
+	<?php do_action('wp_meliora_archive_post_tags_area'); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

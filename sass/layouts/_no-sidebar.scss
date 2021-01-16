@@ -14,8 +14,8 @@
   .site-main {
     --responsive--aligndefault-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal) + 46px);
     --responsive--alignwide-width: calc(#{$breakpoint_sm} - var(--responsive--spacing-horizontal) + 46px);
-    --responsive--alignright-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc( 0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
   }
 
   .site-main__content {

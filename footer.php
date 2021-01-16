@@ -23,6 +23,12 @@
         <div class="u-default-max-width">
             <div class="c-footer__grid">
                 <div class="c-footer__copyright">
+	                <?php if ( get_theme_mod( 'show_branding_in_footer', true ) ) : ?>
+                        <div class="c-footer__branding s-footer-branding">
+                            <?php wp_meliora_branding(true); ?>
+                        </div>
+	                <?php endif; ?>
+                    <p>
 					<?php $allowed_html = [
 						'a'      => [
 							'href'  => [],
@@ -35,10 +41,9 @@
 					];
 					echo wp_kses( get_theme_mod( 'copyright_text', sprintf( '</span>%s <a href="%s" class="customize-unpreviewable">%s</a>.', esc_html__( 'Designed by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ) ), $allowed_html );
 					?>
+                    </p>
                 </div>
-                <div class="c-footer__socials s-footer-socials">
-					<?php wp_meliora_socials_links(); ?>
-                </div>
+                <?php wp_meliora_footer_socials(); ?>
             </div>
         </div><!-- .site-info -->
     </div>

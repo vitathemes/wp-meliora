@@ -14,7 +14,8 @@ get_header();
         <div class="site-main__container default-max-width">
             <div class="site-main__content">
                 <h2 class="site-main__content__title h1"><?php echo wp_kses_post( get_the_archive_title() ); ?></h2>
-				<?php wp_meliora_slider_menu();
+				<?php
+				do_action('wp_meliora_slider_menu_area');
 
 				if ( have_posts() ) :
 

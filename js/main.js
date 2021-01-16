@@ -6,13 +6,20 @@ if (document.querySelectorAll(".js-categories-list").length) {
         }
     });
 
+     const rtlAttr = document.querySelector('.js-categories-list').getAttribute('data-rtl');
+     let cellsAligment = 'left';
+     if (parseInt(rtlAttr)) {
+         cellsAligment = 'right';
+     }
+
      const categoriesCarouselOptions = {
          initialIndex: initIndex,
          freeScroll: true,
          contain: true,
          pageDots: false,
          groupCells: false,
-         cellAlign: 'left'
+         cellAlign: cellsAligment,
+         rightToLeft: parseInt(rtlAttr)
      };
 
     const categoriesCarousel = new Flickity( '.js-categories-list', categoriesCarouselOptions);

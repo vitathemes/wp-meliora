@@ -25,7 +25,7 @@
       left: unset;
 
       @include media(tablet) {
-        border: 1px solid $wp-meliora__neutral-dark-gray-color;
+        border: 1px solid $wp-meliora__base-font-color;
         float: left;
         position: absolute;
         top: 100%;
@@ -79,7 +79,7 @@
       }
 
       a {
-        color: $wp-meliora__quaternary-color;
+        color: $wp-meliora__base-font-color;
         padding: 10px 20px;
         text-align: center;
         white-space: nowrap;
@@ -112,11 +112,11 @@
     transition: $global-transition;
     display: block;
     text-decoration: none;
-    color: $wp-meliora__tertiary-color;
+    color: $wp-meliora__heading-color;
     padding: 10px 0;
 
     @include media(tablet) {
-      color: $wp-meliora__neutral-dark-gray-color;
+      color: $wp-meliora__base-font-color;
     }
 
     &:hover {
@@ -130,7 +130,7 @@
     .current_page_ancestor > a,
     .current-menu-ancestor > a {
       color: $wp-meliora__main-primary-light-color;
-      border-bottom: 2px solid $wp-meliora__neutral-dark-gray-color;
+      border-bottom: 2px solid $wp-meliora__base-font-color;
     }
   }
 
@@ -140,7 +140,7 @@
     flex-wrap: wrap;
 
     span {
-      color: $wp-meliora__neutral-dark-gray-color;
+      color: $wp-meliora__base-font-color;
       transition: $global-transition;
       margin-left: 8px;
       transform-origin: center center;
@@ -167,7 +167,7 @@
     span {
       transform-origin: center center;
       transform: rotate(0deg);
-      color: $wp-meliora__neutral-dark-gray-color;
+      color: $wp-meliora__base-font-color;
 
       @include media(tablet) {
         transform: rotate(-90deg);
@@ -200,7 +200,7 @@
   animation: fadeInFromNone 0.4s forwards;
 }
 
-@include media(tablet){
+@include media(tablet) {
 
   .menu-toggle {
     display: none;

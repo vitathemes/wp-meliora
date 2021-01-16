@@ -39,7 +39,16 @@ function wp_meliora_pingback_header() {
 
 add_action( 'wp_head', 'wp_meliora_pingback_header' );
 
-function wp_meliora_branding() {
+function wp_meliora_branding( $is_footer = false ) {
+	if ( $is_footer ) {
+		if ( has_custom_logo() ) {
+			the_custom_logo();
+		} else { ?>
+            <a class="c-footer__branding__title h1" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		<?php }
+
+		return;
+	}
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else {
@@ -62,27 +71,36 @@ function wp_meliora_branding() {
 function wp_meliora_typography() {
 
 	if ( get_theme_mod( 'headings_typography_color' ) == "" ) {
-		$wp_meliora_tertiary_color = "#474747";
+		$wp_meliora_heading_color = "";
 	} else {
-		$wp_meliora_tertiary_color = get_theme_mod( 'headings_typography_color' );
+
 	}
 	if ( get_theme_mod( 'text_typography_color' ) == "" ) {
-		$wp_meliora_secondary_color = "#474747";
+		$wp_meliora_base_font_color = "";
 	} else {
-		$wp_meliora_secondary_color = get_theme_mod( 'text_typography_color' );
+
 	}
 	if ( get_theme_mod( 'secondary_typography_color' ) == "" ) {
 		$wp_meliora_quaternary_color = "#777777";
 	} else {
-		$wp_meliora_quaternary_color = get_theme_mod( 'text_typography_color' );
 	}
 
+	$wp_meliora_heading_color    = get_theme_mod( 'headings_typography_color', '#474747' );
+	$wp_meliora_base_font_color  = get_theme_mod( 'text_typography_color', '#777777' );
+
+	$defaults                = array(
+		'normal' => '#0088cc',
+		'hover'  => '#00aaff',
+	);
+	$wp_meliora_links_colors = get_theme_mod( 'links_colors', $defaults );
 
 	$html = ':root {	
 	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#FFBA9D" ) . ';
-	            --secondary-color: ' . $wp_meliora_secondary_color . ';
-	            --tertiary-color: ' . $wp_meliora_tertiary_color . ';
-	            --quaternary-color: ' . $wp_meliora_quaternary_color . ';
+	            --base-font-color: ' . $wp_meliora_base_font_color . ';
+	            --heading-color: ' . $wp_meliora_heading_color . ';
+	            
+	            --link-normal-color: ' . $wp_meliora_links_colors['normal'] . ' ;
+	            --link-hover-color: ' . $wp_meliora_links_colors['hover'] . ' ;
 			}';
 
 	return $html;

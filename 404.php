@@ -17,7 +17,13 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+}
+?>
 <main id="primary" class="site-main">
     <div class="site-main__container default-max-width">
         <div class="c-header--404">
@@ -37,7 +43,7 @@
             <div class="page-content">
                 <p><?php esc_html_e( 'This page not found (deleted or never exists). try a phrase in search box or back to home and start again.', 'wp-meliora' ); ?></p>
                 <div class="not-found__actions">
-                    <a href="<?php echo esc_url(site_url()); ?>" class="not-found__actions__link"><?php esc_html_e( 'Take me home', 'wp-meliora' ); ?>
+                    <a href="<?php echo esc_url(home_url()); ?>" class="not-found__actions__link"><?php esc_html_e( 'Take me home', 'wp-meliora' ); ?>
                         <span class="dashicons dashicons-arrow-right-alt2"></span></a>
                 </div>
 				<?php

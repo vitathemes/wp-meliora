@@ -21,15 +21,12 @@
 		?>
         <div class="c-post__meta c-post__meta--date-author entry-meta s-post-meta">
 			<?php
-			wp_meliora_posted_on();
-			wp_meliora_posted_by();
+			do_action( 'wp_meliora_post_meta_area' );
 			?>
         </div><!-- .entry-meta -->
 
 		<?php if ( get_theme_mod( 'show_posts_thumbnail', true ) ) : ?>
-            <div class="c-post__thumbnail">
-				<?php wp_meliora_post_thumbnail(); ?>
-            </div>
+			<?php wp_meliora_post_thumbnail(); ?>
 		<?php endif; ?>
     </header><!-- .entry-header -->
 
@@ -46,8 +43,7 @@
 		);
 		?>
     </div><!-- .entry-content -->
-	<?php wp_meliora_post_tags_single();
-
-	wp_meliora_share_links();
+	<?php
+	do_action( 'wp_meliora_post_footer' );
 	?>
 </article><!-- #post-<?php the_ID(); ?> -->
