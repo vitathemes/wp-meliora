@@ -30,11 +30,6 @@ class Importer extends WXRImporter {
 
 		// Check, if a new AJAX request is required.
 		add_filter( 'wxr_importer.pre_process.post', array( $this, 'new_ajax_request_maybe' ) );
-
-		// WooCommerce product attributes registration.
-		if ( class_exists( 'WooCommerce' ) ) {
-			add_filter( 'wxr_importer.pre_process.term', array( $this, 'woocommerce_product_attributes_registration' ), 10, 1 );
-		}
 	}
 
 	/**
@@ -52,7 +47,7 @@ class Importer extends WXRImporter {
 		}
 
 		if ( ! class_exists( 'XMLReader' ) ) {
-			$this->logger->critical( __( 'The XMLReader class is missing! Please install the XMLReader PHP extension on your server', 'wordpress-importer' ) );
+			$this->logger->critical( __( 'The XMLReader class is missing! Please install the XMLReader PHP extension on your server', 'wp-meliora' ) );
 
 			return false;
 		}
@@ -65,7 +60,7 @@ class Importer extends WXRImporter {
 		}
 
 		if ( ! $status ) {
-			$this->logger->error( __( 'Could not open the XML file for parsing!', 'wordpress-importer' ) );
+			$this->logger->error( __( 'Could not open the XML file for parsing!', 'wp-meliora' ) );
 
 			return false;
 		}
@@ -245,7 +240,7 @@ class Importer extends WXRImporter {
 		$result = $this->import_start( $file );
 
 		if ( is_wp_error( $result ) ) {
-			$this->logger->error( __( 'Content import start error: ', 'wordpress-importer' ) . $result->get_error_message() );
+			$this->logger->error( __( 'Content import start error: ', 'wp-meliora' ) . $result->get_error_message() );
 
 			return false;
 		}
@@ -277,7 +272,7 @@ class Importer extends WXRImporter {
 
 					if ( version_compare( $this->version, self::MAX_WXR_VERSION, '>' ) ) {
 						$this->logger->warning( sprintf(
-							__( 'This WXR file (version %s) is newer than the importer (version %s) and may not be supported. Please consider updating.', 'wordpress-importer' ),
+							__( 'This WXR file (version %s) is newer than the importer (version %s) and may not be supported. Please consider updating.', 'wp-meliora' ),
 							$this->version,
 							self::MAX_WXR_VERSION
 						) );
@@ -501,7 +496,7 @@ class Importer extends WXRImporter {
 			) );
 
 			// Add message to log file.
-			$this->logger->info( __( 'New AJAX call!', 'wordpress-importer' ) );
+			$this->logger->info( __( 'New AJAX call!', 'wp-meliora' ) );
 
 			// Set the current importer state, so it can be continued on the next AJAX call.
 			$this->set_current_importer_data();
@@ -609,18 +604,6 @@ class Importer extends WXRImporter {
 					$wpdb->insert( $wpdb->prefix . 'woocommerce_attribute_taxonomies', $attribute );
 					delete_transient( 'wc_attribute_taxonomies' );
 				}
-
-				// Register the taxonomy now so that the import works!
-				register_taxonomy(
-					$data['taxonomy'],
-					apply_filters( 'woocommerce_taxonomy_objects_' . $data['taxonomy'], array( 'product' ) ),
-					apply_filters( 'woocommerce_taxonomy_args_' . $data['taxonomy'], array(
-						'hierarchical' => true,
-						'show_ui'      => false,
-						'query_var'    => true,
-						'rewrite'      => false,
-					) )
-				);
 			}
 		}
 

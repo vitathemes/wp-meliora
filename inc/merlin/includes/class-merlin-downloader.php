@@ -46,7 +46,7 @@ class Merlin_Downloader {
 			return $this->download_directory_path . $filename;
 		}
 
-		Merlin_Logger::get_instance()->error( __( 'The file was not able to save to disk, while trying to download it', 'merlin-wp' ), array( 'url' => $url, 'filename' => $filename ) );
+		Merlin_Logger::get_instance()->error( __( 'The file was not able to save to disk, while trying to download it', 'wp-meliora' ), array( 'url' => $url, 'filename' => $filename ) );
 
 		return false;
 	}
@@ -63,7 +63,7 @@ class Merlin_Downloader {
 		if ( empty( $url ) ) {
 			return new \WP_Error(
 				'missing_url',
-				__( 'Missing URL for downloading a file!', 'merlin-wp' )
+				__( 'Missing URL for downloading a file!', 'wp-meliora' )
 			);
 		}
 
@@ -81,7 +81,7 @@ class Merlin_Downloader {
 			return new \WP_Error(
 				'download_error',
 				sprintf(
-					__( 'An error occurred while fetching file from: %1$s%2$s%3$s!%4$sReason: %5$s - %6$s.', 'merlin-wp' ),
+					__( 'An error occurred while fetching file from: %1$s%2$s%3$s!%4$sReason: %5$s - %6$s.', 'wp-meliora' ),
 					'<strong>',
 					$url,
 					'</strong>',

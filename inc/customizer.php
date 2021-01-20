@@ -77,8 +77,8 @@ if ( function_exists( 'Kirki' ) ) {
 		// Add Panels
 		Kirki::add_panel( 'elements', array(
 			'priority'    => 10,
-			'title'       => esc_html__( 'Elements', 'kirki' ),
-			'description' => esc_html__( 'My panel description', 'kirki' ),
+			'title'       => esc_html__( 'Elements', 'wp-meliora' ),
+			'description' => esc_html__( 'My panel description', 'wp-meliora' ),
 		) );
 
 // Add sections \\
@@ -573,12 +573,12 @@ if ( function_exists( 'Kirki' ) ) {
 		Kirki::add_field( 'wp-meliora', [
 			'type'     => 'multicolor',
 			'settings' => 'links_colors',
-			'label'    => esc_html__( 'Links Colors', 'kirki' ),
+			'label'    => esc_html__( 'Links Colors', 'wp-meliora' ),
 			'section'  => 'colors',
 			'priority' => 10,
 			'choices'  => [
-				'normal' => esc_html__( 'Normal', 'kirki' ),
-				'hover'  => esc_html__( 'Hover', 'kirki' ),
+				'normal' => esc_html__( 'Normal', 'wp-meliora' ),
+				'hover'  => esc_html__( 'Hover', 'wp-meliora' ),
 			],
 			'default'  => [
 				'normal' => '#000',
