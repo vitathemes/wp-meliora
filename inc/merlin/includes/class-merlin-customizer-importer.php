@@ -61,7 +61,8 @@ class Merlin_Customizer_Importer {
 		}
 
 		// Get the upload data.
-		$raw = file_get_contents( $import_file_path );
+        global $wp_filesystem;
+		$raw = $wp_filesystem->get_contents( $import_file_path );
 
 		// Make sure we got the data.
 		if ( empty( $raw ) ) {

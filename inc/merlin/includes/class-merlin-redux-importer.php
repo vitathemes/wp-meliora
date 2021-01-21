@@ -22,7 +22,8 @@ class Merlin_Redux_Importer {
 		}
 
 		foreach ( $import_data as $redux_item ) {
-			$redux_options_raw_data = file_get_contents( $redux_item['file_path'] );
+		    global $wp_filesystem;
+			$redux_options_raw_data = $wp_filesystem->get_contents( $redux_item['file_path'] );
 			$redux_options_data     = json_decode( $redux_options_raw_data, true );
 			$redux_framework        = ReduxFrameworkInstances::get_instance( $redux_item['option_name'] );
 

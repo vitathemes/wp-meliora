@@ -74,7 +74,8 @@ class Merlin_Widget_Importer {
 		}
 
 		// Get file contents and decode.
-		$data = file_get_contents( $file );
+        global $wp_filesystem;
+		$data = $wp_filesystem->get_contents( $file );
 
 		// Return from this function if there was an error.
 		if ( empty( $data ) ) {

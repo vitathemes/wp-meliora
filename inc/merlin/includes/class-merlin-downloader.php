@@ -40,7 +40,8 @@ class Merlin_Downloader {
 			return $content;
 		}
 
-		$saved_file = file_put_contents( $this->download_directory_path . $filename, $content );
+		global $wp_filesystem;
+		$saved_file = $wp_filesystem->put_contents($this->download_directory_path . $filename, $content);
 
 		if ( ! empty( $saved_file ) ) {
 			return $this->download_directory_path . $filename;
