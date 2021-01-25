@@ -70,21 +70,6 @@ function wp_meliora_branding( $is_footer = false ) {
 
 function wp_meliora_typography() {
 
-	if ( get_theme_mod( 'headings_typography_color' ) == "" ) {
-		$wp_meliora_heading_color = "";
-	} else {
-
-	}
-	if ( get_theme_mod( 'text_typography_color' ) == "" ) {
-		$wp_meliora_base_font_color = "";
-	} else {
-
-	}
-	if ( get_theme_mod( 'secondary_typography_color' ) == "" ) {
-		$wp_meliora_quaternary_color = "#777777";
-	} else {
-	}
-
 	$wp_meliora_heading_color    = get_theme_mod( 'headings_typography_color', '#474747' );
 	$wp_meliora_base_font_color  = get_theme_mod( 'text_typography_color', '#777777' );
 
