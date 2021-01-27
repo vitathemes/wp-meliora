@@ -36,7 +36,7 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 == Changelog ==
 
 = 1.1.1 - May 12 2015 =
-* Remove
+* Removed unnecessary codes and cleanup
 
 = 1.1.0 =
 * Added theme setup
