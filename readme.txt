@@ -35,6 +35,9 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
+= 1.1.1 - May 12 2015 =
+* Remove
+
 = 1.1.0 =
 * Added theme setup
 * Removed Kirki framework
