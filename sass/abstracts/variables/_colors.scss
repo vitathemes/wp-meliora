@@ -7,9 +7,9 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 
-$wp-meliora__primary-color: var(--primary-color);
-$wp-meliora__base-font-color: var(--base-font-color);
-$wp-meliora__heading-color: var(--heading-color);
+$wp-meliora__primary-color: var(--wp-meliora-primary-color);
+$wp-meliora__base-font-color: var(--wp-meliora-base-font-color);
+$wp-meliora__heading-color: var(--wp-meliora-heading-color);
 $wp-meliora__main-primary-color: #000000;
 $wp-meliora__main-primary-light-color: #474747;
 $wp-meliora__neutral-gray-color: #DFDFDF;
@@ -18,5 +18,5 @@ $wp-meliora__neutral-white: #FFFFFF;
 
 $wp-meliora__service-error-color: #891900;
 
-$wp-meliora__link-normal-color: var(--link-normal-color);
-$wp-meliora__link-hover-color: var(--link-hover-color);
+$wp-meliora__link-normal-color: var(--wp-meliora-link-normal-color);
+$wp-meliora__link-hover-color: var(--wp-meliora-link-hover-color);

@@ -39,7 +39,7 @@ if ( function_exists( 'wp_body_open' ) ) {
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="c-header__navigation main-navigation">
-                <button aria-label="Toggle menu" class="c-header__navigation__toggle js-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <button aria-label="<?php esc_attr_e('Toggle menu', 'wp-meliora'); ?>" class="c-header__navigation__toggle js-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                     <span class="dashicons dashicons-menu-alt"></span></button>
 				<?php
 				if ( has_nav_menu( 'menu-1' ) ) {
