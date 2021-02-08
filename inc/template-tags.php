@@ -305,19 +305,19 @@ if ( ! function_exists( 'wp_meliora_socials_links' ) ) :
 		$wp_meliora_linkedin  = get_theme_mod( 'linkedin', "" );
 
 		if ( $wp_meliora_facebook ) {
-			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url( $wp_meliora_facebook ), esc_html__( 'Facebook', 'wp-meliora' ) );
+			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-facebook-alt"></span></a>', esc_url( $wp_meliora_facebook ), esc_attr__( 'Facebook', 'wp-meliora' ) );
 		}
 
 		if ( $wp_meliora_twitter ) {
-			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-twitter"></span></a>', esc_url( $wp_meliora_twitter ), esc_html__( 'Twitter', 'wp-meliora' ) );
+			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-twitter"></span></a>', esc_url( $wp_meliora_twitter ), esc_attr__( 'Twitter', 'wp-meliora' ) );
 		}
 
 		if ( $wp_meliora_instagram ) {
-			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-instagram"></span></a>', esc_url( $wp_meliora_instagram ), esc_html__( 'Instagram', 'wp-meliora' ) );
+			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-instagram"></span></a>', esc_url( $wp_meliora_instagram ), esc_attr__( 'Instagram', 'wp-meliora' ) );
 		}
 
 		if ( $wp_meliora_linkedin ) {
-			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-linkedin"></span></a>', esc_url( $wp_meliora_linkedin ), esc_html__( 'Linkedin', 'wp-meliora' ) );
+			echo sprintf( '<a href="%s" rel="noreferrer" aria-label="%s" class="social-link" target="_blank"><span class="dashicons dashicons-linkedin"></span></a>', esc_url( $wp_meliora_linkedin ), esc_attr__( 'Linkedin', 'wp-meliora' ) );
 		}
 	}
 endif;

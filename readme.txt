@@ -4,8 +4,8 @@ Requires at least: 5.5.3
 Tested up to: 5.6
 Requires PHP: 5.6
 Stable tag: 1.1.0
-License: GPL-3.0
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+License: GPL-2.0-or-later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 WP-Meliora is a WordPress minimal & Fast-loading theme for people who want to have a simple blog & introduce themselves.
 
@@ -34,6 +34,10 @@ WP-Meliora is a WordPress minimal & Fast-loading theme for people who want to ha
 See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.com/indigo/).
 
 == Changelog ==
+
+= 1.1.2 - May 12 2015 =
+* Fix minor issues
+* Update naming of some vars
 
 = 1.1.1 - May 12 2015 =
 * Removed unnecessary codes and cleanup
