@@ -85,7 +85,7 @@ Flickity by desandro
 License: GNU GPLv3, https://www.gnu.org/licenses/gpl-3.0.html
 Source: https://flickity.metafizzy.co/
 
-Kirki WordPress Customizer Framework
+Kirki WordPress Customizer Framework by Ari Stathopoulos
 License: MIT License, https://github.com/kirki-framework/kirki/blob/master/LICENSE
 Source: https://kirki.org
 
