@@ -1,7 +1,7 @@
 === WP Meliora ===
 Contributors: vitathemes, kashani, mrmolaei, mostafas1990
 Requires at least: 5.5.3
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
 Stable tag: 1.1.0
 License: GPL-2.0-or-later
@@ -35,9 +35,13 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
+= 1.1.3 - May 12 2015 =
+* Fixed Customizer colors issue
+* Fixed target attribute of menu items
+
 = 1.1.2 - May 12 2015 =
-* Fix minor issues
-* Update naming of some vars
+* Fixed minor issues
+* Updated naming of some vars
 
 = 1.1.1 - May 12 2015 =
 * Removed unnecessary codes and cleanup

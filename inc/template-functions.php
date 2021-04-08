@@ -80,7 +80,7 @@ function wp_meliora_typography() {
 	$wp_meliora_links_colors = get_theme_mod( 'links_colors', $defaults );
 
 	$html = ':root {	
-	            --wp-meliora-primary-color: ' . get_theme_mod( "branding_primary_color", "#FFBA9D" ) . ';
+	            --wp-meliora-primary-color: ' . get_theme_mod( "colors_primary_color", "#FFBA9D" ) . ';
 	            --wp-meliora-base-font-color: ' . $wp_meliora_base_font_color . ';
 	            --wp-meliora-heading-color: ' . $wp_meliora_heading_color . ';
 	            
