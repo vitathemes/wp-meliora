@@ -70,21 +70,6 @@ function wp_meliora_branding( $is_footer = false ) {
 
 function wp_meliora_typography() {
 
-	if ( get_theme_mod( 'headings_typography_color' ) == "" ) {
-		$wp_meliora_heading_color = "";
-	} else {
-
-	}
-	if ( get_theme_mod( 'text_typography_color' ) == "" ) {
-		$wp_meliora_base_font_color = "";
-	} else {
-
-	}
-	if ( get_theme_mod( 'secondary_typography_color' ) == "" ) {
-		$wp_meliora_quaternary_color = "#777777";
-	} else {
-	}
-
 	$wp_meliora_heading_color    = get_theme_mod( 'headings_typography_color', '#474747' );
 	$wp_meliora_base_font_color  = get_theme_mod( 'text_typography_color', '#777777' );
 
@@ -95,12 +80,12 @@ function wp_meliora_typography() {
 	$wp_meliora_links_colors = get_theme_mod( 'links_colors', $defaults );
 
 	$html = ':root {	
-	            --primary-color: ' . get_theme_mod( "branding_primary_color", "#FFBA9D" ) . ';
-	            --base-font-color: ' . $wp_meliora_base_font_color . ';
-	            --heading-color: ' . $wp_meliora_heading_color . ';
+	            --wp-meliora-primary-color: ' . get_theme_mod( "colors_primary_color", "#FFBA9D" ) . ';
+	            --wp-meliora-base-font-color: ' . $wp_meliora_base_font_color . ';
+	            --wp-meliora-heading-color: ' . $wp_meliora_heading_color . ';
 	            
-	            --link-normal-color: ' . $wp_meliora_links_colors['normal'] . ' ;
-	            --link-hover-color: ' . $wp_meliora_links_colors['hover'] . ' ;
+	            --wp-meliora-link-normal-color: ' . $wp_meliora_links_colors['normal'] . ' ;
+	            --wp-meliora-link-hover-color: ' . $wp_meliora_links_colors['hover'] . ' ;
 			}';
 
 	return $html;

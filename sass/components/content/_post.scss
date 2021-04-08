@@ -187,8 +187,18 @@
   }
 }
 
-.c-post__content__main a:hover {
-  color: var(--secondary-color);
+.c-post__content__main a {
+  color: $wp-meliora__link-normal-color;
+
+  &:visited {
+    color: $wp-meliora__link-normal-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $wp-meliora__link-hover-color;
+  }
 }
 
 

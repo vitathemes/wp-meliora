@@ -8,13 +8,17 @@ class Wp_meliora_walker_nav_menu extends Walker_Nav_Menu {
 		$title       = $item->title;
 		$description = $item->description;
 		$permalink   = $item->url;
+		$target      = $item->target;
 
+		if ($target == "_blank") {
+			$target = ' target="_blank" ';
+		}
 
 		$output .= "<li class='" . implode( " ", $item->classes ) . "'>";
 
 		//Add SPAN if no Permalink
 		if ( $permalink ) {
-			$output .= '<a href="' . $permalink . '">';
+			$output .= '<a href="' . $permalink . '"' . $target . '>';
 		}
 
 		$output .= $title;
@@ -24,7 +28,7 @@ class Wp_meliora_walker_nav_menu extends Walker_Nav_Menu {
 		}
 
 		if ( $args->walker->has_children ) {
-			$output .= '<span aria-label="Toggle sub menu" role="button" class="dashicons dashicons-arrow-down-alt2 js-toggle-submenu"></span>';
+			$output .= sprintf('<span aria-label="%s" role="button" class="dashicons dashicons-arrow-down-alt2 js-toggle-submenu"></span>', esc_attr__('Toggle sub menu', 'wp-meliora'));
 		}
 	}
 }

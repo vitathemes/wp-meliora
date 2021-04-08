@@ -14,7 +14,7 @@
 <footer id="colophon" class="c-footer site-footer">
     <div class="c-footer__top">
         <div class="c-footer__top__back-to-top">
-            <a aria-label="Back to Top" class="c-footer__top__back-to-top__link" href="#masthead">
+            <a aria-label="<?php esc_attr_e('Back to Top', 'wp-meliora'); ?>" class="c-footer__top__back-to-top__link" href="#masthead">
                 <span class="dashicons dashicons-arrow-up-alt2"></span>
             </a>
         </div>

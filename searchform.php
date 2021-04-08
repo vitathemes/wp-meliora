@@ -6,7 +6,7 @@
 			value="<?php echo get_search_query() ?>" name="s"
 			title="<?php echo esc_attr_x( 'Search for:', 'label' , 'wp-meliora'  ) ?>" />
 	</label>
-    <button aria-label="Search" type="submit" class="c-search-form__submit search-submit">
+    <button aria-label="<?php esc_attr_e('Search', 'wp-meliora'); ?>" type="submit" class="c-search-form__submit search-submit">
         <span class="dashicons dashicons-search"></span>
     </button>
 </form>
