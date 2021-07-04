@@ -377,7 +377,7 @@ if ( ! function_exists( 'wp_meliora_share_links' ) ) {
 			$wp_meliora_facebook_url = "https://www.facebook.com/sharer.php?u=" . get_permalink();
 
 			echo '<div class="c-social-share">';  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo sprintf( '<span class="c-social-share__title">%s</span>', esc_html_e( 'Share', 'wp-meliora' ) );
+			echo sprintf( '<span class="c-social-share__title">%s</span>', esc_html__( 'Share', 'wp-meliora' ) );
 			echo sprintf( '<a class="c-social-share__link" target="_blank" href="%s"><span class="dashicons dashicons-facebook-alt c-social-share__link__icon"></span></a>', esc_url( $wp_meliora_facebook_url ) );
 			echo sprintf( '<a class="c-social-share__link" target="_blank" href="%s"><span class="dashicons dashicons-twitter c-social-share__link__icon"></span></a>', esc_url( $wp_meliora_twitter_url ) );
 			echo sprintf( '<a class="c-social-share__link" target="_blank" href="%s"><span class="dashicons dashicons-linkedin c-social-share__link__icon"></span></a>', esc_url( $wp_meliora_linkedin_url ) );

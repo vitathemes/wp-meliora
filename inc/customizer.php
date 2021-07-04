@@ -532,15 +532,6 @@ if ( function_exists( 'Kirki' ) ) {
 			'default'  => 1,
 			'priority' => 10,
 		] );
-
-		Kirki::add_field( 'wp-meliora', [
-			'type'     => 'textarea',
-			'settings' => 'copyright_text',
-			'label'    => esc_html__( 'Copyright Text', 'wp-meliora' ),
-			'section'  => 'footer',
-			'default'  => sprintf( '%s <a href="%s" target="_blank">%s</a>.', esc_html__( 'Designed by ', 'wp-meliora' ), esc_url( 'https://vitathemes.com' ), esc_html__( 'VitaThemes', 'wp-meliora' ) ),
-			'priority' => 10,
-		] );
 		// -- Copyright --
 
 		// -- Branding Fields --
@@ -721,7 +712,7 @@ if ( function_exists( 'Kirki' ) ) {
 			'selector' => '.c-header .c-search-form',
 		) );
 
-		$wp_customize->selective_refresh->add_partial( 'copyright_text', array(
+		$wp_customize->selective_refresh->add_partial( 'show_branding_in_footer', array(
 			'selector' => '.c-footer__copyright',
 		) );
 

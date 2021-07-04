@@ -35,15 +35,19 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
-= 1.1.3 - May 12 2015 =
+= 1.2.0 =
+* Added widget areas to footer
+* Minor improvements
+
+= 1.1.3 =
 * Fixed Customizer colors issue
 * Fixed target attribute of menu items
 
-= 1.1.2 - May 12 2015 =
+= 1.1.2 =
 * Fixed minor issues
 * Updated naming of some vars
 
-= 1.1.1 - May 12 2015 =
+= 1.1.1 =
 * Removed unnecessary codes and cleanup
 
 = 1.1.0 =

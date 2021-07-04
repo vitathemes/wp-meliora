@@ -44,7 +44,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @include media(laptop) {
+  @include media(tablet) {
     flex-wrap: nowrap;
   }
 }
@@ -77,7 +77,7 @@
   margin-top: 42px;
   padding: 0 15px;
 
-  @include media(laptop) {
+  @include media(tablet) {
     width: auto;
     margin-top: 0;
     padding: 0;
@@ -107,7 +107,7 @@
 .c-footer__branding {
   margin-bottom: 32px;
 
-  @include media(tablet) {
+  @include media(laptop) {
     margin-right: 42px;
     margin-bottom: 0;
   }
@@ -121,5 +121,97 @@
   img {
     height: 28px;
     width: auto;
+  }
+}
+
+.c-footer__widgets {
+  margin-top: 64px;
+  padding: 0 15px;
+}
+
+.c-footer__widget-area__column {
+  width: 100%;
+
+  &:nth-of-type(1) {
+    margin-bottom: 40px;
+  }
+
+  @include media(tablet) {
+    width: 50%;
+
+    &:nth-of-type(1) {
+      margin-right: 32px;
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(2) {
+      margin-left: 32px;
+    }
+  }
+}
+
+.c-footer__widget-area {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media(tablet) {
+    flex-wrap: nowrap;
+  }
+}
+
+.s-footer-widgets {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea {
+    color: $wp-meliora__main-primary-light-color;
+    border: none;
+    border-radius: $global-radius;
+    background-color: $wp-meliora__neutral-gray-color;
+    padding-right: 8px;
+    padding-left: 14px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+
+    &::placeholder {
+      color: $wp-meliora__main-primary-light-color;
+      opacity: 1;
+    }
+
+    &:focus {
+      color: $wp-meliora__main-primary-color;
+    }
+  }
+
+  select {
+    color: $wp-meliora__main-primary-light-color;
+    border: none;
+    border-radius: $global-radius;
+    background-color: $wp-meliora__neutral-gray-color;
+    padding: 10px 14px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  ul {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

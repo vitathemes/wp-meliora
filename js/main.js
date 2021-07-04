@@ -36,7 +36,7 @@ var wp_meliora_lastParentIndex = document.querySelectorAll('.c-header__navigatio
 document.addEventListener('focusin', function () {
     wp_meliora_focus = document.activeElement;
     if (wp_meliora_isToggleItem && wp_meliora_focus !== wp_meliora_menuLinks[0]) {
-        document.querySelectorAll('.c-header__navigation > ul > li')[wp_meliora_lastParentIndex].querySelector('a').wp_meliora_focus();
+        document.querySelectorAll('.c-header__navigation > ul > li')[wp_meliora_lastParentIndex].querySelector('a').focus();
     }
 
     if (wp_meliora_focus === wp_meliora_menuToggle) {

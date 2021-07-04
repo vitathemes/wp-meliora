@@ -105,7 +105,7 @@ add_action( 'after_setup_theme', 'wp_meliora_setup' );
  * @global int $content_width
  */
 function wp_meliora_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wp_meliora_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'wp_meliora_content_width', 1120 );
 }
 
 add_action( 'after_setup_theme', 'wp_meliora_content_width', 0 );
@@ -121,9 +121,33 @@ function wp_meliora_widgets_init() {
 			'name'          => esc_html__( 'Sidebar', 'wp-meliora' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
-			'before_widget' => '<section id="%1$s" class="c-widget widget %2$s">',
-			'after_widget'  => '</section>',
+			'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
+			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="c-widget__title widget-title h1">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer #1', 'wp-meliora' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
+			'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="c-widget__title widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer #2', 'wp-meliora' ),
+			'id'            => 'sidebar-3',
+			'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
+			'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="c-widget__title widget-title">',
 			'after_title'   => '</h2>',
 		)
 	);
