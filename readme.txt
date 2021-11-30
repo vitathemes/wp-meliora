@@ -35,7 +35,7 @@ See a working example at [demo.vitathemes.com/indigo](https://demo.vitathemes.co
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.2.1 =
 * Added some styles
 * Made all functions pluggable
 
