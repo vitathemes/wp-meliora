@@ -216,10 +216,12 @@ if ( ! function_exists( 'wp_meliora_slider_menu' ) ) {
 		}
 	}
 }
-function wp_meliora_show_slider_menu_in_code_area_name() {
-	wp_meliora_slider_menu();
-}
 
+if ( ! function_exists( 'wp_meliora_show_slider_menu_in_code_area_name' ) ) {
+	function wp_meliora_show_slider_menu_in_code_area_name() {
+		wp_meliora_slider_menu();
+	}
+}
 add_action( 'wp_meliora_slider_menu_area', 'wp_meliora_show_slider_menu_in_code_area_name' );
 
 

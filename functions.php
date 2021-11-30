@@ -97,80 +97,96 @@ if ( ! function_exists( 'wp_meliora_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'wp_meliora_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function wp_meliora_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wp_meliora_content_width', 1120 );
-}
-
-add_action( 'after_setup_theme', 'wp_meliora_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function wp_meliora_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'wp-meliora' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
-			'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="c-widget__title widget-title h1">',
-			'after_title'   => '</h2>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer #1', 'wp-meliora' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
-			'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="c-widget__title widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer #2', 'wp-meliora' ),
-			'id'            => 'sidebar-3',
-			'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
-			'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="c-widget__title widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-
-add_action( 'widgets_init', 'wp_meliora_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function wp_meliora_scripts() {
-	wp_enqueue_style( 'wp_meliora-style', get_stylesheet_uri(), array(), WP_MELIORA_VERSION );
-	wp_style_add_data( 'wp_meliora-style', 'rtl', 'replace' );
-	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_script( 'wp_meliora-navigation', get_template_directory_uri() . '/js/navigation.js', array(), WP_MELIORA_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-carousel', get_template_directory_uri() . '/js/vendor.min.js', array(), WP_MELIORA_VERSION, true );
-	wp_enqueue_script( 'wp_meliora-main', get_template_directory_uri() . '/js/main.js', array( 'wp_meliora-carousel' ), WP_MELIORA_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+if ( ! function_exists( 'wp_meliora_content_width' ) ) {
+	/**
+	 * Set the content width in pixels, based on the theme's design and stylesheet.
+	 *
+	 * Priority 0 to make it available to lower priority callbacks.
+	 *
+	 * @global int $content_width
+	 */
+	function wp_meliora_content_width() {
+		$GLOBALS['content_width'] = apply_filters( 'wp_meliora_content_width', 1120 );
 	}
 }
+add_action( 'after_setup_theme', 'wp_meliora_content_width', 0 );
 
+if ( ! function_exists( 'wp_meliora_widgets_init' ) ) {
+	/**
+	 * Register widget area.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+	 */
+	function wp_meliora_widgets_init() {
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Sidebar', 'wp-meliora' ),
+				'id'            => 'sidebar-1',
+				'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
+				'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="c-widget__title widget-title h1">',
+				'after_title'   => '</h2>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer #1', 'wp-meliora' ),
+				'id'            => 'sidebar-2',
+				'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
+				'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="c-widget__title widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Footer #2', 'wp-meliora' ),
+				'id'            => 'sidebar-3',
+				'description'   => esc_html__( 'Add widgets here.', 'wp-meliora' ),
+				'before_widget' => '<div id="%1$s" class="c-widget widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="c-widget__title widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+	}
+}
+add_action( 'widgets_init', 'wp_meliora_widgets_init' );
+
+
+if ( ! function_exists( 'wp_meliora_scripts' ) ) {
+	/**
+	 * Enqueue scripts and styles.
+	 */
+	function wp_meliora_scripts() {
+		wp_enqueue_style( 'wp_meliora-style', get_stylesheet_uri(), array(), WP_MELIORA_VERSION );
+		wp_style_add_data( 'wp_meliora-style', 'rtl', 'replace' );
+		wp_enqueue_style( 'dashicons' );
+		wp_enqueue_script( 'wp_meliora-navigation',
+			get_template_directory_uri() . '/js/navigation.js',
+			array(),
+			WP_MELIORA_VERSION,
+			true );
+		wp_enqueue_script( 'wp_meliora-carousel',
+			get_template_directory_uri() . '/js/vendor.min.js',
+			array(),
+			WP_MELIORA_VERSION,
+			true );
+		wp_enqueue_script( 'wp_meliora-main',
+			get_template_directory_uri() . '/js/main.js',
+			array( 'wp_meliora-carousel' ),
+			WP_MELIORA_VERSION,
+			true );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
+}
 add_action( 'wp_enqueue_scripts', 'wp_meliora_scripts' );
 
 /**

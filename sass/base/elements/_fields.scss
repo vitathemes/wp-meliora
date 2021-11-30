@@ -32,6 +32,7 @@ textarea {
 
   &:focus {
     color: $wp-meliora__main-primary-color;
+    outline: $wp-meliora__primary-color solid 2px;
   }
 }
 
