@@ -71,3 +71,8 @@ See the [Changelog](CHANGELOG.md)
 ## License
 
 WP-Meliora is licensed under [GNU GPL](LICENSE).
+
+## ❤️ Sponsors
+<a href="" target="_blank"><img width="200" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png"/></a>
+
+Want to become a sponsor? you can sponsor & support VitaThemes by providing our team your service for free!
